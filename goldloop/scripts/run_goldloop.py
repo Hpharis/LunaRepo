@@ -28,15 +28,21 @@ from modules.affiliate_injector import load_affiliate_links, inject_links
 load_dotenv()
 
 #  Paths
-# Paths (relative to repo root)
-DB_FILE      = ROOT_DIR / "goldloop" / "data" / "goldloop.db"
-EXPORT_BASE  = ROOT_DIR / "touringmag-site" / "src" / "content"
-ASSETS_DIR   = ROOT_DIR / "touringmag-site" / "public" / "assets"
-LOG_FILE     = ROOT_DIR / "goldloop" / "logs" / "affiliate_log.txt"
+# Project root = repo root
+REPO_ROOT = Path(__file__).resolve().parents[2]
 
-EXPORT_BASE.mkdir(parents=True, exist_ok=True)
-ASSETS_DIR.mkdir(parents=True, exist_ok=True)
-LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
+# Goldloop root = where scripts/modules live
+GOLDLOOP_ROOT = REPO_ROOT / "goldloop"
+
+# Make goldloop root importable
+sys.path.insert(0, str(GOLDLOOP_ROOT))
+
+# Paths
+DB_FILE      = GOLDLOOP_ROOT / "data" / "goldloop.db"
+EXPORT_BASE  = REPO_ROOT / "touringmag-site" / "src" / "content"
+ASSETS_DIR   = REPO_ROOT / "touringmag-site" / "public" / "assets"
+LOG_FILE     = GOLDLOOP_ROOT / "logs" / "affiliate_log.txt"
+
 
 # API keys
 openai.api_key = os.getenv("OPENAI_API_KEY")
