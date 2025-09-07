@@ -1,0 +1,444 @@
+1s
+2s
+0s
+27s
+Run pip install -r goldloop/requirements.txt
+Collecting openai==0.28 (from -r goldloop/requirements.txt (line 1))
+  Downloading openai-0.28.0-py3-none-any.whl.metadata (13 kB)
+Collecting pandas (from -r goldloop/requirements.txt (line 2))
+  Downloading pandas-2.3.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+Collecting scikit-learn (from -r goldloop/requirements.txt (line 3))
+  Downloading scikit_learn-1.7.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+Collecting flask (from -r goldloop/requirements.txt (line 4))
+  Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB)
+Collecting requests (from -r goldloop/requirements.txt (line 5))
+  Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Collecting python-dotenv (from -r goldloop/requirements.txt (line 6))
+  Downloading python_dotenv-1.1.1-py3-none-any.whl.metadata (24 kB)
+Collecting paypalrestsdk (from -r goldloop/requirements.txt (line 7))
+  Downloading paypalrestsdk-1.13.3-py3-none-any.whl.metadata (1.0 kB)
+Collecting schedule (from -r goldloop/requirements.txt (line 8))
+  Downloading schedule-1.2.2-py3-none-any.whl.metadata (3.8 kB)
+Collecting pyyaml (from -r goldloop/requirements.txt (line 9))
+  Downloading PyYAML-6.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting pillow (from -r goldloop/requirements.txt (line 10))
+  Downloading pillow-11.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.0 kB)
+Collecting sqlalchemy (from -r goldloop/requirements.txt (line 11))
+  Downloading sqlalchemy-2.0.43-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.6 kB)
+Collecting fpdf2 (from -r goldloop/requirements.txt (line 12))
+  Downloading fpdf2-2.8.4-py2.py3-none-any.whl.metadata (72 kB)
+Collecting beautifulsoup4 (from -r goldloop/requirements.txt (line 13))
+  Downloading beautifulsoup4-4.13.5-py3-none-any.whl.metadata (3.8 kB)
+Collecting tqdm (from openai==0.28->-r goldloop/requirements.txt (line 1))
+  Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+Collecting aiohttp (from openai==0.28->-r goldloop/requirements.txt (line 1))
+  Downloading aiohttp-3.12.15-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.7 kB)
+Collecting numpy>=1.26.0 (from pandas->-r goldloop/requirements.txt (line 2))
+  Downloading numpy-2.3.2-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+Collecting python-dateutil>=2.8.2 (from pandas->-r goldloop/requirements.txt (line 2))
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz>=2020.1 (from pandas->-r goldloop/requirements.txt (line 2))
+  Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas->-r goldloop/requirements.txt (line 2))
+  Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting scipy>=1.8.0 (from scikit-learn->-r goldloop/requirements.txt (line 3))
+  Downloading scipy-1.16.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (61 kB)
+Collecting joblib>=1.2.0 (from scikit-learn->-r goldloop/requirements.txt (line 3))
+  Downloading joblib-1.5.2-py3-none-any.whl.metadata (5.6 kB)
+Collecting threadpoolctl>=3.1.0 (from scikit-learn->-r goldloop/requirements.txt (line 3))
+  Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Collecting blinker>=1.9.0 (from flask->-r goldloop/requirements.txt (line 4))
+  Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting click>=8.1.3 (from flask->-r goldloop/requirements.txt (line 4))
+  Downloading click-8.2.1-py3-none-any.whl.metadata (2.5 kB)
+Collecting itsdangerous>=2.2.0 (from flask->-r goldloop/requirements.txt (line 4))
+  Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting jinja2>=3.1.2 (from flask->-r goldloop/requirements.txt (line 4))
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting markupsafe>=2.1.1 (from flask->-r goldloop/requirements.txt (line 4))
+  Downloading MarkupSafe-3.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+Collecting werkzeug>=3.1.0 (from flask->-r goldloop/requirements.txt (line 4))
+  Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+Collecting charset_normalizer<4,>=2 (from requests->-r goldloop/requirements.txt (line 5))
+  Downloading charset_normalizer-3.4.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (36 kB)
+Collecting idna<4,>=2.5 (from requests->-r goldloop/requirements.txt (line 5))
+  Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting urllib3<3,>=1.21.1 (from requests->-r goldloop/requirements.txt (line 5))
+  Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting certifi>=2017.4.17 (from requests->-r goldloop/requirements.txt (line 5))
+  Downloading certifi-2025.8.3-py3-none-any.whl.metadata (2.4 kB)
+Collecting six>=1.0.0 (from paypalrestsdk->-r goldloop/requirements.txt (line 7))
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting pyopenssl>=0.15 (from paypalrestsdk->-r goldloop/requirements.txt (line 7))
+  Downloading pyopenssl-25.1.0-py3-none-any.whl.metadata (17 kB)
+Collecting greenlet>=1 (from sqlalchemy->-r goldloop/requirements.txt (line 11))
+  Downloading greenlet-3.2.4-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+Collecting typing-extensions>=4.6.0 (from sqlalchemy->-r goldloop/requirements.txt (line 11))
+  Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting defusedxml (from fpdf2->-r goldloop/requirements.txt (line 12))
+  Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+Collecting fonttools>=4.34.0 (from fpdf2->-r goldloop/requirements.txt (line 12))
+  Downloading fonttools-4.59.2-cp312-cp312-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (109 kB)
+Collecting soupsieve>1.2 (from beautifulsoup4->-r goldloop/requirements.txt (line 13))
+  Downloading soupsieve-2.8-py3-none-any.whl.metadata (4.6 kB)
+Collecting cryptography<46,>=41.0.5 (from pyopenssl>=0.15->paypalrestsdk->-r goldloop/requirements.txt (line 7))
+  Downloading cryptography-45.0.7-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+Collecting cffi>=1.14 (from cryptography<46,>=41.0.5->pyopenssl>=0.15->paypalrestsdk->-r goldloop/requirements.txt (line 7))
+  Downloading cffi-1.17.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting pycparser (from cffi>=1.14->cryptography<46,>=41.0.5->pyopenssl>=0.15->paypalrestsdk->-r goldloop/requirements.txt (line 7))
+  Downloading pycparser-2.22-py3-none-any.whl.metadata (943 bytes)
+Collecting aiohappyeyeballs>=2.5.0 (from aiohttp->openai==0.28->-r goldloop/requirements.txt (line 1))
+  Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl.metadata (5.9 kB)
+Collecting aiosignal>=1.4.0 (from aiohttp->openai==0.28->-r goldloop/requirements.txt (line 1))
+  Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting attrs>=17.3.0 (from aiohttp->openai==0.28->-r goldloop/requirements.txt (line 1))
+  Downloading attrs-25.3.0-py3-none-any.whl.metadata (10 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp->openai==0.28->-r goldloop/requirements.txt (line 1))
+  Downloading frozenlist-1.7.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+Collecting multidict<7.0,>=4.5 (from aiohttp->openai==0.28->-r goldloop/requirements.txt (line 1))
+  Downloading multidict-6.6.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+Collecting propcache>=0.2.0 (from aiohttp->openai==0.28->-r goldloop/requirements.txt (line 1))
+  Downloading propcache-0.3.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (12 kB)
+Collecting yarl<2.0,>=1.17.0 (from aiohttp->openai==0.28->-r goldloop/requirements.txt (line 1))
+  Downloading yarl-1.20.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (73 kB)
+Downloading openai-0.28.0-py3-none-any.whl (76 kB)
+Downloading pandas-2.3.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 157.5 MB/s  0:00:00
+Downloading scikit_learn-1.7.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.5/9.5 MB 202.1 MB/s  0:00:00
+Downloading flask-3.1.2-py3-none-any.whl (103 kB)
+Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+Downloading charset_normalizer-3.4.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB)
+Downloading idna-3.10-py3-none-any.whl (70 kB)
+Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+Downloading python_dotenv-1.1.1-py3-none-any.whl (20 kB)
+Downloading paypalrestsdk-1.13.3-py3-none-any.whl (23 kB)
+Downloading schedule-1.2.2-py3-none-any.whl (12 kB)
+Downloading PyYAML-6.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (767 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 767.5/767.5 kB 100.1 MB/s  0:00:00
+Downloading pillow-11.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 109.6 MB/s  0:00:00
+Downloading sqlalchemy-2.0.43-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 171.9 MB/s  0:00:00
+Downloading fpdf2-2.8.4-py2.py3-none-any.whl (251 kB)
+Downloading beautifulsoup4-4.13.5-py3-none-any.whl (105 kB)
+Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Downloading certifi-2025.8.3-py3-none-any.whl (161 kB)
+Downloading click-8.2.1-py3-none-any.whl (102 kB)
+Downloading fonttools-4.59.2-cp312-cp312-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (4.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 115.7 MB/s  0:00:00
+Downloading greenlet-3.2.4-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (607 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 607.6/607.6 kB 93.0 MB/s  0:00:00
+Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading joblib-1.5.2-py3-none-any.whl (308 kB)
+Downloading MarkupSafe-3.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (23 kB)
+Downloading numpy-2.3.2-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 149.4 MB/s  0:00:00
+Downloading pyopenssl-25.1.0-py3-none-any.whl (56 kB)
+Downloading cryptography-45.0.7-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 64.5 MB/s  0:00:00
+Downloading cffi-1.17.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (479 kB)
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+Downloading scipy-1.16.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.2/35.2 MB 115.6 MB/s  0:00:00
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading soupsieve-2.8-py3-none-any.whl (36 kB)
+Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+Downloading aiohttp-3.12.15-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 125.6 MB/s  0:00:00
+Downloading multidict-6.6.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (256 kB)
+Downloading yarl-1.20.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (355 kB)
+Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
+Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Downloading attrs-25.3.0-py3-none-any.whl (63 kB)
+Downloading frozenlist-1.7.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (241 kB)
+Downloading propcache-0.3.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (224 kB)
+Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Downloading pycparser-2.22-py3-none-any.whl (117 kB)
+Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+Installing collected packages: pytz, urllib3, tzdata, typing-extensions, tqdm, threadpoolctl, soupsieve, six, schedule, pyyaml, python-dotenv, pycparser, propcache, pillow, numpy, multidict, markupsafe, joblib, itsdangerous, idna, greenlet, frozenlist, fonttools, defusedxml, click, charset_normalizer, certifi, blinker, attrs, aiohappyeyeballs, yarl, werkzeug, sqlalchemy, scipy, requests, python-dateutil, jinja2, fpdf2, cffi, beautifulsoup4, aiosignal, scikit-learn, pandas, flask, cryptography, aiohttp, pyopenssl, openai, paypalrestsdk
+Successfully installed aiohappyeyeballs-2.6.1 aiohttp-3.12.15 aiosignal-1.4.0 attrs-25.3.0 beautifulsoup4-4.13.5 blinker-1.9.0 certifi-2025.8.3 cffi-1.17.1 charset_normalizer-3.4.3 click-8.2.1 cryptography-45.0.7 defusedxml-0.7.1 flask-3.1.2 fonttools-4.59.2 fpdf2-2.8.4 frozenlist-1.7.0 greenlet-3.2.4 idna-3.10 itsdangerous-2.2.0 jinja2-3.1.6 joblib-1.5.2 markupsafe-3.0.2 multidict-6.6.4 numpy-2.3.2 openai-0.28.0 pandas-2.3.2 paypalrestsdk-1.13.3 pillow-11.3.0 propcache-0.3.2 pycparser-2.22 pyopenssl-25.1.0 python-dateutil-2.9.0.post0 python-dotenv-1.1.1 pytz-2025.2 pyyaml-6.0.2 requests-2.32.5 schedule-1.2.2 scikit-learn-1.7.1 scipy-1.16.1 six-1.17.0 soupsieve-2.8 sqlalchemy-2.0.43 threadpoolctl-3.6.0 tqdm-4.67.1 typing-extensions-4.15.0 tzdata-2025.2 urllib3-2.5.0 werkzeug-3.1.3 yarl-1.20.1
+1m 12s
+Run python goldloop/scripts/run_goldloop.py all
+  
+/home/runner/work/LunaRepo/LunaRepo/goldloop/scripts/run_goldloop.py:381: DeprecationWarning: Substituting font arial by core font helvetica - This is deprecated since v2.7.8, and will soon be removed
+  pdf.set_font("Arial", "B", 16)
+/home/runner/work/LunaRepo/LunaRepo/goldloop/scripts/run_goldloop.py:382: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=True use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(0, 10, "TouringMag Checklist", ln=True, align="C")
+/home/runner/work/LunaRepo/LunaRepo/goldloop/scripts/run_goldloop.py:385: DeprecationWarning: Substituting font arial by core font helvetica - This is deprecated since v2.7.8, and will soon be removed
+  pdf.set_font("Arial", size=12)
+/home/runner/work/LunaRepo/LunaRepo/goldloop/scripts/run_goldloop.py:387: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=True use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(0, 10, f"[ ] {i}. {step}", ln=True)
+Using SQLite DB at: /home/runner/work/LunaRepo/LunaRepo/goldloop/data/goldloop.db
+[INFO] Requesting blog article from OpenAI...
+[OK] Article stored: Discovering the Freedom of Motorcycle Touring Adventures (discovering-the-freedom-of-motorcycle-touring-adventures)
+[OK] Exported to /home/runner/work/LunaRepo/LunaRepo/goldloop/touringmag-site/src/content/blog/discovering-the-freedom-of-motorcycle-touring-adventures.md
+[INFO] Requesting gear article from OpenAI...
+[OK] Article stored: Durable and Versatile Motorcycle Touring Backpack (durable-and-versatile-motorcycle-touring-backpack)
+[OK] Exported to /home/runner/work/LunaRepo/LunaRepo/goldloop/touringmag-site/src/content/gear/durable-and-versatile-motorcycle-touring-backpack.md
+[INFO] Requesting upgrades article from OpenAI...
+[OK] Article stored: Touring Seat Upgrade for Enhanced Comfort (touring-seat-upgrade-for-enhanced-comfort)
+[OK] Exported to /home/runner/work/LunaRepo/LunaRepo/goldloop/touringmag-site/src/content/upgrades/touring-seat-upgrade-for-enhanced-comfort.md
+[INFO] Requesting guides article from OpenAI...
+[OK] Article stored: Motorcycle Touring Essential Guide for Beginners (motorcycle-touring-essential-guide-for-beginners)
+Error:  Failed to generate checklist PDF: Character "’" at index 28 in text is outside the range of characters supported by the font used: "helvetica". Please consider using a Unicode font.
+[OK] Exported to /home/runner/work/LunaRepo/LunaRepo/goldloop/touringmag-site/src/content/guides/motorcycle-touring-essential-guide-for-beginners.md
+[INFO] Skipping git push: /home/runner/work/LunaRepo/LunaRepo/goldloop/touringmag-site is not a git repo.
+0s
+Run echo "=== Generated Content Check ==="
+=== Generated Content Check ===
+Blog posts: 0
+Gear reviews: 51
+Guides: 46
+Upgrades: 50
+⚠️ Warning: No blog posts found.
+2s
+Run actions/setup-node@v3
+Found in cache @ /opt/hostedtoolcache/node/20.19.4/x64
+Environment details
+  
+8s
+Run npm ci
+  
+added 484 packages, and audited 485 packages in 7s
+213 packages are looking for funding
+  run `npm fund` for details
+found 0 vulnerabilities
+4s
+Run npm run build
+> touringmag-site@0.0.1 build
+> astro build
+20:20:15 [WARN] Unsupported file type /home/runner/work/LunaRepo/LunaRepo/touringmag-site/src/pages/styles/global.css found. Prefix filename with an underscore (`_`) to ignore.
+20:20:16 [content] Syncing content
+20:20:16 [WARN] [glob-loader] The base directory "/home/runner/work/LunaRepo/LunaRepo/touringmag-site/src/content/blog/" does not exist.
+20:20:16 [content] Synced content
+20:20:16 [types] Generated 821ms
+20:20:16 [build] output: "static"
+20:20:16 [build] mode: "static"
+20:20:16 [build] directory: /home/runner/work/LunaRepo/LunaRepo/touringmag-site/dist/
+20:20:16 [build] adapter: @astrojs/vercel
+20:20:16 [build] Collecting build info...
+20:20:16 [build] ✓ Completed in 848ms.
+20:20:16 [build] Building static entrypoints...
+20:20:18 [vite] ✓ built in 1.44s
+20:20:18 [build] ✓ Completed in 1.47s.
+ building client (vite) 
+20:20:18 [vite] transforming...
+20:20:18 [vite] ✓ 5 modules transformed.
+20:20:18 [vite] rendering chunks...
+20:20:18 [vite] ✓ built in 23ms
+ generating static routes 
+20:20:18 ▶ src/pages/about.astro
+20:20:18   └─ /about/index.html (+7ms) 
+20:20:18 ▶ src/pages/blog/[slug].astro
+The collection "blog" does not exist or is empty. Please check your content config file for errors.
+20:20:18 ▶ src/pages/blog/index.astro
+The collection "blog" does not exist or is empty. Please check your content config file for errors.
+20:20:18   └─ /blog/index.html (+2ms) 
+20:20:18 ▶ src/pages/contact.astro
+20:20:18   └─ /contact/index.html (+2ms) 
+20:20:18 ▶ src/pages/gear/[slug].astro
+20:20:18   ├─ /gear/advancedtech-motorcycle-gps-for-touring-adventures/index.html (+3ms) 
+20:20:18   ├─ /gear/all-weather-motorcycle-touring-jacket-review/index.html (+2ms) 
+20:20:18   ├─ /gear/boost-your-motorcycle-touring-experience-with-these-upgrades/index.html (+1ms) 
+20:20:18   ├─ /gear/comfortable-touring-motorcycle-saddle-for-long-rides/index.html (+1ms) 
+20:20:18   ├─ /gear/compact-adventure-compatible-waterproof-luggage-review/index.html (+1ms) 
+20:20:18   ├─ /gear/compact-and-versatile-motorcycle-touring-backpack/index.html (+1ms) 
+20:20:18   ├─ /gear/comprehensive-review-of-the-tourmaster-sentinel-rain-jacket/index.html (+2ms) 
+20:20:18   ├─ /gear/compact-rider-powerpack-review-for-touring-enthusiasts/index.html (+1ms) 
+20:20:18   ├─ /gear/discover-the-top-10-must-have-motorcycle-touring-accessories/index.html (+1ms) 
+20:20:18   ├─ /gear/durable-adventure-motorcycle-saddlebags/index.html (+1ms) 
+20:20:18   ├─ /gear/durable-saddlebag-for-long-distance-touring/index.html (+1ms) 
+20:20:18   ├─ /gear/enhance-your-ride--top-motorcycle-touring-upgrades-and-gear/index.html (+1ms) 
+20:20:18   ├─ /gear/essential-motorcycle-touring-upgrades-for-a-thrilling-adventure/index.html (+1ms) 
+20:20:18   ├─ /gear/essential-motorcycle-touring-upgrades-for-epic-long-rides/index.html (+1ms) 
+20:20:18   ├─ /gear/explore-fearless--upgrade-your-motorcycle-touring-experience/index.html (+1ms) 
+20:20:18   ├─ /gear/exploremax-motorcycle-touring-jacket-review/index.html (+1ms) 
+20:20:18   ├─ /gear/exploring-the-rugged-durability-of-the-adventurepro-saddlebags/index.html (+1ms) 
+20:20:18   ├─ /gear/multi-purpose-motorcycle-tank-bag-review/index.html (+1ms) 
+20:20:18   ├─ /gear/multi-purpose-motorcycle-touring-jacket-review/index.html (+1ms) 
+20:20:18   ├─ /gear/rev-it-sand-4-h2o-jacket-review/index.html (+1ms) 
+20:20:18   ├─ /gear/rev-up-your-adventure--top-motorcycle-touring-upgrades---gear/index.html (+1ms) 
+20:20:18   ├─ /gear/revpro-touring-saddlebag-review-for-long-distance-riders/index.html (+1ms) 
+20:20:18   ├─ /gear/revving-up-comfort-the-latest-motorcycle-touring-jacket-review/index.html (+1ms) 
+20:20:18   ├─ /gear/revzilla-terrain-motorcycle-jacket-review/index.html (+1ms) 
+20:20:18   ├─ /gear/rider-s-choice--versatile-motorcycle-touring-jacket/index.html (+1ms) 
+20:20:18   ├─ /gear/rugged-roadman-motorcycle-saddlebags-review/index.html (+1ms) 
+20:20:18   ├─ /gear/the-ultimate-comfort-motorcycle-touring-jacket-for-long-rides/index.html (+1ms) 
+20:20:18   ├─ /gear/the-ultimate-touring-helmet-for-long-distance-adventures/index.html (+1ms) 
+20:20:18   ├─ /gear/top-notch-touring-jacket-for-all-weather-adventures/index.html (+1ms) 
+20:20:18   ├─ /gear/top-pick-for-long-distance-riders-alpinestars-andes-v3-jacket-review/index.html (+1ms) 
+20:20:18   ├─ /gear/top-touring-helmet-for-comfort-and-safety/index.html (+1ms) 
+20:20:18   ├─ /gear/touringmag-gear-20250906114911/index.html (+1ms) 
+20:20:18   ├─ /gear/touringmag-s-review-of-the-adventurex-motorcycle-jacket/index.html (+1ms) 
+20:20:18   ├─ /gear/ultimate-comfort-touring-jacket-unveiled/index.html (+1ms) 
+20:20:18   ├─ /gear/ultimate-comfort-with-airhawk-motorcycle-seat-cushion/index.html (+1ms) 
+20:20:18   ├─ /gear/ultimate-comfort-with-the-aerotour-motorcycle-jacket/index.html (+1ms) 
+20:20:18   ├─ /gear/ultimate-guide-to-the-alpinestars-andes-v3-jacket/index.html (+1ms) 
+20:20:18   ├─ /gear/ultimate-touring-jacket-for-all-weather-riders/index.html (+1ms) 
+20:20:18   ├─ /gear/ultralight-touring-jacket-for-all-weather-adventures/index.html (+1ms) 
+20:20:18   ├─ /gear/versatile-adventure-motorcycle-touring-jacket-review/index.html (+1ms) 
+20:20:18   ├─ /gear/versatile-all-weather-motorcycle-touring-gloves/index.html (+1ms) 
+20:20:18   ├─ /gear/versatile-comfort-with-the-nomad-motorcycle-touring-jacket/index.html (+1ms) 
+20:20:18   ├─ /gear/versatile-motorcycle-touring-backpack-review/index.html (+1ms) 
+20:20:18   ├─ /gear/versatile-motorcycle-touring-gear-for-adventurous-riders/index.html (+1ms) 
+20:20:18   ├─ /gear/versatile-motorcycle-touring-jacket-for-all-weather-riders/index.html (+1ms) 
+20:20:18   ├─ /gear/versatile-rider-backpack-for-long-distance-adventures/index.html (+1ms) 
+20:20:18   ├─ /gear/versatile-roam-touring-jacket-review/index.html (+1ms) 
+20:20:18   ├─ /gear/versatile-touring-helmet-for-long-rides/index.html (+1ms) 
+20:20:18   ├─ /gear/versatile-touring-motorcycle-jacket-review/index.html (+1ms) 
+20:20:18   ├─ /gear/versatile-touring-saddlebags-for-motorcycle-enthusiasts/index.html (+1ms) 
+20:20:18   └─ /gear/waterproof-motorcycle-touring-jacket-review/index.html (+1ms) 
+20:20:18 ▶ src/pages/gear/index.astro
+20:20:18   └─ /gear/index.html (+9ms) 
+20:20:18 ▶ src/pages/guides/[slug].astro
+20:20:18   ├─ /guides/boost-your-journey--top-motorcycle-touring-upgrades/index.html (+5ms) 
+20:20:18   ├─ /guides/efficient-packing-tips-for-motorcycle-touring/index.html (+1ms) 
+20:20:18   ├─ /guides/discover-essential-motorcycle-touring-gear-for-a-smoother-ride/index.html (+1ms) 
+20:20:18   ├─ /guides/essential-guide-to-motorcycle-touring-essentials/index.html (+1ms) 
+20:20:18   ├─ /guides/essential-motorcycle-packing-guide-for-touring-riders/index.html (+1ms) 
+20:20:18   ├─ /guides/essential-motorcycle-touring-gear-checklist/index.html (+1ms) 
+20:20:18   ├─ /guides/essential-motorcycle-touring-gear-for-beginners/index.html (+1ms) 
+20:20:18   ├─ /guides/essential-motorcycle-touring-gear-packing-guide/index.html (+1ms) 
+20:20:18   ├─ /guides/essential-motorcycle-touring-guide-for-beginners/index.html (+1ms) 
+20:20:18   ├─ /guides/essential-motorcycle-touring-maintenance-guide/index.html (+1ms) 
+20:20:18   ├─ /guides/essential-motorcycle-touring-packing-guide/index.html (+1ms) 
+20:20:18   ├─ /guides/essential-motorcycle-touring-upgrades-for-a-smoother-adventure/index.html (+1ms) 
+20:20:18   ├─ /guides/essential-motorcycle-touring-upgrades-for-an-unforgettable-adventure/index.html (+1ms) 
+20:20:18   ├─ /guides/essential-motorcycle-touring-upgrades-for-an-unforgettable-ride/index.html (+1ms) 
+20:20:18   ├─ /guides/essential-tools-for-motorcycle-touring/index.html (+1ms) 
+20:20:18   ├─ /guides/expanding-horizons--top-upgrades-for-your-motorcycle-touring-experience/index.html (+1ms) 
+20:20:18   ├─ /guides/how-to-pack-for-a-motorcycle-touring-trip/index.html (+1ms) 
+20:20:18   ├─ /guides/how-to-pack-for-motorcycle-touring/index.html (+1ms) 
+20:20:18   ├─ /guides/how-to-plan-an-ultimate-motorcycle-tour-adventure/index.html (+1ms) 
+20:20:18   ├─ /guides/master-motorcycle-touring-checklist-creation/index.html (+1ms) 
+20:20:18   ├─ /guides/mastering-long-distance-motorcycle-touring/index.html (+1ms) 
+20:20:18   ├─ /guides/mastering-motorcycle-touring-for-beginners/index.html (+1ms) 
+20:20:18   ├─ /guides/mastering-motorcycle-touring-gps-setup/index.html (+1ms) 
+20:20:18   ├─ /guides/motorcycle-chain-maintenance-guide-for-touring-riders/index.html (+1ms) 
+20:20:18   ├─ /guides/motorcycle-touring-essentials-guide/index.html (+1ms) 
+20:20:18   ├─ /guides/motorcycle-touring-essentials-packing-guide/index.html (+1ms) 
+20:20:18   ├─ /guides/motorcycle-touring-gear-essentials-guide/index.html (+1ms) 
+20:20:18   ├─ /guides/motorcycle-touring-gear-guide-for-beginners/index.html (+1ms) 
+20:20:18   ├─ /guides/motorcycle-touring-gear-setup-guide/index.html (+1ms) 
+20:20:18   ├─ /guides/motorcycle-touring-packing-list-guide/index.html (+1ms) 
+20:20:18   ├─ /guides/motorcycle-touring-route-planning-guide/index.html (+1ms) 
+20:20:18   ├─ /guides/motorcycle-touring-with-gps-navigation-guide/index.html (+1ms) 
+20:20:18   ├─ /guides/packing-for-a-motorcycle-tour-the-ultimate-guide/index.html (+1ms) 
+20:20:18   ├─ /guides/packing-for-motorcycle-touring-simplified/index.html (+1ms) 
+20:20:18   ├─ /guides/packing-list-for-motorcycle-touring-adventures/index.html (+1ms) 
+20:20:18   ├─ /guides/packing-tips-for-motorcycle-touring-adventures/index.html (+1ms) 
+20:20:18   ├─ /guides/packing-tips-for-motorcycle-touring-riders/index.html (+1ms) 
+20:20:18   ├─ /guides/plan-a-successful-motorcycle-touring-adventure/index.html (+1ms) 
+20:20:18   ├─ /guides/planning-long-distance-motorcycle-tours/index.html (+1ms) 
+20:20:18   ├─ /guides/ride-in-style-with-the-top-motorcycle-touring-upgrades-of-2024/index.html (+1ms) 
+20:20:18   ├─ /guides/route-planning-for-motorcycle-touring-adventures/index.html (+1ms) 
+20:20:18   ├─ /guides/the-ultimate-guide-to-motorcycle-touring-essentials/index.html (+1ms) 
+20:20:18   ├─ /guides/touring-motorcycle-tire-maintenance-guide/index.html (+1ms) 
+20:20:18   ├─ /guides/touringmag-guides-20250906113811/index.html (+1ms) 
+20:20:18   ├─ /guides/ultimate-guide-to-motorcycle-touring-essentials/index.html (+1ms) 
+20:20:18   └─ /guides/ultimate-motorcycle-touring-preparation-guide/index.html (+1ms) 
+20:20:18 ▶ src/pages/guides/index.astro
+20:20:18   └─ /guides/index.html (+6ms) 
+20:20:18 λ src/pages/rss.xml.js
+The collection "blog" does not exist or is empty. Please check your content config file for errors.
+20:20:18   └─ /rss.xml (+2ms) 
+20:20:18 λ src/pages/sitemap.xml.ts
+The collection "blog" does not exist or is empty. Please check your content config file for errors.
+20:20:18   └─ /sitemap.xml (+1ms) 
+20:20:18 ▶ src/pages/upgrades/[slug].astro
+20:20:18   ├─ /upgrades/comfort-seat-upgrade-for-motorcycle-touring/index.html (+1ms) 
+20:20:18   ├─ /upgrades/enhance-comfort-with-motorcycle-touring-seats/index.html (+1ms) 
+20:20:18   ├─ /upgrades/enhance-comfort-with-touring-seat-upgrade/index.html (+1ms) 
+20:20:18   ├─ /upgrades/enhance-comfort-with-touring-seat-upgrades/index.html (+1ms) 
+20:20:18   ├─ /upgrades/enhance-touring-comfort-with-motorcycle-seat-upgrades/index.html (+1ms) 
+20:20:18   ├─ /upgrades/enhance-touring-experience-with-saddlebag-upgrades/index.html (+1ms) 
+20:20:18   ├─ /upgrades/enhance-touring-with-advanced-motorcycle-luggage-systems/index.html (+1ms) 
+20:20:18   ├─ /upgrades/enhance-touring-experience-with-windscreen-upgrades/index.html (+1ms) 
+20:20:18   ├─ /upgrades/enhance-touring-with-heated-motorcycle-grips/index.html (+1ms) 
+20:20:18   ├─ /upgrades/enhance-your-ride-with-a-touring-windscreen-upgrade/index.html (+1ms) 
+20:20:18   ├─ /upgrades/enhance-your-ride-with-led-lighting-upgrades/index.html (+1ms) 
+20:20:18   ├─ /upgrades/enhance-your-ride-with-motorcycle-touring-gps/index.html (+1ms) 
+20:20:18   ├─ /upgrades/enhanced-comfort-touring-seat-upgrade/index.html (+1ms) 
+20:20:18   ├─ /upgrades/enhanced-motorcycle-gps-for-better-touring/index.html (+1ms) 
+20:20:18   ├─ /upgrades/enhanced-motorcycle-windshield-upgrade-for-better-touring/index.html (+1ms) 
+20:20:18   ├─ /upgrades/enhanced-touring-motorcycle-seat-upgrade/index.html (+1ms) 
+20:20:18   ├─ /upgrades/enhancing-comfort-with-motorcycle-seat-upgrades/index.html (+1ms) 
+20:20:18   ├─ /upgrades/essential-gps-navigation-for-motorcycle-touring/index.html (+1ms) 
+20:20:18   ├─ /upgrades/essential-motorcycle-touring-gear-for-the-ultimate-road-adventure/index.html (+1ms) 
+20:20:18   ├─ /upgrades/essential-motorcycle-touring-gear-upgrades-for-ultimate-comfort/index.html (+1ms) 
+20:20:18   ├─ /upgrades/essential-upgrades-for-enhanced-motorcycle-touring-experiences/index.html (+1ms) 
+20:20:18   ├─ /upgrades/essential-upgrades-for-motorcycle-touring-adventure/index.html (+1ms) 
+20:20:18   ├─ /upgrades/gps-navigation-system-upgrade-for-touring-effortlessly/index.html (+1ms) 
+20:20:18   ├─ /upgrades/improve-comfort-with-motorcycle-touring-seats/index.html (+4ms) 
+20:20:18   ├─ /upgrades/install-a-touring-windshield-for-enhanced-comfort/index.html (+1ms) 
+20:20:18   ├─ /upgrades/install-gps-navigation-for-touring/index.html (+1ms) 
+20:20:18   ├─ /upgrades/kick-start-your-adventure--top-motorcycle-touring-upgrades/index.html (+1ms) 
+20:20:18   ├─ /upgrades/maximize-comfort--essential-motorcycle-touring-upgrades---gear/index.html (+1ms) 
+20:20:18   ├─ /upgrades/motorcycle-touring-navigation-system-upgrade/index.html (+1ms) 
+20:20:18   ├─ /upgrades/motorcycle-touring-seat-upgrade-for-comfort/index.html (+1ms) 
+20:20:18   ├─ /upgrades/motorcycle-touring-seat-upgrade/index.html (+1ms) 
+20:20:18   ├─ /upgrades/optimize-your-ride-with-motorcycle-touring-mirrors/index.html (+1ms) 
+20:20:18   ├─ /upgrades/revolutionize-your-rides-with-essential-motorcycle-touring-upgrades/index.html (+1ms) 
+20:20:18   ├─ /upgrades/saddlebag-upgrades-for-enhanced-motorcycle-touring/index.html (+1ms) 
+20:20:18   ├─ /upgrades/top-handlebars-for-motorcycle-touring/index.html (+1ms) 
+20:20:18   ├─ /upgrades/top-motorcycle-exhaust-upgrades-for-touring-enthusiasts/index.html (+1ms) 
+20:20:18   ├─ /upgrades/tour-better-with-enhanced-motorcycle-seats/index.html (+1ms) 
+20:20:18   ├─ /upgrades/touring-adventure-seat-upgrade-for-comfort/index.html (+1ms) 
+20:20:18   ├─ /upgrades/touringmag-guide-to-better-motorcycle-saddlebags/index.html (+1ms) 
+20:20:18   ├─ /upgrades/touringmag-guide-to-enhanced-motorcycle-windshields/index.html (+1ms) 
+20:20:18   ├─ /upgrades/touringmag-guide-to-motorcycle-tire-upgrades/index.html (+1ms) 
+20:20:18   ├─ /upgrades/touringmag-guide-to-upgrading-motorcycle-seats/index.html (+1ms) 
+20:20:18   ├─ /upgrades/touringmag-motorcycle-gps-navigation-upgrade/index.html (+1ms) 
+20:20:18   ├─ /upgrades/touringmag-motorcycle-gps-system-upgrade/index.html (+1ms) 
+20:20:18   ├─ /upgrades/touringmag-motorcycle-gps-upgrade-guide/index.html (+1ms) 
+20:20:18   ├─ /upgrades/touringmag-motorcycle-seat-upgrade-guide/index.html (+1ms) 
+20:20:18   ├─ /upgrades/touringmag-motorcycle-touring-windshield-upgrade-guide/index.html (+1ms) 
+20:20:18   ├─ /upgrades/touringmag-motorcycle-windshield-upgrade/index.html (+1ms) 
+20:20:18   ├─ /upgrades/upgrade-your-motorcycle-with-touring-saddlebags/index.html (+1ms) 
+20:20:18   └─ /upgrades/upgrade-your-touring-experience-with-enhanced-windshields/index.html (+1ms) 
+20:20:18 ▶ src/pages/upgrades/index.astro
+20:20:18   └─ /upgrades/index.html (+7ms) 
+20:20:18 ▶ src/pages/index.astro
+The collection "blog" does not exist or is empty. Please check your content config file for errors.
+20:20:18   └─ /index.html (+3ms) 
+20:20:18 ✓ Completed in 249ms.
+20:20:18 [@astrojs/sitemap] `sitemap-index.xml` created at `dist`
+20:20:18 [@astrojs/vercel] Copying static files to .vercel/output/static
+20:20:18 [build] 154 page(s) built in 2.89s
+20:20:18 [build] Complete!
+12s
+Run npx vercel --prod --token ***
+  
+npm warn exec The following package was not found and will be installed: vercel@47.0.5
+npm warn deprecated path-match@1.2.4: This package is archived and no longer maintained. For support, visit https://github.com/expressjs/express/discussions
+Vercel CLI 47.0.5
+> NOTE: The Vercel CLI now collects telemetry regarding usage of the CLI.
+> This information is used to shape the CLI roadmap and prioritize features.
+> You can learn more, including how to opt-out if you'd not like to participate in this program, by visiting the following URL:
+> https://vercel.com/docs/cli/about-telemetry
+Error: Command `vercel deploy` requires confirmation. Use option "--yes" to confirm.
+Error: Process completed with exit code 1.
+0s
+0s
+0s
+Post job cleanup.
+/usr/bin/git version
+git version 2.51.0
+Temporarily overriding HOME='/home/runner/work/_temp/0d019380-627d-4bd9-8c1c-67145dbef7a2' before making global git config changes
+Adding repository directory to the temporary git global config as a safe directory
+/usr/bin/git config --global --add safe.directory /home/runner/work/LunaRepo/LunaRepo
+/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+http.https://github.com/.extraheader
+/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+0s
+Cleaning up orphan processes
+Terminate orphan process: pid (2330) (node)
