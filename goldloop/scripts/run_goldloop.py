@@ -18,9 +18,17 @@ from bs4 import BeautifulSoup
 import io
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
-#  Project root
-ROOT_DIR = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT_DIR))
+from pathlib import Path
+import sys
+
+
+
+# Repo root (for touringmag-site paths)
+REPO_ROOT = GOLDLOOP_ROOT.parent
+
+# Always resolve to the goldloop/ folder (where modules/ lives)
+GOLDLOOP_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(GOLDLOOP_ROOT))
 
 from modules.affiliate_injector import load_affiliate_links, inject_links
 
