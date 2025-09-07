@@ -7,13 +7,12 @@ on:
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-latest   # or self-hosted if needed
+    runs-on: ubuntu-latest
 
     steps:
-      # Checkout repo
       - uses: actions/checkout@v4
 
-      # --- Goldloop (Python) ---
+      # Python: Goldloop generates markdown + images
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
@@ -29,22 +28,12 @@ jobs:
 
       - name: Verify generated Markdown files
         run: |
-          echo "=== Generated Content Check ==="
-          BLOG_COUNT=$(ls -1 touringmag-site/src/content/blog/*.md 2>/dev/null | wc -l)
-          GEAR_COUNT=$(ls -1 touringmag-site/src/content/gear/*.md 2>/dev/null | wc -l)
-          GUIDES_COUNT=$(ls -1 touringmag-site/src/content/guides/*.md 2>/dev/null | wc -l)
-          UPGRADES_COUNT=$(ls -1 touringmag-site/src/content/upgrades/*.md 2>/dev/null | wc -l)
+          ls -1 touringmag-site/src/content/blog/*.md | wc -l || true
+          ls -1 touringmag-site/src/content/gear/*.md | wc -l || true
+          ls -1 touringmag-site/src/content/guides/*.md | wc -l || true
+          ls -1 touringmag-site/src/content/upgrades/*.md | wc -l || true
 
-          echo "Blog posts: $BLOG_COUNT"
-          echo "Gear reviews: $GEAR_COUNT"
-          echo "Guides: $GUIDES_COUNT"
-          echo "Upgrades: $UPGRADES_COUNT"
-
-          if [ "$BLOG_COUNT" -eq 0 ]; then
-            echo "⚠️ Warning: No blog posts found."
-          fi
-
-      # --- TouringMag (Astro) ---
+      # Node: Astro build
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -58,7 +47,7 @@ jobs:
         run: npm run build
         working-directory: touringmag-site
 
-      # --- Deploy to Vercel ---
+      # Deploy to Vercel
       - name: Deploy to Vercel (Production)
-        run: npx vercel --prod --token ${{ secrets.VERCEL_TOKEN }}
+        run: npx vercel --prod --yes --token ${{ secrets.VERCEL_TOKEN }}
         working-directory: touringmag-site
