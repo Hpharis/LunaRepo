@@ -465,4 +465,4 @@ if __name__ == "__main__":
     else:
         run_for_mode(args.mode)
 
-    git_push()
+    # git_push()  <-- REMOVE THIS LINE
