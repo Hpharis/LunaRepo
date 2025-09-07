@@ -15,35 +15,17 @@ import shutil
 import yaml
 from fpdf import FPDF
 from bs4 import BeautifulSoup
-import io
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
 
-from pathlib import Path
-import sys
-
-
-
-# Repo root (for touringmag-site paths)
-REPO_ROOT = GOLDLOOP_ROOT.parent
+# -------------------------------------------------------------------
+# Path setup
+# -------------------------------------------------------------------
 
 # Always resolve to the goldloop/ folder (where modules/ lives)
 GOLDLOOP_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(GOLDLOOP_ROOT))
 
-from modules.affiliate_injector import load_affiliate_links, inject_links
-
-# Load env vars
-load_dotenv()
-
-#  Paths
-# Project root = repo root
-REPO_ROOT = Path(__file__).resolve().parents[2]
-
-# Goldloop root = where scripts/modules live
-GOLDLOOP_ROOT = REPO_ROOT / "goldloop"
-
-# Make goldloop root importable
-sys.path.insert(0, str(GOLDLOOP_ROOT))
+# Repo root = parent of goldloop (where touringmag-site lives)
+REPO_ROOT = GOLDLOOP_ROOT.parent
 
 # Paths
 DB_FILE      = GOLDLOOP_ROOT / "data" / "goldloop.db"
@@ -51,8 +33,12 @@ EXPORT_BASE  = REPO_ROOT / "touringmag-site" / "src" / "content"
 ASSETS_DIR   = REPO_ROOT / "touringmag-site" / "public" / "assets"
 LOG_FILE     = GOLDLOOP_ROOT / "logs" / "affiliate_log.txt"
 
+EXPORT_BASE.mkdir(parents=True, exist_ok=True)
+ASSETS_DIR.mkdir(parents=True, exist_ok=True)
+LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
 
-# API keys
+# Load env vars
+load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 UNSPLASH_ACCESS_KEY = os.getenv("UNSPLASH_ACCESS_KEY")
 
