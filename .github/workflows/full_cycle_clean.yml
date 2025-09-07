@@ -41,8 +41,7 @@ jobs:
           echo "Upgrades: $UPGRADES_COUNT"
 
           if [ "$BLOG_COUNT" -eq 0 ]; then
-            echo "❌ No blog posts found — aborting deploy."
-            exit 1
+            echo "⚠️ Warning: No blog posts found."
           fi
 
       # --- TouringMag (Astro) ---

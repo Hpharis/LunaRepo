@@ -28,10 +28,11 @@ from modules.affiliate_injector import load_affiliate_links, inject_links
 load_dotenv()
 
 #  Paths
-DB_FILE = ROOT_DIR / "data" / "goldloop.db"
-EXPORT_BASE = ROOT_DIR / "touringmag-site" / "src" / "content"
-ASSETS_DIR = ROOT_DIR / "touringmag-site" / "public" / "assets"
-LOG_FILE = ROOT_DIR / "logs" / "affiliate_log.txt"
+# Paths (relative to repo root)
+DB_FILE      = ROOT_DIR / "goldloop" / "data" / "goldloop.db"
+EXPORT_BASE  = ROOT_DIR / "touringmag-site" / "src" / "content"
+ASSETS_DIR   = ROOT_DIR / "touringmag-site" / "public" / "assets"
+LOG_FILE     = ROOT_DIR / "goldloop" / "logs" / "affiliate_log.txt"
 
 EXPORT_BASE.mkdir(parents=True, exist_ok=True)
 ASSETS_DIR.mkdir(parents=True, exist_ok=True)
