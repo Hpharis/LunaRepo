@@ -15,7 +15,7 @@ import shutil
 import yaml
 from fpdf import FPDF
 from bs4 import BeautifulSoup
-
+from modules.affiliate_injector import load_affiliate_links, inject_links
 # -------------------------------------------------------------------
 # Path setup
 # -------------------------------------------------------------------
