@@ -1,0 +1,64 @@
+# 🧠 Goldloop AI .gitignore
+
+# === Python artifacts ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg
+*.egg-info/
+dist/
+build/
+
+# === Virtual environments ===
+.env/
+.venv/
+venv/
+ENV/
+
+# === Environment configuration ===
+.env
+.env.*
+*.env
+
+# === Local DB and generated data ===
+*.db
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+
+# === Logs, cache, and scratch files ===
+*.log
+*.bak
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# === IDE & tooling ===
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+
+# === Node/npm leftovers (if frontend added later) ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# === Notebooks and temp data ===
+*.ipynb
+.ipynb_checkpoints/
+
+# === Deployment/compiled stuff ===
+__output__/
+*.tar
+*.zip
+*.gz
+*.tgz
+
+# Auto-generated blog content
+src/content/blog/*.md

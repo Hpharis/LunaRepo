@@ -1,0 +1,30 @@
+---
+export const prerender = false;
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+import Layout from '../../layouts/BaseLayout.astro'
+import { Astro } from 'astro'
+
+const { slug } = Astro.params
+const filePath = `./src/content/${slug}.md`
+const rawContent = fs.readFileSync(filePath, 'utf-8')
+const { data, content } = matter(rawContent)
+---
+
+<Layout>
+  <article class="prose prose-invert max-w-none">
+    <h1 class="text-3xl font-bold text-white mb-2">{data.title}</h1>
+    <p class="text-sm text-zinc-400 mb-6">{data.date}</p>
+
+    <div class="my-4 border-t border-zinc-800 py-4 text-sm text-zinc-500">
+      <p>This article may contain affiliate links. We may earn a commission if you click through and make a purchase.</p>
+    </div>
+
+    <div innerHTML={content} />
+
+    <div class="mt-8 border-t border-zinc-800 pt-4 text-center text-sm text-zinc-500">
+      <p>Have a product you'd like us to review? <a href="/contact" class="text-blue-400 hover:underline">Let us know</a>.</p>
+    </div>
+  </article>
+</Layout>

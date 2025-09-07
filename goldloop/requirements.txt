@@ -1,0 +1,14 @@
+openai==0.28
+pandas
+scikit-learn
+flask
+requests
+python-dotenv
+paypalrestsdk
+schedule
+pyyaml
+pillow
+sqlalchemy
+fpdf2
+beautifulsoup4
+

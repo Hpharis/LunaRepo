@@ -1,0 +1,69 @@
+---
+const {
+  title = "TouringMag",
+  description = "Motorcycle touring upgrades, gear reviews, and riding guides."
+} = Astro.props;
+---
+
+<html lang="en">
+  <head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6639891364095839"
+     crossorigin="anonymous"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="stylesheet" href="public/styles/global.css" />
+	
+  </head>
+  <body class="flex flex-col min-h-screen bg-neutral-950 text-gray-100 font-sans">
+    <!-- 🔝 Header -->
+<header style="background:black; border-bottom:1px solid #262626; position:sticky; top:0; z-index:50;">
+  <div style="max-width:1280px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:1rem 1.5rem;">
+    <!-- Left: Logo -->
+    <a href="/" style="display:flex; align-items:center;">
+<img 
+  src="/assets/touringmaglogo.png" 
+  alt="TouringMag Logo" 
+  style="height:100px; width:auto;" 
+/>
+
+    </a>
+
+    <!-- Center: Nav -->
+    <nav class="flex justify-center space-x-8 font-medium text-gray-300 text-sm md:text-lg uppercase tracking-wide">
+      <a href="/" class="hover:text-orange-400 transition">Home</a>
+      <a href="/blog" class="hover:text-orange-400 transition">Blog</a>
+      <a href="/gear" class="hover:text-orange-400 transition">Gear</a>
+      <a href="/upgrades" class="hover:text-orange-400 transition">Upgrades</a>
+      <a href="/guides" class="hover:text-orange-400 transition">Guides</a>
+      <a href="/about" class="hover:text-orange-400 transition">About</a>
+      <a href="/contact" class="hover:text-orange-400 transition">Contact</a>
+    </nav>
+  </div>
+</header>
+
+    <!-- 📰 Main content -->
+    <main class="flex-1 max-w-7xl mx-auto w-full px-6 py-10">
+      <slot />
+    </main>
+
+    <!-- 🔻 Footer -->
+    <footer class="bg-black border-t border-neutral-800 py-10 text-center text-gray-400 text-sm">
+      <!-- Newsletter -->
+      <div class="max-w-md mx-auto mb-8">
+        <h3 class="text-lg font-semibold text-white mb-3">Subscribe to TouringMag</h3>
+        <!--Zoho Campaigns Embed Button Starts--> <script type="text/javascript" src="https://xbxb-cmpzourl.maillist-manage.com/js/jquery-1.11.0.min.js"></script> <script type='text/javascript' src='https://xbxb-cmpzourl.maillist-manage.com/js/jquery-migrate-1.2.1.min.js'></script> <script type='text/javascript' src='https://xbxb-cmpzourl.maillist-manage.com/js/jquery-ui-1.10.4.custom.min.js'></script> <div id="zc_popoverlay" style="display:none;background: radial-gradient(50% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5) 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);height: 100%;left: 0px;overflow-x: hidden;overflow-y: auto;position: fixed;top: 0px;width: 100%;z-index: 2;"> <div style="height: 100%;display:table;margin: 0px auto;position: static;"> <div style="display: table-cell;vertical-align: middle;"> <div style="position:relative;background-color: #fff;box-shadow: 1px 2px 5px #555;border-radius: 3px;padding: 10px;margin: 15px 0px;" id="signUpFormInline"> </div> </div> </div> </div> <div id='embedLink'> <button type="button" purpose="nrmlBtn" class="" style="outline: none 0px; background-color: rgb(167, 167, 167); color: rgb(255, 255, 255); border: 1px solid rgb(153, 153, 153); font-size: 12px; padding: 10px; border-radius: 5px; font-family: Arial; text-align: center; width: auto; cursor: pointer;" changetype="EMBED_BUTTON" id="EMBED_BUTTON" name="EMBED_BUTTON" value="Join Our Newsletter" onclick="zc_loadForm('campaigns.zoho.com','https://xbxb-cmpzourl.maillist-manage.com/ua/Optin?od=11287eccd4f76f&amp;zx=132b4dca&amp;tD=1df223c5f60447a9&amp;sD=1df223c5f6082bd0')" formopenin="Popup" btntype="nrmlBtn"> <span class="zceditcnt">Join Our Newsletter</span> </button> </div> <input type='hidden' id='zc_Url' value='xbxb-cmpzourl.maillist-manage.com'/> <input type='hidden' id='zc_formIx' name='zc_formIx' value='3z53e6e04a648063aa84c1c9a1b423185f67a2892a87f66434e60d095ba5bc647d' > <input type='hidden' id='cmpZuid' name='zx' value='undefined' > <input type='hidden' id='viewFrom' name='viewFrom' value='BUTTON_ACTION' /> <input type='hidden' id='button_tc_codeVal' name='button_tc_codeVal' value='ZCFORMVIEW' /> <script type='text/javascript' src='https://xbxb-cmpzourl.maillist-manage.com/js/optin_min.js'></script> <script> var trackingText='ZCFORMVIEW'; var $ZC = jQuery.noConflict(); $ZC('[id=embedLink]').append("<input type='hidden' id='tc_code"+$ZC('[id=embedLink]').size()+"' value="+trackingText+">"); var elemSize = parseInt($ZC('[id=embedLink]').size())-1; var embedLink = $ZC($ZC('[id=embedLink]')[elemSize]).attr('href'); if(embedLink!=undefined && embedLink!=null && embedLink!='null'){ var dynamicCodeVal = $ZC("#tc_code"+$ZC('[id=embedLink]').size()).val(); embedLink = embedLink+'&trackingcode='+dynamicCodeVal; $ZC($ZC('[id=embedLink]')[elemSize]).attr('href',embedLink); $ZC('[id=button_tc_codeVal]').val(dynamicCodeVal); trackSignupEvent(dynamicCodeVal,'buttonView'); } </script> <!-- Zoho Campaigns Embed Button End -->
+      </div>
+
+      <p>&copy; 2025 TouringMag. All rights reserved.</p>
+      <p class="italic mt-2">Independently operated — not affiliated with Harley-Davidson.</p>
+
+      <div class="mt-4 space-x-6">
+        <a href="/about" class="hover:text-orange-400">About</a>
+        <a href="/contact" class="hover:text-orange-400">Contact</a>
+        <a href="/blog" class="hover:text-orange-400">Blog</a>
+      </div>
+    </footer>
+  </body>
+</html>

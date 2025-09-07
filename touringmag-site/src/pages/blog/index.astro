@@ -1,0 +1,42 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+const blogPosts = (await getCollection("blog")).sort(
+  (a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate)
+);
+
+const placeholder = "/assets/blog-placeholder-1.jpg";
+---
+
+<BaseLayout title="Blog | TouringMag" description="Explore TouringMag blog articles: reviews, upgrades, guides, and rider stories.">
+  <section style="max-width:1200px; margin:0 auto; padding:2rem 1rem;">
+    <h1 style="font-size:2rem; font-weight:700; color:#f97316; margin-bottom:2rem;">Latest Blog Articles</h1>
+
+    <!-- Grid of blog posts -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:2rem;">
+      {blogPosts.map((post) => (
+        <a href={`/blog/${post.slug}`} 
+           style="background:#111; border-radius:12px; overflow:hidden; text-decoration:none; color:inherit; display:flex; flex-direction:column; transition:transform 0.2s, box-shadow 0.2s;">
+          <img 
+            src={post.data.thumbnail || post.data.heroImage || placeholder} 
+            alt={post.data.title} 
+            style="width:100%; height:180px; object-fit:cover;" 
+          />
+          <div style="padding:1rem; flex:1; display:flex; flex-direction:column;">
+            <h2 style="font-size:1.2rem; font-weight:600; color:white; margin-bottom:0.5rem;">
+              {post.data.title}
+            </h2>
+            <p style="font-size:0.9rem; color:#bbb; flex:1;">
+              {post.data.summary}
+            </p>
+            <p style="font-size:0.8rem; color:#888; margin-top:0.5rem;">
+              <FormattedDate date={post.data.pubDate} />
+            </p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

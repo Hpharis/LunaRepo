@@ -1,0 +1,4 @@
+name,email,age,tags
+John Doe,john@example.com,45,harley;veteran
+Jane Smith,jane@example.com,38,harley;newbie
+Bob Brown,bob@example.com,52,harley;custom

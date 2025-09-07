@@ -1,0 +1,136 @@
+---
+import { getCollection, getEntryBySlug } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((p) => ({ params: { slug: p.slug } }));
+}
+
+const { slug } = Astro.params;
+const post = await getEntryBySlug("blog", slug);
+if (!post) throw new Error(`Blog post not found: ${slug}`);
+
+const placeholder = "/assets/blog-placeholder-1.jpg";
+const data = post.data;
+
+// ✅ compile MD/MDX to a component
+const { Content } = await post.render();
+
+// JSON-LD (ensure ISO strings)
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: data.title,
+  image: data.heroImage || placeholder,
+  description: data.summary || "",
+  datePublished: data.pubDate?.toISOString?.() ?? data.pubDate,
+  dateModified:
+    data.updatedDate?.toISOString?.() ??
+    data.pubDate?.toISOString?.() ??
+    data.updatedDate ??
+    data.pubDate,
+  author: { "@type": "Organization", name: "TouringMag" },
+  publisher: {
+    "@type": "Organization",
+    name: "TouringMag",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://touringmag.com/assets/touringmaglogo.png",
+    },
+  },
+};
+---
+
+<BaseLayout
+  title={`${data.title} – TouringMag`}
+  description={data.summary || ""}
+  image={data.heroImage || placeholder}
+>
+  <!-- 📰 Hero Banner -->
+  <div class="relative mb-12">
+    <img
+      src={data.heroImage || placeholder}
+      alt={data.title}
+      class="w-full h-72 md:h-96 object-cover rounded-lg shadow-lg"
+    />
+    <div
+      class="absolute inset-0 bg-black/50 rounded-lg flex flex-col items-center justify-center text-center px-6"
+    >
+      <h1 class="text-3xl md:text-5xl font-extrabold text-white drop-shadow mb-2">
+        {data.title}
+      </h1>
+      {data.summary && <p class="text-gray-200 max-w-2xl">{data.summary}</p>}
+      <p class="text-sm text-gray-400 mt-4">
+        {data.pubDate && <FormattedDate date={data.pubDate} />}
+        {data.updatedDate && (
+          <span class="ml-2 italic"
+            >(updated <FormattedDate date={data.updatedDate} />)</span
+          >
+        )}
+      </p>
+    </div>
+  </div>
+
+  <!-- Ad slot (only on production builds) -->
+  {import.meta.env.PROD && (
+    <>
+      <ins
+        class="adsbygoogle"
+        style="display:block; text-align:center; margin:2rem 0;"
+        data-ad-client="ca-pub-6639891364095839"
+        data-ad-slot="1234567890"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+      <script>
+        {(adsbygoogle = window.adsbygoogle || []).push({});}
+      </script>
+    </>
+  )}
+
+  <!-- 📰 Two-Column Layout -->
+  <div class="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+    <!-- Main article -->
+    <article class="prose prose-invert md:col-span-2 max-w-none">
+      <!-- ✅ Render compiled content -->
+      <Content />
+    </article>
+
+    <!-- Sidebar -->
+    <aside class="space-y-6">
+      <div class="bg-neutral-900 p-4 rounded-lg shadow">
+        <h3 class="text-lg font-semibold text-orange-500 mb-3">Related Reads</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/gear" class="hover:text-orange-400">Latest Gear Reviews</a></li>
+          <li><a href="/upgrades" class="hover:text-orange-400">Upgrade Ideas</a></li>
+          <li><a href="/guides" class="hover:text-orange-400">Touring Guides</a></li>
+        </ul>
+      </div>
+      <div class="bg-neutral-900 p-4 rounded-lg shadow">
+        <h3 class="text-lg font-semibold text-orange-500 mb-3">Subscribe</h3>
+        <form action="https://your-mailchimp-or-zoho-endpoint" method="POST" class="space-y-2">
+          <input
+            type="email"
+            name="EMAIL"
+            placeholder="Enter your email"
+            required
+            class="w-full p-2 rounded bg-neutral-950 border border-neutral-700 text-white"
+          />
+          <button type="submit" class="w-full bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ✅ JSON-LD Structured Data -->
+  <script type="application/ld+json">
+    {JSON.stringify(jsonLd)}
+  </script>
+</BaseLayout>
+

@@ -1,0 +1,76 @@
+---
+import { getCollection, getEntryBySlug } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const posts = await getCollection("upgrades");
+  return posts.map((p) => ({ params: { slug: p.slug } }));
+}
+
+const { slug } = Astro.params;
+const post = await getEntryBySlug("upgrades", slug);
+if (!post) throw new Error(`Upgrade post not found: ${slug}`);
+
+const { Content } = await post.render();
+const data = post.data;
+const placeholder = "/assets/blog-placeholder-1.jpg";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: data.title,
+  image: data.heroImage || placeholder,
+  description: data.summary || "",
+  datePublished: data.pubDate?.toISOString?.() ?? data.pubDate,
+  dateModified:
+    data.updatedDate?.toISOString?.() ??
+    data.pubDate?.toISOString?.() ??
+    data.updatedDate ??
+    data.pubDate,
+  author: { "@type": "Organization", name: "TouringMag" },
+};
+---
+
+<BaseLayout
+  title={`${data.title} – Upgrades | TouringMag`}
+  description={data.summary || ""}
+  image={data.heroImage || placeholder}
+>
+  <div class="relative mb-12">
+    <img src={data.heroImage || placeholder} alt={data.title}
+         class="w-full h-72 md:h-96 object-cover rounded-lg shadow-lg" />
+    <div class="absolute inset-0 bg-black/50 rounded-lg flex flex-col items-center justify-center text-center px-6">
+      <h1 class="text-3xl md:text-5xl font-extrabold text-white drop-shadow mb-2">{data.title}</h1>
+      {data.summary && <p class="text-gray-200 max-w-2xl">{data.summary}</p>}
+      <p class="text-sm text-gray-400 mt-4">
+        {data.pubDate && <FormattedDate date={data.pubDate} />}
+        {data.updatedDate && (
+          <span class="ml-2 italic">(updated <FormattedDate date={data.updatedDate} />)</span>
+        )}
+      </p>
+    </div>
+  </div>
+
+  {import.meta.env.PROD && (
+    <>
+      <ins class="adsbygoogle"
+           style="display:block; text-align:center; margin:2rem 0;"
+           data-ad-client="ca-pub-6639891364095839"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>{(adsbygoogle = window.adsbygoogle || []).push({});}</script>
+    </>
+  )}
+
+  <article class="prose prose-invert max-w-3xl mx-auto px-4">
+    <Content />
+  </article>
+
+  <script type="application/ld+json">
+    {JSON.stringify(jsonLd)}
+  </script>
+</BaseLayout>

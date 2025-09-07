@@ -1,0 +1,119 @@
+
+---
+import { getCollection, getEntryBySlug } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const posts = await getCollection("guides");
+  return posts.map((p) => ({ params: { slug: p.slug } }));
+}
+
+const { slug } = Astro.params;
+const post = await getEntryBySlug("guides", slug);
+if (!post) throw new Error(`Guide not found: ${slug}`);
+
+const { Content } = await post.render();
+const data = post.data;
+const placeholder = "/assets/blog-placeholder-1.jpg";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  headline: data.title,
+  image: data.heroImage || placeholder,
+  description: data.summary || "",
+  datePublished: data.pubDate?.toISOString?.() ?? data.pubDate,
+  dateModified:
+    data.updatedDate?.toISOString?.() ??
+    data.pubDate?.toISOString?.() ??
+    data.updatedDate ??
+    data.pubDate,
+  author: { "@type": "Organization", name: "TouringMag" },
+};
+---
+
+<BaseLayout
+  title={`${data.title} – Guide | TouringMag`}
+  description={data.summary || ""}
+  image={data.heroImage || placeholder}
+>
+  <!-- Hero -->
+  <div class="relative mb-12">
+    <img src={data.heroImage || placeholder} alt={data.title}
+         class="w-full h-72 md:h-96 object-cover rounded-lg shadow-lg" />
+    <div class="absolute inset-0 bg-black/50 rounded-lg flex flex-col items-center justify-center text-center px-6">
+      <h1 class="text-3xl md:text-5xl font-extrabold text-white drop-shadow mb-2">{data.title}</h1>
+      {data.summary && <p class="text-gray-200 max-w-2xl">{data.summary}</p>}
+      <p class="text-sm text-gray-400 mt-4">
+        {data.pubDate && <FormattedDate date={data.pubDate} />}
+        {data.updatedDate && (
+          <span class="ml-2 italic">(updated <FormattedDate date={data.updatedDate} />)</span>
+        )}
+      </p>
+      {data.difficulty && (
+        <p class="mt-2 text-orange-400 font-semibold text-lg">
+          Difficulty: {data.difficulty}
+        </p>
+      )}
+    </div>
+  </div>
+
+  <!-- Optional Ad Block -->
+  {import.meta.env.PROD && (
+    <>
+      <ins class="adsbygoogle"
+           style="display:block; text-align:center; margin:2rem 0;"
+           data-ad-client="ca-pub-6639891364095839"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>{(adsbygoogle = window.adsbygoogle || []).push({});}</script>
+    </>
+  )}
+
+ <!-- Main Content -->
+  <article class="prose prose-invert max-w-3xl mx-auto px-4">
+    <Content />
+
+    <!-- Extra Guide Features -->
+    <div class="mt-12 border-t border-neutral-800 pt-8 space-y-8">
+
+ 
+
+      <!-- Recommended Gear & Resources -->
+      <div>
+        <h2 class="text-xl font-bold text-orange-400 mb-3">Recommended Gear & Resources</h2>
+        <ul class="list-disc list-inside text-gray-300 space-y-2">
+          <li><a href="https://www.revzilla.com" class="text-blue-400 hover:underline" target="_blank">
+            Touring Jacket – Weatherproof comfort
+          </a></li>
+          <li><a href="https://www.amazon.com" class="text-blue-400 hover:underline" target="_blank">
+            GPS Navigation Mount – Keep your route in view
+          </a></li>
+          <li><a href="https://www.cyclegear.com" class="text-blue-400 hover:underline" target="_blank">
+            Tire Repair Kit – Be prepared for roadside fixes
+          </a></li>
+        </ul>
+        <p class="text-xs text-gray-500 mt-2">
+          Links may include affiliates that support TouringMag at no extra cost to you.
+        </p>
+      </div>
+
+      <!-- Print Option -->
+      <div>
+        <button onclick="window.print()" 
+          class="text-sm text-gray-400 hover:text-white border border-neutral-700 px-3 py-1 rounded">
+          🖨 Print this guide
+        </button>
+      </div>
+    </div>
+  </article>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+    {JSON.stringify(jsonLd)}
+  </script>
+</BaseLayout>

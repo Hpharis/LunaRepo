@@ -1,0 +1,27 @@
+{
+  "name": "touringmag-site",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "set CHOKIDAR_USEPOLLING=false && set NODE_OPTIONS=--max-old-space-size=8192 && astro dev --port 4322",
+    "build": "astro build",
+    "preview": "astro preview",
+    "start": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.4",
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/sitemap": "^3.1.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vercel": "^8.0.4",
+    "astro": "^5.12.3",
+    "tailwindcss": "^3.4.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38"
+  },
+  "overrides": {
+    "path-to-regexp": "^6.3.0"
+  }
+}

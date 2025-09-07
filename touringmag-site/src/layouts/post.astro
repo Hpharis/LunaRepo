@@ -1,0 +1,18 @@
+---
+const { title, summary, date } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <title>{title}</title>
+    <meta name="description" content={summary} />
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1>{title}</h1>
+        <p><em>{date}</em></p>
+        <slot />
+      </article>
+    </main>
+  </body>
+</html>
