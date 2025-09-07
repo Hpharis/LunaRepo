@@ -76,6 +76,7 @@ def enhance_with_ai(base_path, hero_path):
 
 def init_db():
     """Ensure the posts table exists before inserting."""
+    DB_FILE.parent.mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(DB_FILE)
     cur = conn.cursor()
     cur.execute("""
@@ -91,7 +92,6 @@ def init_db():
     """)
     conn.commit()
     conn.close()
-
 
 def slugify(title: str) -> str:
     return "".join(c.lower() if c.isalnum() else "-" for c in title).strip("-")
