@@ -62,3 +62,4 @@ __output__/
 
 # Auto-generated blog content
 src/content/blog/*.md
+.vercel
