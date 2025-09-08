@@ -1,10 +1,8 @@
-# modules/affiliate_injector.py
-
 import csv
 import re
 from pathlib import Path
 from dotenv import load_dotenv
-from shared.db import query, commit
+from goldloop.shared.db import query, commit
 
 load_dotenv()
 

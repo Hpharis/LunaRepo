@@ -15,7 +15,7 @@ import shutil
 import yaml
 from fpdf import FPDF
 from bs4 import BeautifulSoup
-from modules.affiliate_injector import load_affiliate_links, inject_links
+from goldloop.modules.affiliate_injector import load_affiliate_links, inject_links
 # -------------------------------------------------------------------
 # Path setup
 # -------------------------------------------------------------------
@@ -330,19 +330,42 @@ def log_affiliate_injection(slug, injected_details):
             f.write("  - No affiliate links injected.\n")
 
 
-def export_markdown(slug, title, summary, body, hero, thumb, collection="blog", extra_fields=None):
+from datetime import datetime, timezone
+from pathlib import Path
+from bs4 import BeautifulSoup
+from fpdf import FPDF
+
+def export_markdown(
+    slug,
+    title,
+    summary,
+    body,
+    hero,
+    thumb,
+    collection="blog",
+    extra_fields=None,
+    export_base=None
+):
+    """
+    Exports an article to markdown and, for guides, generates a checklist PDF.
+
+    Args:
+        slug (str): Article slug.
+        title (str): Article title.
+        summary (str): Article summary.
+        body (str): Article body (HTML or Markdown).
+        hero (str): Hero image path.
+        thumb (str): Thumbnail image path.
+        collection (str): Section/collection to export to.
+        extra_fields (dict): Any extra frontmatter fields.
+        export_base (Path): Base export directory (defaults to EXPORT_BASE global).
+    """
+    if export_base is None:
+        export_base = EXPORT_BASE  # Assume global variable if not provided
+
     pub_date = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
-    link_map = load_affiliate_links()
-    injected_details = []
-    for keyword, url in link_map:
-        updated_body, count = inject_links(body, [(keyword, url)])
-        if count > 0:
-            body = updated_body
-            injected_details.append((keyword, url, count))
-
-    log_affiliate_injection(slug, injected_details)
-
+    # --- Compose frontmatter ---
     frontmatter = f"""---
 title: "{title}"
 summary: "{summary}"
@@ -359,18 +382,14 @@ thumbnail: "{thumb}"
             else:
                 frontmatter += f"{key}: {val}\n"
 
-    if "affiliateLink" not in (extra_fields or {}) and injected_details:
-        frontmatter += f"affiliateLink: {injected_details[0][1]}\n"
-
     frontmatter += "---\n\n" + body
 
-    out_file = EXPORT_BASE / collection / f"{slug}.md"
+    # --- Write markdown file ---
+    out_file = export_base / collection / f"{slug}.md"
     out_file.parent.mkdir(parents=True, exist_ok=True)
     out_file.write_text(frontmatter, encoding="utf-8")
-    
-     # -------------------
-    # Extra: generate checklist PDF for guides
-    # -------------------
+
+    # --- Checklist PDF for guides ---
     if collection == "guides":
         try:
             soup = BeautifulSoup(body, "html.parser")
@@ -378,13 +397,19 @@ thumbnail: "{thumb}"
             if steps:
                 pdf = FPDF()
                 pdf.add_page()
-                pdf.set_font("Arial", "B", 16)
-                pdf.cell(0, 10, "TouringMag Checklist", ln=True, align="C")
+                pdf.set_font("helvetica", "B", 16)
+                pdf.cell(
+                    0, 10, "TouringMag Checklist",
+                    new_x=FPDF.XPos.LMARGIN, new_y=FPDF.YPos.NEXT, align="C"
+                )
                 pdf.ln(10)
 
-                pdf.set_font("Arial", size=12)
+                pdf.set_font("helvetica", size=12)
                 for i, step in enumerate(steps, start=1):
-                    pdf.cell(0, 10, f"[ ] {i}. {step}", ln=True)
+                    pdf.cell(
+                        0, 10, f"[ ] {i}. {step}",
+                        new_x=FPDF.XPos.LMARGIN, new_y=FPDF.YPos.NEXT
+                    )
 
                 checklist_path = out_file.parent / f"{slug}-checklist.pdf"
                 pdf.output(str(checklist_path))
