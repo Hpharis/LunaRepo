@@ -1,20 +1,26 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = "About TouringMag";
+const description = "Learn more about TouringMag—your independent source for touring gear, guides, reviews, and the voice of Luna and her editorial team.";
 ---
-
-<BaseLayout title="About TouringMag" description="Learn more about TouringMag, our mission, and what we offer to motorcycle touring enthusiasts.">
+<BaseLayout {title} {description}>
   <section class="max-w-3xl mx-auto py-12 text-gray-200">
     <h1 class="text-4xl font-bold text-orange-500 mb-6">About TouringMag</h1>
-    <p class="mb-4">
-      TouringMag is your independent hub for everything motorcycle touring — from gear reviews and upgrades to long-form riding guides. 
-      We are not affiliated with or endorsed by Harley-Davidson, but we proudly cover their motorcycles along with many others.
-    </p>
-    <p class="mb-4">
-      Our mission is simple: to give riders the insights, tools, and confidence they need to elevate every ride.
-      Whether you're planning your first road trip or upgrading your touring setup, you'll find trusted content here.
-    </p>
-    <p class="italic text-sm text-gray-400 mt-8">
-      This site is independently operated and not affiliated with Harley-Davidson Motor Company.
-    </p>
+    <p>Welcome to <strong>TouringMag</strong>—your one-stop hub for everything motorcycle touring. I’m <strong>H.W. Pharis</strong>, and I run this site with one goal: to fuel your passion for the open road through high-quality reviews, guides, and stories.</p>
+    <h2 class="mt-8 text-2xl">Our Mission</h2>
+    <p>TouringMag exists to enrich your riding experience... (rest of mission content)</p>
+    <h2 class="mt-8 text-2xl">Editorial Team — The Luna Collective</h2>
+    <ul class="list-disc ml-6">
+      <li><strong>Luna Rider</strong> writes gear reviews with hands-on insights.</li>
+      <li><strong>Luna Guide</strong> shares detailed how-tos and touring strategies.</li>
+      <li><strong>Luna Opinion</strong> explores trends and community reflections.</li>
+    </ul>
+    <h2 class="mt-8 text-2xl">Why TouringMag Stands Out</h2>
+    <ul class="list-disc ml-6">
+      <li><strong>Independent & rider-owned</strong>: No manufacturer affiliations.</li>
+      <li><strong>Ever-growing resource</strong>: Gear reviews, packing tips, riding guides.</li>
+      <li><strong>Community-driven future</strong>: Expanding Luna voices and destinations.</li>
+    </ul>
+    <p class="mt-8 italic">Thank you for making TouringMag part of your ride. Let’s explore the road ahead together.</p>
   </section>
 </BaseLayout>

@@ -10,18 +10,21 @@ const links = [
 ];
 ---
 
+<!-- src/components/Header.astro -->
 <header class="site-header">
-<nav class="hidden md:flex space-x-6 font-medium text-gray-700">
-  <a href="/" class="hover:text-orange-600">Home</a>
-  <a href="/blog" class="hover:text-orange-600">Blog</a>
-  <a href="/gear" class="hover:text-orange-600">Gear</a>
-  <a href="/upgrades" class="hover:text-orange-600">Upgrades</a>
-  <a href="/guides" class="hover:text-orange-600">Guides</a>
-  <a href="/about" class="hover:text-orange-600">About</a>
-  <a href="/contact" class="hover:text-orange-600">Contact</a>
-</nav>
-
-</header>
+  <div class="site-header__wrapper">
+    <a href="/" class="logo">
+      <img src="/public/assets/touringmaglogo.png" alt="TouringMag Logo" class="logo-img" />
+    </a>
+    <nav class="nav">
+      <a href="/">Home</a>
+      <a href="/blog">Blog</a>
+      <a href="/gear">Gear</a>
+      <a href="/upgrades">Upgrades</a>
+      <a href="/guides">Guides</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </nav>
 
 <style>
   .site-header {
@@ -29,6 +32,15 @@ const links = [
     padding: 1rem 2rem;
     border-bottom: 1px solid #222;
     margin-bottom: 2rem;
+  }
+  .site-header__wrapper {
+    align-items: center; /* Keeps everything vertically aligned */
+    height: 80px;        /* Optional: caps the header height */
+  }
+  .logo-img {
+    height: 100px;       /* For example, increase from 48px to 64px */
+    width: auto;        /* Maintain aspect ratio */
+    max-height: 100px;   /* Ensures the logo doesn't exceed this height */
   }
   nav ul {
     display: flex;
