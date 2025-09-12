@@ -1,7 +1,7 @@
 ---
 title: "Top Pick for Long-Distance Riders Alpinestars Andes V3 Jacket Review"
 summary: "Discover why the Alpinestars Andes V3 Jacket is essential for motorcyclists."
-pubDate: "2025-09-07T11:27:24+00:00"
+pubDate: "2025-08-10T22:18:37"
 heroImage: "/assets/top-pick-for-long-distance-riders-alpinestars-andes-v3-jacket-review-hero.jpg"
 thumbnail: "/assets/top-pick-for-long-distance-riders-alpinestars-andes-v3-jacket-review-thumb.jpg"
 rating: 4

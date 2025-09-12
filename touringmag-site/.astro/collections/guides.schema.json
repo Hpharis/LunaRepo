@@ -57,6 +57,12 @@
             "type": "string"
           }
         },
+        "author": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
         "difficulty": {
           "type": "string",
           "enum": [

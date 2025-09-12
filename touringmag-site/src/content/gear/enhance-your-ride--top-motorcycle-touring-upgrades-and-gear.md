@@ -1,7 +1,7 @@
 ---
 title: "Enhance Your Ride: Top Motorcycle Touring Upgrades and Gear"
 summary: "Embark on an adventurous journey through the best motorcycle touring upgrades and gear to enhance your riding experience."
-pubDate: "2025-08-31T13:15:03Z"
+pubDate: "2025-08-13T22:18:37"
 heroImage: "/assets/motorcycle-touring-upgrades.jpg"
 rating: 4
 affiliateLink: https://amazon.com/example

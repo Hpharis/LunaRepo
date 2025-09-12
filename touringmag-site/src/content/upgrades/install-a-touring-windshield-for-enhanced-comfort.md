@@ -1,7 +1,7 @@
 ---
 title: "Install a Touring Windshield for Enhanced Comfort"
 summary: "Upgrade your motorcycle with a touring windshield for improved comfort and wind protection."
-pubDate: "2025-09-06T14:38:04+00:00"
+pubDate: "2025-07-04T22:18:39"
 heroImage: "/assets/install-a-touring-windshield-for-enhanced-comfort-hero.jpg"
 thumbnail: "/assets/install-a-touring-windshield-for-enhanced-comfort-thumb.jpg"
 tags:

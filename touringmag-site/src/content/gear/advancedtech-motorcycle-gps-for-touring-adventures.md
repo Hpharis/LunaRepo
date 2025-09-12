@@ -1,7 +1,7 @@
 ---
 title: "AdvancedTech Motorcycle GPS for Touring Adventures"
 summary: "Discover the features and drawbacks of the AdvancedTech Motorcycle GPS."
-pubDate: "2025-09-07T12:07:01+00:00"
+pubDate: "2025-07-16T22:18:37"
 heroImage: "/assets/advancedtech-motorcycle-gps-for-touring-adventures-hero.jpg"
 thumbnail: "/assets/advancedtech-motorcycle-gps-for-touring-adventures-thumb.jpg"
 rating: 4

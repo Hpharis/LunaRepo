@@ -1,7 +1,7 @@
 ---
 title: "Essential Motorcycle Touring Upgrades for a Smoother Adventure"
 summary: "Discover must-have upgrades to enhance your motorcycle touring experience and ensure a smoother ride."
-pubDate: "2025-09-06T14:21:56+00:00"
+pubDate: "2025-07-23T22:18:38"
 heroImage: "/assets/essential-motorcycle-touring-upgrades-for-a-smoother-adventure-hero.jpg"
 thumbnail: "/assets/essential-motorcycle-touring-upgrades-for-a-smoother-adventure-thumb.jpg"
 difficulty: Beginner

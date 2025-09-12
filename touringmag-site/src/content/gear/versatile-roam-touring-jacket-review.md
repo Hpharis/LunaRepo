@@ -1,7 +1,7 @@
 ---
 title: "Versatile Roam Touring Jacket Review"
 summary: "Discover the ultimate touring jacket for motorcycle enthusiasts."
-pubDate: "2025-09-07T00:31:12+00:00"
+pubDate: "2025-06-22T22:18:38"
 heroImage: "/assets/versatile-roam-touring-jacket-review-hero.jpg"
 thumbnail: "/assets/versatile-roam-touring-jacket-review-thumb.jpg"
 rating: 5

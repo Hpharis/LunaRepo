@@ -1,7 +1,7 @@
 ---
 title: "Top Motorcycle Exhaust Upgrades for Touring Enthusiasts"
 summary: "Enhance your touring motorcycle's performance and style with top exhaust upgrades."
-pubDate: "2025-09-07T00:18:54+00:00"
+pubDate: "2025-08-08T22:18:39"
 heroImage: "/assets/top-motorcycle-exhaust-upgrades-for-touring-enthusiasts-hero.jpg"
 thumbnail: "/assets/top-motorcycle-exhaust-upgrades-for-touring-enthusiasts-thumb.jpg"
 tags:

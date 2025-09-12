@@ -1,7 +1,7 @@
 ---
 title: "Versatile Adventure Motorcycle Jacket Review"
 summary: "A comprehensive guide to the ultimate touring jacket for all seasons."
-pubDate: "2025-09-07T23:58:47+00:00"
+pubDate: "2025-06-22T22:18:37"
 heroImage: "/assets/versatile-adventure-motorcycle-jacket-review-hero.jpg"
 thumbnail: "/assets/versatile-adventure-motorcycle-jacket-review-thumb.jpg"
 rating: 5

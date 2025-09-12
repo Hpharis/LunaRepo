@@ -1,7 +1,7 @@
 ---
 title: "TouringMag Motorcycle Touring Windshield Upgrade Guide"
 summary: "Enhance your riding experience with a new motorcycle touring windshield."
-pubDate: "2025-09-07T12:18:56+00:00"
+pubDate: "2025-07-25T22:18:39"
 heroImage: "/assets/touringmag-motorcycle-touring-windshield-upgrade-guide-hero.jpg"
 thumbnail: "/assets/touringmag-motorcycle-touring-windshield-upgrade-guide-thumb.jpg"
 tags:

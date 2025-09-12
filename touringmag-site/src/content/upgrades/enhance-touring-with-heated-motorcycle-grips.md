@@ -1,7 +1,7 @@
 ---
 title: "Enhance Touring with Heated Motorcycle Grips"
 summary: "Discover how heated grips can transform your motorcycle touring experience with unmatched comfort and control."
-pubDate: "2025-09-07T13:21:55+00:00"
+pubDate: "2025-08-07T22:18:39"
 heroImage: "/assets/enhance-touring-with-heated-motorcycle-grips-hero.jpg"
 thumbnail: "/assets/enhance-touring-with-heated-motorcycle-grips-thumb.jpg"
 tags:

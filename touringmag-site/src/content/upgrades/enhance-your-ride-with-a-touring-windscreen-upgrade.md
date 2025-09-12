@@ -1,7 +1,7 @@
 ---
 title: "Enhance Your Ride with a Touring Windscreen Upgrade"
 summary: "Discover why upgrading to a touring windscreen can enhance your motorcycle adventures."
-pubDate: "2025-09-07T12:19:37+00:00"
+pubDate: "2025-09-02T22:18:39"
 heroImage: "/assets/enhance-your-ride-with-a-touring-windscreen-upgrade-hero.jpg"
 thumbnail: "/assets/enhance-your-ride-with-a-touring-windscreen-upgrade-thumb.jpg"
 tags:

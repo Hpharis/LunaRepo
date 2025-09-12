@@ -1,7 +1,7 @@
 ---
 title: "Revving Up Comfort The Latest Motorcycle Touring Jacket Review"
 summary: "Discover the ultimate balance of comfort and protection in motorcycle touring jackets designed for long rides."
-pubDate: "2025-09-07T12:08:22+00:00"
+pubDate: "2025-06-19T22:18:37"
 heroImage: "/assets/revving-up-comfort-the-latest-motorcycle-touring-jacket-review-hero.jpg"
 thumbnail: "/assets/revving-up-comfort-the-latest-motorcycle-touring-jacket-review-thumb.jpg"
 rating: 3

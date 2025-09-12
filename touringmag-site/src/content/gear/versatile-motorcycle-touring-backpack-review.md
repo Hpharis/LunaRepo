@@ -1,7 +1,7 @@
 ---
 title: "Versatile Motorcycle Touring Backpack Review"
 summary: "Discover the ideal backpack for long-distance motorcycle touring enthusiasts."
-pubDate: "2025-09-07T12:19:34+00:00"
+pubDate: "2025-07-23T22:18:37"
 heroImage: "/assets/versatile-motorcycle-touring-backpack-review-hero.jpg"
 thumbnail: "/assets/versatile-motorcycle-touring-backpack-review-thumb.jpg"
 rating: 4

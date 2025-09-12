@@ -9,6 +9,8 @@ const baseFields = {
   thumbnail: z.string().optional(),       // added
   affiliateLink: z.string().optional(),   // added
   tags: z.array(z.string()).optional(),   // shared
+  author: z.string().optional(),
+  role: z.string().optional(),
 };
 
 const blog = defineCollection({

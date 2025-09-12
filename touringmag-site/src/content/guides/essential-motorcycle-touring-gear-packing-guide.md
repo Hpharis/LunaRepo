@@ -1,7 +1,7 @@
 ---
 title: "Essential Motorcycle Touring Gear Packing Guide"
 summary: "Learn how to efficiently pack gear for motorcycle touring."
-pubDate: "2025-09-07T12:19:08+00:00"
+pubDate: "2025-06-24T22:18:38"
 heroImage: "/assets/essential-motorcycle-touring-gear-packing-guide-hero.jpg"
 thumbnail: "/assets/essential-motorcycle-touring-gear-packing-guide-thumb.jpg"
 difficulty: Beginner

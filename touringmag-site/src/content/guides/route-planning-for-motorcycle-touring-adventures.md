@@ -1,7 +1,7 @@
 ---
 title: "Route Planning for Motorcycle Touring Adventures"
 summary: "Discover essential tips for planning successful motorcycle touring routes."
-pubDate: "2025-09-07T12:17:48+00:00"
+pubDate: "2025-07-28T22:18:38"
 heroImage: "/assets/route-planning-for-motorcycle-touring-adventures-hero.jpg"
 thumbnail: "/assets/route-planning-for-motorcycle-touring-adventures-thumb.jpg"
 difficulty: Intermediate

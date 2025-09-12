@@ -1,7 +1,7 @@
 ---
 title: "Enhanced Motorcycle GPS for Better Touring"
 summary: "Improve your motorcycle touring experience with an advanced GPS system."
-pubDate: "2025-09-07T13:21:09+00:00"
+pubDate: "2025-08-02T22:18:39"
 heroImage: "/assets/enhanced-motorcycle-gps-for-better-touring-hero.jpg"
 thumbnail: "/assets/enhanced-motorcycle-gps-for-better-touring-thumb.jpg"
 tags:

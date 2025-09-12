@@ -1,7 +1,7 @@
 ---
 title: "Kick-start Your Adventure: Top Motorcycle Touring Upgrades"
 summary: "Explore our comprehensive guide on the leading motorcycle touring upgrades to elevate your road trip experience."
-pubDate: "2025-09-01T14:13:36+00:00"
+pubDate: "2025-06-25T22:18:39"
 heroImage: "/assets/kick-start-your-adventure--top-motorcycle-touring-upgrades-hero.jpg"
 thumbnail: "/assets/kick-start-your-adventure--top-motorcycle-touring-upgrades-thumb.jpg"
 tags:

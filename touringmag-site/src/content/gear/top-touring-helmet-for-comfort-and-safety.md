@@ -1,7 +1,7 @@
 ---
 title: "Top Touring Helmet for Comfort and Safety"
 summary: "Discover the ultimate helmet combining comfort, safety, and style for motorcycle tours."
-pubDate: "2025-09-07T12:55:49+00:00"
+pubDate: "2025-08-23T22:18:37"
 heroImage: "/assets/top-touring-helmet-for-comfort-and-safety-hero.jpg"
 thumbnail: "/assets/top-touring-helmet-for-comfort-and-safety-thumb.jpg"
 rating: 4

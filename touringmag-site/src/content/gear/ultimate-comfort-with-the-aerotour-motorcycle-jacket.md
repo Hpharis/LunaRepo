@@ -1,7 +1,7 @@
 ---
 title: "Ultimate Comfort with the AeroTour Motorcycle Jacket"
 summary: "Discover unmatched comfort and protection with the AeroTour Motorcycle Jacket."
-pubDate: "2025-09-06T15:16:55+00:00"
+pubDate: "2025-06-13T22:18:37"
 heroImage: "/assets/ultimate-comfort-with-the-aerotour-motorcycle-jacket-hero.jpg"
 thumbnail: "/assets/ultimate-comfort-with-the-aerotour-motorcycle-jacket-thumb.jpg"
 rating: 5

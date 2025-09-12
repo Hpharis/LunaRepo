@@ -1,7 +1,7 @@
 ---
 title: "Mastering Motorcycle Touring for Beginners"
 summary: "Learn essential tips and techniques for a successful motorcycle tour."
-pubDate: "2025-09-07T11:27:33+00:00"
+pubDate: "2025-06-20T22:18:38"
 heroImage: "/assets/mastering-motorcycle-touring-for-beginners-hero.jpg"
 thumbnail: "/assets/mastering-motorcycle-touring-for-beginners-thumb.jpg"
 difficulty: Intermediate

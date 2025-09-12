@@ -1,7 +1,7 @@
 ---
 title: "Upgrade Your Touring Experience with Enhanced Windshields"
 summary: "Discover the importance of windshields in motorcycle touring and improve your rides with our top picks."
-pubDate: "2025-09-06T14:50:36+00:00"
+pubDate: "2025-09-01T22:18:39"
 heroImage: "/assets/upgrade-your-touring-experience-with-enhanced-windshields-hero.jpg"
 thumbnail: "/assets/upgrade-your-touring-experience-with-enhanced-windshields-thumb.jpg"
 tags:

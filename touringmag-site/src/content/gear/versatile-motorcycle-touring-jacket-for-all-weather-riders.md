@@ -1,7 +1,7 @@
 ---
 title: "Versatile Motorcycle Touring Jacket for All-Weather Riders"
 summary: "Discover the perfect motorcycle touring jacket for versatile all-weather riding."
-pubDate: "2025-09-06T23:39:09+00:00"
+pubDate: "2025-08-09T22:18:37"
 heroImage: "/assets/versatile-motorcycle-touring-jacket-for-all-weather-riders-hero.jpg"
 thumbnail: "/assets/versatile-motorcycle-touring-jacket-for-all-weather-riders-thumb.jpg"
 rating: 4

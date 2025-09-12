@@ -1,7 +1,7 @@
 ---
 title: "Enhance Your Ride with LED Lighting Upgrades"
 summary: "Discover the benefits of upgrading your motorcycle with LED lighting for improved visibility and style."
-pubDate: "2025-09-07T12:57:46+00:00"
+pubDate: "2025-08-10T22:18:39"
 heroImage: "/assets/enhance-your-ride-with-led-lighting-upgrades-hero.jpg"
 thumbnail: "/assets/enhance-your-ride-with-led-lighting-upgrades-thumb.jpg"
 tags:

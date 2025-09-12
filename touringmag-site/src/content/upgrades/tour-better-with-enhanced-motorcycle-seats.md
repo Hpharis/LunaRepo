@@ -1,7 +1,7 @@
 ---
 title: "Tour Better with Enhanced Motorcycle Seats"
 summary: "Discover how upgrading your motorcycle seat can improve comfort and endurance on long tours."
-pubDate: "2025-09-07T12:51:05+00:00"
+pubDate: "2025-06-11T22:18:39"
 heroImage: "/assets/tour-better-with-enhanced-motorcycle-seats-hero.jpg"
 thumbnail: "/assets/tour-better-with-enhanced-motorcycle-seats-thumb.jpg"
 tags:

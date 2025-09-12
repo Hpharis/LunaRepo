@@ -1,7 +1,7 @@
 ---
 title: "Master Motorcycle Touring Checklist Creation"
 summary: "Create the ultimate checklist for motorcycle touring adventures."
-pubDate: "2025-09-07T12:54:54+00:00"
+pubDate: "2025-07-07T22:18:38"
 heroImage: "/assets/master-motorcycle-touring-checklist-creation-hero.jpg"
 thumbnail: "/assets/master-motorcycle-touring-checklist-creation-thumb.jpg"
 difficulty: Beginner

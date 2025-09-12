@@ -1,7 +1,7 @@
 ---
 title: "TouringMag's Review of the AdventureX Motorcycle Jacket"
 summary: "Discover the perfect balance of comfort and protection with the AdventureX Jacket."
-pubDate: "2025-09-07T12:54:20+00:00"
+pubDate: "2025-08-13T22:18:37"
 heroImage: "/assets/touringmag-s-review-of-the-adventurex-motorcycle-jacket-hero.jpg"
 thumbnail: "/assets/touringmag-s-review-of-the-adventurex-motorcycle-jacket-thumb.jpg"
 rating: 5

@@ -1,7 +1,7 @@
 ---
 title: "How to Pack for a Motorcycle Touring Trip"
 summary: "This guide provides essential packing tips for motorcycle touring enthusiasts."
-pubDate: "2025-09-07T03:28:17+00:00"
+pubDate: "2025-08-01T22:18:38"
 heroImage: "/assets/how-to-pack-for-a-motorcycle-touring-trip-hero.jpg"
 thumbnail: "/assets/how-to-pack-for-a-motorcycle-touring-trip-thumb.jpg"
 difficulty: Advanced

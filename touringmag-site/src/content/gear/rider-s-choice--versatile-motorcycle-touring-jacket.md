@@ -1,7 +1,7 @@
 ---
 title: "Rider's Choice: Versatile Motorcycle Touring Jacket"
 summary: "Discover the ultimate all-weather motorcycle touring jacket for avid adventurers."
-pubDate: "2025-09-06T15:04:25+00:00"
+pubDate: "2025-08-14T22:18:37"
 heroImage: "/assets/rider-s-choice--versatile-motorcycle-touring-jacket-hero.jpg"
 thumbnail: "/assets/rider-s-choice--versatile-motorcycle-touring-jacket-thumb.jpg"
 rating: 3

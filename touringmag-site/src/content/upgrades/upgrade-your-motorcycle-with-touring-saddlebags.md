@@ -1,7 +1,7 @@
 ---
 title: "Upgrade Your Motorcycle with Touring Saddlebags"
 summary: "Enhance your motorcycle touring experience with spacious and durable saddlebags."
-pubDate: "2025-09-07T00:31:15+00:00"
+pubDate: "2025-08-13T22:18:39"
 heroImage: "/assets/upgrade-your-motorcycle-with-touring-saddlebags-hero.jpg"
 thumbnail: "/assets/upgrade-your-motorcycle-with-touring-saddlebags-thumb.jpg"
 tags:

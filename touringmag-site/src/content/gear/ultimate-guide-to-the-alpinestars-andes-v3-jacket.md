@@ -1,7 +1,7 @@
 ---
 title: "Ultimate Guide to the Alpinestars Andes V3 Jacket"
 summary: "Discover the Alpinestars Andes V3, a versatile touring motorcycle jacket."
-pubDate: "2025-09-06T20:04:42+00:00"
+pubDate: "2025-06-21T22:18:37"
 heroImage: "/assets/ultimate-guide-to-the-alpinestars-andes-v3-jacket-hero.jpg"
 thumbnail: "/assets/ultimate-guide-to-the-alpinestars-andes-v3-jacket-thumb.jpg"
 rating: 4

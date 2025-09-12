@@ -1,7 +1,7 @@
 ---
 title: "TouringMag Motorcycle GPS Navigation Upgrade"
 summary: "Upgrade your touring experience with advanced motorcycle GPS systems."
-pubDate: "2025-09-07T12:18:15+00:00"
+pubDate: "2025-08-05T22:18:39"
 heroImage: "/assets/touringmag-motorcycle-gps-navigation-upgrade-hero.jpg"
 thumbnail: "/assets/touringmag-motorcycle-gps-navigation-upgrade-thumb.jpg"
 tags:

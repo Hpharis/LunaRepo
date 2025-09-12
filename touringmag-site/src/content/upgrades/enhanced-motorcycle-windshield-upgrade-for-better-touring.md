@@ -1,7 +1,7 @@
 ---
 title: "Enhanced Motorcycle Windshield Upgrade for Better Touring"
 summary: "Improve wind protection and comfort with an upgraded motorcycle windshield."
-pubDate: "2025-09-06T15:16:58+00:00"
+pubDate: "2025-07-25T22:18:39"
 heroImage: "/assets/enhanced-motorcycle-windshield-upgrade-for-better-touring-hero.jpg"
 thumbnail: "/assets/enhanced-motorcycle-windshield-upgrade-for-better-touring-thumb.jpg"
 tags:

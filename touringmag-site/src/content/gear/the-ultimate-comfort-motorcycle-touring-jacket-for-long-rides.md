@@ -1,7 +1,7 @@
 ---
 title: "The Ultimate Comfort Motorcycle Touring Jacket for Long Rides"
 summary: "Discover unparalleled comfort and protection with the latest touring jacket."
-pubDate: "2025-09-07T13:21:06+00:00"
+pubDate: "2025-08-29T22:18:37"
 heroImage: "/assets/the-ultimate-comfort-motorcycle-touring-jacket-for-long-rides-hero.jpg"
 thumbnail: "/assets/the-ultimate-comfort-motorcycle-touring-jacket-for-long-rides-thumb.jpg"
 rating: 5

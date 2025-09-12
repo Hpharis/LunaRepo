@@ -1,7 +1,7 @@
 ---
 title: "Top-Notch Touring Jacket for All-Weather Adventures"
 summary: "Discover the ultimate touring jacket designed for motorcycle enthusiasts seeking comfort and protection."
-pubDate: "2025-09-06T15:31:17+00:00"
+pubDate: "2025-09-04T22:18:37"
 heroImage: "/assets/top-notch-touring-jacket-for-all-weather-adventures-hero.jpg"
 thumbnail: "/assets/top-notch-touring-jacket-for-all-weather-adventures-thumb.jpg"
 rating: 3

@@ -1,7 +1,7 @@
 ---
 title: "TouringMag Motorcycle Seat Upgrade Guide"
 summary: "Enhance comfort and performance with a TouringMag motorcycle seat upgrade."
-pubDate: "2025-09-07T12:20:12+00:00"
+pubDate: "2025-07-27T22:18:39"
 heroImage: "/assets/touringmag-motorcycle-seat-upgrade-guide-hero.jpg"
 thumbnail: "/assets/touringmag-motorcycle-seat-upgrade-guide-thumb.jpg"
 tags:

@@ -1,7 +1,7 @@
 ---
 title: "Install GPS Navigation for Touring"
 summary: "Enhance your motorcycle touring experience with reliable GPS navigation."
-pubDate: "2025-09-06T14:43:17+00:00"
+pubDate: "2025-07-26T22:18:39"
 heroImage: "/assets/install-gps-navigation-for-touring-hero.jpg"
 thumbnail: "/assets/install-gps-navigation-for-touring-thumb.jpg"
 tags:

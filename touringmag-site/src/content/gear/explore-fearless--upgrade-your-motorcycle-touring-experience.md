@@ -1,7 +1,7 @@
 ---
 title: "Explore Fearless: Upgrade Your Motorcycle Touring Experience"
 summary: "From gear overhauls to tech upgrades, learn how to transform your motorcycle touring experience."
-pubDate: "2025-09-01T13:48:43+00:00"
+pubDate: "2025-08-17T22:18:37"
 heroImage: "/assets/explore-fearless--upgrade-your-motorcycle-touring-experience-hero.jpg"
 thumbnail: "/assets/explore-fearless--upgrade-your-motorcycle-touring-experience-thumb.jpg"
 rating: 3

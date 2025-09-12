@@ -1,7 +1,7 @@
 ---
 title: "GPS Navigation System Upgrade for Touring Effortlessly"
 summary: "Enhance your motorcycle touring experience with a reliable GPS navigation system for stress-free travels."
-pubDate: "2025-09-06T15:04:28+00:00"
+pubDate: "2025-06-23T22:18:39"
 heroImage: "/assets/gps-navigation-system-upgrade-for-touring-effortlessly-hero.jpg"
 thumbnail: "/assets/gps-navigation-system-upgrade-for-touring-effortlessly-thumb.jpg"
 tags:

@@ -1,7 +1,7 @@
 ---
 title: "Ultimate Protection with the Armadillo Motorcycle Jacket"
 summary: "Discover unmatched protection and style with the Armadillo Motorcycle Jacket"
-pubDate: "2025-09-07T23:40:11+00:00"
+pubDate: "2025-08-24T22:18:37"
 heroImage: "/assets/ultimate-protection-with-the-armadillo-motorcycle-jacket-hero.jpg"
 thumbnail: "/assets/ultimate-protection-with-the-armadillo-motorcycle-jacket-thumb.jpg"
 rating: 3

@@ -1,7 +1,7 @@
 ---
 title: "Essential Upgrades for Enhanced Motorcycle Touring Experiences"
 summary: "Discover top motorcycle touring upgrades for a safer and more enjoyable ride."
-pubDate: "2025-09-05T00:58:31+00:00"
+pubDate: "2025-09-05T22:18:39"
 heroImage: "/assets/essential-upgrades-for-enhanced-motorcycle-touring-experiences-hero.jpg"
 thumbnail: "/assets/essential-upgrades-for-enhanced-motorcycle-touring-experiences-thumb.jpg"
 tags:

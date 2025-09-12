@@ -1,7 +1,7 @@
 ---
 title: "Mastering Long-Distance Motorcycle Touring"
 summary: "A comprehensive guide for an unforgettable long-distance motorcycle tour."
-pubDate: "2025-09-06T14:29:32+00:00"
+pubDate: "2025-08-25T22:18:38"
 heroImage: "/assets/mastering-long-distance-motorcycle-touring-hero.jpg"
 thumbnail: "/assets/mastering-long-distance-motorcycle-touring-thumb.jpg"
 difficulty: Advanced

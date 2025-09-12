@@ -1,7 +1,7 @@
 ---
 title: "Enhanced Touring Motorcycle Seat Upgrade"
 summary: "Discover how an upgraded motorcycle seat enhances your touring experience."
-pubDate: "2025-09-07T12:54:36+00:00"
+pubDate: "2025-06-29T22:18:39"
 heroImage: "/assets/enhanced-touring-motorcycle-seat-upgrade-hero.jpg"
 thumbnail: "/assets/enhanced-touring-motorcycle-seat-upgrade-thumb.jpg"
 tags:

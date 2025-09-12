@@ -1,7 +1,7 @@
 ---
 title: "Essential Motorcycle Touring Upgrades for an Unforgettable Adventure"
 summary: "Discover must-have upgrades that enhance comfort, safety, and performance for your next motorcycle tour."
-pubDate: "2025-09-04T19:40:37+00:00"
+pubDate: "2025-06-19T22:18:38"
 heroImage: "/assets/essential-motorcycle-touring-upgrades-for-an-unforgettable-adventure-hero.jpg"
 thumbnail: "/assets/essential-motorcycle-touring-upgrades-for-an-unforgettable-adventure-thumb.jpg"
 difficulty: Advanced

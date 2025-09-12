@@ -1,7 +1,7 @@
 ---
 title: "Enhance Comfort with Motorcycle Touring Seats"
 summary: "Upgrade to touring seats for a more comfortable long-distance ride."
-pubDate: "2025-09-07T13:23:17+00:00"
+pubDate: "2025-08-25T22:18:38"
 heroImage: "/assets/enhance-comfort-with-motorcycle-touring-seats-hero.jpg"
 thumbnail: "/assets/enhance-comfort-with-motorcycle-touring-seats-thumb.jpg"
 tags:

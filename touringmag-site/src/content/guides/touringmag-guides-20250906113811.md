@@ -1,7 +1,7 @@
 ---
 title: "TouringMag Guides 20250906113811"
 summary: "TouringMag guides article."
-pubDate: "2025-09-06T14:38:11+00:00"
+pubDate: "2025-08-21T22:18:38"
 heroImage: "/assets/touringmag-guides-20250906113811-hero.jpg"
 thumbnail: "/assets/touringmag-guides-20250906113811-thumb.jpg"
 difficulty: Intermediate

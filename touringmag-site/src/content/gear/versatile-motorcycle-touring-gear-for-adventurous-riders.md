@@ -1,7 +1,7 @@
 ---
 title: "Versatile Motorcycle Touring Gear for Adventurous Riders"
 summary: "Discover the perfect gear for long-distance motorcycle tours with our expert review."
-pubDate: "2025-09-07T13:21:49+00:00"
+pubDate: "2025-07-18T22:18:37"
 heroImage: "/assets/versatile-motorcycle-touring-gear-for-adventurous-riders-hero.jpg"
 thumbnail: "/assets/versatile-motorcycle-touring-gear-for-adventurous-riders-thumb.jpg"
 rating: 4

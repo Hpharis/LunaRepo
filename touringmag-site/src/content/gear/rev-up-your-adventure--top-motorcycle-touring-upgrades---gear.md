@@ -1,7 +1,7 @@
 ---
 title: "Rev up Your Adventure: Top Motorcycle Touring Upgrades & Gear"
 summary: "Explore the best motorcycle touring upgrades and gear to elevate your road trip experience."
-pubDate: "2025-08-31T12:39:09Z"
+pubDate: "2025-08-30T22:18:37"
 heroImage: "/assets/motorcycle-touring-upgrades.jpg"
 rating: 4
 affiliateLink: https://amazon.com/example

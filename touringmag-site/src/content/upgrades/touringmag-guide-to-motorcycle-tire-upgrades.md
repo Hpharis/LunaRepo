@@ -1,7 +1,7 @@
 ---
 title: "TouringMag Guide to Motorcycle Tire Upgrades"
 summary: "Enhance your touring bike's performance with upgraded tires for better grip."
-pubDate: "2025-09-06T23:57:34+00:00"
+pubDate: "2025-07-03T22:18:39"
 heroImage: "/assets/touringmag-guide-to-motorcycle-tire-upgrades-hero.jpg"
 thumbnail: "/assets/touringmag-guide-to-motorcycle-tire-upgrades-thumb.jpg"
 tags:

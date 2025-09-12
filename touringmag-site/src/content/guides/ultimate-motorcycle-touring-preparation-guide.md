@@ -1,7 +1,7 @@
 ---
 title: "Ultimate Motorcycle Touring Preparation Guide"
 summary: "Essential steps and tips for an unforgettable motorcycle touring experience"
-pubDate: "2025-09-06T14:49:21+00:00"
+pubDate: "2025-08-29T22:18:38"
 heroImage: "/assets/ultimate-motorcycle-touring-preparation-guide-hero.jpg"
 thumbnail: "/assets/ultimate-motorcycle-touring-preparation-guide-thumb.jpg"
 difficulty: Beginner

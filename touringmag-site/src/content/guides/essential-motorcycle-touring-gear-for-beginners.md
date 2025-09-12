@@ -1,7 +1,7 @@
 ---
 title: "Essential Motorcycle Touring Gear for Beginners"
 summary: "Discover the must-have gear for a safe and enjoyable motorcycle tour."
-pubDate: "2025-09-06T15:04:34+00:00"
+pubDate: "2025-08-26T22:18:38"
 heroImage: "/assets/essential-motorcycle-touring-gear-for-beginners-hero.jpg"
 thumbnail: "/assets/essential-motorcycle-touring-gear-for-beginners-thumb.jpg"
 difficulty: Beginner

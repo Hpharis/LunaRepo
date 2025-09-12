@@ -1,7 +1,7 @@
 ---
 title: "Essential Upgrades for Motorcycle Touring Adventure"
 summary: "Discover top motorcycle touring upgrades and gear essential for your next road adventure."
-pubDate: "2025-08-31T12:40:59Z"
+pubDate: "2025-06-20T22:18:39"
 heroImage: "/assets/motorcycle-touring-upgrades.jpg"
 ---
 

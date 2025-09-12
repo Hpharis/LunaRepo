@@ -1,7 +1,7 @@
 ---
 title: "Enhancing Comfort with Motorcycle Seat Upgrades"
 summary: "Upgrade your motorcycle seat for increased comfort on long tours."
-pubDate: "2025-09-07T12:51:42+00:00"
+pubDate: "2025-06-22T22:18:39"
 heroImage: "/assets/enhancing-comfort-with-motorcycle-seat-upgrades-hero.jpg"
 thumbnail: "/assets/enhancing-comfort-with-motorcycle-seat-upgrades-thumb.jpg"
 tags:

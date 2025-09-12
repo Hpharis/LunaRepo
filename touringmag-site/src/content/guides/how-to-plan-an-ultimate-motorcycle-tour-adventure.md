@@ -1,7 +1,7 @@
 ---
 title: "How to Plan an Ultimate Motorcycle Tour Adventure"
 summary: "Discover essential steps to plan an exhilarating motorcycle touring experience."
-pubDate: "2025-09-07T13:22:03+00:00"
+pubDate: "2025-07-18T22:18:38"
 heroImage: "/assets/how-to-plan-an-ultimate-motorcycle-tour-adventure-hero.jpg"
 thumbnail: "/assets/how-to-plan-an-ultimate-motorcycle-tour-adventure-thumb.jpg"
 difficulty: Advanced

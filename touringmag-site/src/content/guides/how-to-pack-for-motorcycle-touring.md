@@ -1,7 +1,7 @@
 ---
 title: "How to Pack for Motorcycle Touring"
 summary: "Learn efficient packing techniques for a successful motorcycle tour"
-pubDate: "2025-09-07T12:56:28+00:00"
+pubDate: "2025-06-29T22:18:38"
 heroImage: "/assets/how-to-pack-for-motorcycle-touring-hero.jpg"
 thumbnail: "/assets/how-to-pack-for-motorcycle-touring-thumb.jpg"
 difficulty: Beginner

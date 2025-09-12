@@ -1,7 +1,7 @@
 ---
 title: "Versatile Comfort with the Nomad Motorcycle Touring Jacket"
 summary: "Discover the adaptable and durable Nomad Jacket designed for avid motorcycle tourers."
-pubDate: "2025-09-07T13:23:04+00:00"
+pubDate: "2025-08-23T22:18:37"
 heroImage: "/assets/versatile-comfort-with-the-nomad-motorcycle-touring-jacket-hero.jpg"
 thumbnail: "/assets/versatile-comfort-with-the-nomad-motorcycle-touring-jacket-thumb.jpg"
 rating: 5

@@ -1,7 +1,7 @@
 ---
 title: "Multi-Purpose Motorcycle Tank Bag Review"
 summary: "Discover the versatile tank bag ideal for long motorcycle tours."
-pubDate: "2025-09-06T14:38:01+00:00"
+pubDate: "2025-08-09T22:18:37"
 heroImage: "/assets/multi-purpose-motorcycle-tank-bag-review-hero.jpg"
 thumbnail: "/assets/multi-purpose-motorcycle-tank-bag-review-thumb.jpg"
 rating: 3

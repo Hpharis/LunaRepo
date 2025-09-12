@@ -1,7 +1,7 @@
 ---
 title: "Essential Motorcycle Touring Gear Checklist"
 summary: "Discover the must-have gear for a safe and thrilling motorcycle tour"
-pubDate: "2025-09-06T23:25:08+00:00"
+pubDate: "2025-09-02T22:18:38"
 heroImage: "/assets/essential-motorcycle-touring-gear-checklist-hero.jpg"
 thumbnail: "/assets/essential-motorcycle-touring-gear-checklist-thumb.jpg"
 difficulty: Intermediate

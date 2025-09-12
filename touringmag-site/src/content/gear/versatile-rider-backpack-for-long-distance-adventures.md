@@ -1,7 +1,7 @@
 ---
 title: "Versatile Rider Backpack for Long-Distance Adventures"
 summary: "Discover the ultimate touring backpack designed for motorcycle enthusiasts."
-pubDate: "2025-09-06T14:47:37+00:00"
+pubDate: "2025-08-09T22:18:37"
 heroImage: "/assets/versatile-rider-backpack-for-long-distance-adventures-hero.jpg"
 thumbnail: "/assets/versatile-rider-backpack-for-long-distance-adventures-thumb.jpg"
 rating: 5

@@ -1,7 +1,7 @@
 ---
 title: "Packing List for Motorcycle Touring Adventures"
 summary: "Discover essential items for a successful motorcycle touring experience"
-pubDate: "2025-09-06T15:17:04+00:00"
+pubDate: "2025-07-13T22:18:38"
 heroImage: "/assets/packing-list-for-motorcycle-touring-adventures-hero.jpg"
 thumbnail: "/assets/packing-list-for-motorcycle-touring-adventures-thumb.jpg"
 difficulty: Beginner

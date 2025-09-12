@@ -1,7 +1,7 @@
 ---
 title: "Enhance Touring Experience with Saddlebag Upgrades"
 summary: "Discover the benefits of upgrading your motorcycle saddlebags for improved touring."
-pubDate: "2025-09-06T14:29:28+00:00"
+pubDate: "2025-07-28T22:18:38"
 heroImage: "/assets/enhance-touring-experience-with-saddlebag-upgrades-hero.jpg"
 thumbnail: "/assets/enhance-touring-experience-with-saddlebag-upgrades-thumb.jpg"
 tags:

@@ -1,7 +1,7 @@
 ---
 title: "Enhance Comfort with Upgraded Motorcycle Seats"
 summary: "Discover why upgrading motorcycle seats is crucial for a comfortable touring experience."
-pubDate: "2025-09-07T23:58:50+00:00"
+pubDate: "2025-07-23T22:18:38"
 heroImage: "/assets/enhance-comfort-with-upgraded-motorcycle-seats-hero.jpg"
 thumbnail: "/assets/enhance-comfort-with-upgraded-motorcycle-seats-thumb.jpg"
 tags:

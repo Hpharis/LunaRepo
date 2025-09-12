@@ -1,7 +1,7 @@
 ---
 title: "Motorcycle Touring Route Planning Guide"
 summary: "Master the art of planning the perfect motorcycle touring route."
-pubDate: "2025-09-07T12:06:36+00:00"
+pubDate: "2025-08-19T22:18:38"
 heroImage: "/assets/motorcycle-touring-route-planning-guide-hero.jpg"
 thumbnail: "/assets/motorcycle-touring-route-planning-guide-thumb.jpg"
 difficulty: Intermediate

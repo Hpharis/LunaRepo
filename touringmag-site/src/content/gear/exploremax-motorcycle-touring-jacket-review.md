@@ -1,7 +1,7 @@
 ---
 title: "ExploreMax Motorcycle Touring Jacket Review"
 summary: "Discover the perfect blend of style and protection for long rides"
-pubDate: "2025-09-07T12:17:29+00:00"
+pubDate: "2025-06-14T22:18:37"
 heroImage: "/assets/exploremax-motorcycle-touring-jacket-review-hero.jpg"
 thumbnail: "/assets/exploremax-motorcycle-touring-jacket-review-thumb.jpg"
 rating: 4

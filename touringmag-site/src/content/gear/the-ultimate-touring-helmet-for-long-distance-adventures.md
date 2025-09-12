@@ -1,7 +1,7 @@
 ---
 title: "The Ultimate Touring Helmet for Long Distance Adventures"
 summary: "Discover the best helmet for comfort and safety on long motorcycle tours"
-pubDate: "2025-09-07T12:05:49+00:00"
+pubDate: "2025-08-29T22:18:37"
 heroImage: "/assets/the-ultimate-touring-helmet-for-long-distance-adventures-hero.jpg"
 thumbnail: "/assets/the-ultimate-touring-helmet-for-long-distance-adventures-thumb.jpg"
 rating: 4

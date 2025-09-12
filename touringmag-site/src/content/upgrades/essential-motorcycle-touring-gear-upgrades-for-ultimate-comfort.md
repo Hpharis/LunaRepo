@@ -1,7 +1,7 @@
 ---
 title: "Essential Motorcycle Touring Gear Upgrades for Ultimate Comfort"
 summary: "Discover must-have gear upgrades to enhance comfort and safety on your next motorcycle tour."
-pubDate: "2025-09-06T12:06:40+00:00"
+pubDate: "2025-08-21T22:18:39"
 heroImage: "/assets/essential-motorcycle-touring-gear-upgrades-for-ultimate-comfort-hero.jpg"
 thumbnail: "/assets/essential-motorcycle-touring-gear-upgrades-for-ultimate-comfort-thumb.jpg"
 tags:

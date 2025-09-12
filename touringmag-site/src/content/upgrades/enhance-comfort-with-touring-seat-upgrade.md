@@ -1,7 +1,7 @@
 ---
 title: "Enhance Comfort with Touring Seat Upgrade"
 summary: "Upgrade to a touring seat for enhanced comfort on long rides."
-pubDate: "2025-09-07T00:22:03+00:00"
+pubDate: "2025-06-15T22:18:38"
 heroImage: "/assets/enhance-comfort-with-touring-seat-upgrade-hero.jpg"
 thumbnail: "/assets/enhance-comfort-with-touring-seat-upgrade-thumb.jpg"
 tags:

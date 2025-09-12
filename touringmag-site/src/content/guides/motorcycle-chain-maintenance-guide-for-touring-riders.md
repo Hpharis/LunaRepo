@@ -1,7 +1,7 @@
 ---
 title: "Motorcycle Chain Maintenance Guide for Touring Riders"
 summary: "Keep your motorcycle chain in top condition with this essential guide."
-pubDate: "2025-09-07T12:06:03+00:00"
+pubDate: "2025-09-01T22:18:38"
 heroImage: "/assets/motorcycle-chain-maintenance-guide-for-touring-riders-hero.jpg"
 thumbnail: "/assets/motorcycle-chain-maintenance-guide-for-touring-riders-thumb.jpg"
 difficulty: Advanced

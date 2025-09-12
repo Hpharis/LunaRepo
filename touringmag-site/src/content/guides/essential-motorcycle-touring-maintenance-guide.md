@@ -1,7 +1,7 @@
 ---
 title: "Essential Motorcycle Touring Maintenance Guide"
 summary: "Comprehensive guide to maintaining your motorcycle during touring trips"
-pubDate: "2025-09-07T12:58:05+00:00"
+pubDate: "2025-06-25T22:18:38"
 heroImage: "/assets/essential-motorcycle-touring-maintenance-guide-hero.jpg"
 thumbnail: "/assets/essential-motorcycle-touring-maintenance-guide-thumb.jpg"
 difficulty: Intermediate

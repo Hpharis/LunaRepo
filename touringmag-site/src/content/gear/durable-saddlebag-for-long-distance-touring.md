@@ -1,7 +1,7 @@
 ---
 title: "Durable Saddlebag for Long-Distance Touring"
 summary: "Explore the durable and spacious saddlebag ideal for motorcycle touring."
-pubDate: "2025-09-07T12:57:26+00:00"
+pubDate: "2025-06-14T22:18:37"
 heroImage: "/assets/durable-saddlebag-for-long-distance-touring-hero.jpg"
 thumbnail: "/assets/durable-saddlebag-for-long-distance-touring-thumb.jpg"
 rating: 3

@@ -1,7 +1,7 @@
 ---
 title: "Packing for a Motorcycle Tour The Ultimate Guide"
 summary: "Learn essential tips for packing efficiently for a motorcycle tour."
-pubDate: "2025-09-07T13:23:24+00:00"
+pubDate: "2025-09-08T22:18:38"
 heroImage: "/assets/packing-for-a-motorcycle-tour-the-ultimate-guide-hero.jpg"
 thumbnail: "/assets/packing-for-a-motorcycle-tour-the-ultimate-guide-thumb.jpg"
 difficulty: Advanced

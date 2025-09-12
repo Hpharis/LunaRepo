@@ -1,7 +1,7 @@
 ---
 title: "Boost Your Motorcycle Touring Experience with these Upgrades"
 summary: "Tips and tricks to enhance your motorcycle touring by investing in key upgrades and gear."
-pubDate: "2025-09-01T12:24:59+00:00"
+pubDate: "2025-08-27T22:18:37"
 heroImage: "/assets/motorcycle-touring-upgrades.jpg"
 rating: 5
 ---

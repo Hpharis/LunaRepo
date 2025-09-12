@@ -1,7 +1,7 @@
 ---
 title: "Motorcycle Touring Gear Setup Guide"
 summary: "Learn essential gear setup tips for a successful motorcycle tour."
-pubDate: "2025-09-07T00:22:07+00:00"
+pubDate: "2025-06-25T22:18:38"
 heroImage: "/assets/motorcycle-touring-gear-setup-guide-hero.jpg"
 thumbnail: "/assets/motorcycle-touring-gear-setup-guide-thumb.jpg"
 difficulty: Intermediate

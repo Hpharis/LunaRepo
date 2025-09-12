@@ -1,7 +1,7 @@
 ---
 title: "Enhance Touring Experience with Windscreen Upgrades"
 summary: "Discover how windscreen upgrades can improve comfort and visibility on motorcycle tours."
-pubDate: "2025-09-07T12:56:06+00:00"
+pubDate: "2025-06-26T22:18:39"
 heroImage: "/assets/enhance-touring-experience-with-windscreen-upgrades-hero.jpg"
 thumbnail: "/assets/enhance-touring-experience-with-windscreen-upgrades-thumb.jpg"
 tags:

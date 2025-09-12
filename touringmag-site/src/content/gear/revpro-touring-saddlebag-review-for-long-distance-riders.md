@@ -1,7 +1,7 @@
 ---
 title: "RevPro Touring Saddlebag Review For Long-Distance Riders"
 summary: "Discover the performance and features of the RevPro Touring Saddlebag for seamless motorcycle adventures."
-pubDate: "2025-09-07T13:20:28+00:00"
+pubDate: "2025-06-30T22:18:37"
 heroImage: "/assets/revpro-touring-saddlebag-review-for-long-distance-riders-hero.jpg"
 thumbnail: "/assets/revpro-touring-saddlebag-review-for-long-distance-riders-thumb.jpg"
 rating: 3

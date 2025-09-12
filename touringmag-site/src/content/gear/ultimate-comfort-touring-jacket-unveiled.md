@@ -1,7 +1,7 @@
 ---
 title: "Ultimate Comfort Touring Jacket Unveiled"
 summary: "Discover why the Ultimate Comfort Touring Jacket is a must-have for long rides."
-pubDate: "2025-09-07T12:51:01+00:00"
+pubDate: "2025-08-10T22:18:37"
 heroImage: "/assets/ultimate-comfort-touring-jacket-unveiled-hero.jpg"
 thumbnail: "/assets/ultimate-comfort-touring-jacket-unveiled-thumb.jpg"
 rating: 5

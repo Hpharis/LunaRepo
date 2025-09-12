@@ -1,7 +1,7 @@
 ---
 title: "Ultimate Comfort with AirHawk Motorcycle Seat Cushion"
 summary: "Enhance long-distance rides with the AirHawk's innovative comfort technology."
-pubDate: "2025-09-07T13:22:24+00:00"
+pubDate: "2025-07-14T22:18:37"
 heroImage: "/assets/ultimate-comfort-with-airhawk-motorcycle-seat-cushion-hero.jpg"
 thumbnail: "/assets/ultimate-comfort-with-airhawk-motorcycle-seat-cushion-thumb.jpg"
 rating: 4

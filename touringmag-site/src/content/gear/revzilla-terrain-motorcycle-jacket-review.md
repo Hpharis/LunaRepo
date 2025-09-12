@@ -1,7 +1,7 @@
 ---
 title: "RevZilla Terrain Motorcycle Jacket Review"
 summary: "Discover how the RevZilla Terrain Jacket excels in motorcycle touring."
-pubDate: "2025-09-07T12:06:28+00:00"
+pubDate: "2025-08-30T22:18:37"
 heroImage: "/assets/revzilla-terrain-motorcycle-jacket-review-hero.jpg"
 thumbnail: "/assets/revzilla-terrain-motorcycle-jacket-review-thumb.jpg"
 rating: 5

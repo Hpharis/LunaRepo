@@ -1,7 +1,7 @@
 ---
 title: "Expanding Horizons: Top Upgrades for Your Motorcycle Touring Experience"
 summary: "Explore the best gear and upgrades to elevate your motorcycle touring experience."
-pubDate: "2025-08-31T12:41:13Z"
+pubDate: "2025-06-12T22:18:38"
 heroImage: "/assets/motorcycle-touring-upgrades.jpg"
 ---
 

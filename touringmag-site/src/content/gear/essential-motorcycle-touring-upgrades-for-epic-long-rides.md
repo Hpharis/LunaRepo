@@ -1,7 +1,7 @@
 ---
 title: "Essential Motorcycle Touring Upgrades for Epic Long Rides"
 summary: "Discover must-have motorcycle touring upgrades to enhance your riding experience and ensure gear efficiency."
-pubDate: "2025-09-01T14:15:02+00:00"
+pubDate: "2025-07-10T22:18:37"
 heroImage: "/assets/essential-motorcycle-touring-upgrades-for-epic-long-rides-hero.jpg"
 thumbnail: "/assets/essential-motorcycle-touring-upgrades-for-epic-long-rides-thumb.jpg"
 rating: 3

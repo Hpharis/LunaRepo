@@ -1,7 +1,7 @@
 ---
 title: "Mastering Motorcycle Touring GPS Setup"
 summary: "Enhance your touring experience with our expert GPS setup guide for motorcycles"
-pubDate: "2025-09-07T13:22:38+00:00"
+pubDate: "2025-08-16T22:18:38"
 heroImage: "/assets/mastering-motorcycle-touring-gps-setup-hero.jpg"
 thumbnail: "/assets/mastering-motorcycle-touring-gps-setup-thumb.jpg"
 difficulty: Advanced

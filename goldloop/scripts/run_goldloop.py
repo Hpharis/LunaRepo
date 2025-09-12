@@ -8,14 +8,14 @@ from pathlib import Path
 from dotenv import load_dotenv
 import openai
 import argparse
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from PIL import Image
 import io
 import shutil
 import yaml
 from fpdf import FPDF
 from bs4 import BeautifulSoup
-from goldloop.modules.affiliate_injector import load_affiliate_links, inject_links
+
 # -------------------------------------------------------------------
 # Path setup
 # -------------------------------------------------------------------
@@ -41,6 +41,10 @@ LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 UNSPLASH_ACCESS_KEY = os.getenv("UNSPLASH_ACCESS_KEY")
+
+# Import Goldloop modules
+from goldloop.modules.affiliate_injector import load_affiliate_links, inject_links
+from goldloop.modules.persona_engine import get_persona, apply_persona_prompt
 
 # -------------------
 # Helpers
@@ -93,6 +97,7 @@ def init_db():
     conn.commit()
     conn.close()
 
+
 def slugify(title: str) -> str:
     return "".join(c.lower() if c.isalnum() else "-" for c in title).strip("-")
 
@@ -143,12 +148,17 @@ def generate_images(title: str, slug: str):
         print(f"[ERROR] Image generation failed: {e}")
         return "/assets/blog-placeholder-1.jpg", "/assets/blog-placeholder-1.jpg"
 
+# -------------------
+# Prompt builder
+# -------------------
+
 def build_prompt(mode: str) -> str:
-    """Return a section-specific content prompt."""
+    """Return a section-specific content prompt with persona voice applied."""
+
     if mode == "gear":
-        return """
+        base_prompt = """
         You are a product reviewer for TouringMag (motorcycle touring gear).
-        IMPORTANT: Do not include colons (:) in titles except after "title:" itself. Keep YAML keys and values plain.
+        IMPORTANT: Always wrap string values in double quotes (") in YAML.
         Respond ONLY in valid YAML (without markdown code fences) with:
 
         title: A clear product review title (max 12 words)
@@ -167,9 +177,9 @@ def build_prompt(mode: str) -> str:
           <p>Overall rating and buyer’s tip.</p>
         """
     elif mode == "upgrades":
-        return """
+        base_prompt = """
         You are writing an upgrade guide for TouringMag (motorcycle touring upgrades).
-        IMPORTANT: Do not include colons (:) in titles except after "title:" itself. Keep YAML keys and values plain.
+        IMPORTANT: Always wrap string values in double quotes (") in YAML.
         Respond ONLY in valid YAML (without markdown code fences) with:
 
         title: Upgrade title (max 12 words, include keyword)
@@ -189,9 +199,9 @@ def build_prompt(mode: str) -> str:
           <p>Easy / Intermediate / Advanced</p>
         """
     elif mode == "guides":
-        return """
+        base_prompt = """
         You are writing a detailed how-to guide for TouringMag (motorcycle touring).
-        IMPORTANT: Do not include colons (:) in titles except after "title:" itself. Keep YAML keys and values plain.
+        IMPORTANT: Always wrap string values in double quotes (") in YAML.
         Respond ONLY in valid YAML (without markdown code fences) with:
 
         title: Guide title (max 12 words, include keyword)
@@ -218,9 +228,9 @@ def build_prompt(mode: str) -> str:
           <p>Beginner / Intermediate / Advanced</p>
         """
     else:  # blog
-        return """
+        base_prompt = """
         You are a lifestyle writer for TouringMag (motorcycle touring).
-        IMPORTANT: Do not include colons (:) in titles except after "title:" itself. Keep YAML keys and values plain.
+        IMPORTANT: Always wrap string values in double quotes (") in YAML.
         Respond ONLY in valid YAML (without markdown code fences) with:
 
         title: Blog title (max 12 words, include keyword)
@@ -234,22 +244,16 @@ def build_prompt(mode: str) -> str:
           <p>Lesson, reflection, or call to action.</p>
         """
 
+    return apply_persona_prompt(mode, base_prompt)
+
+# -------------------
+# Article generator
+# -------------------
 
 def generate_article(mode="blog"):
     """Generate a full article with metadata, images, and DB insert."""
     init_db()
     prompt = build_prompt(mode)
-
-    # Force guide structure when mode=guides
-    if mode == "guides":
-        prompt += """
-        IMPORTANT: This is a detailed how-to guide. 
-        You must include:
-        - <h2>Tools & Materials</h2> with <ul>
-        - <h2>Step-by-Step Instructions</h2> with <ol>
-        - <h2>Safety Notes</h2> with <p>
-        - <h2>Difficulty</h2> with Beginner / Intermediate / Advanced
-        """
 
     print(f"[INFO] Requesting {mode} article from OpenAI...")
     response = openai.ChatCompletion.create(
@@ -258,7 +262,7 @@ def generate_article(mode="blog"):
     )
     content = response["choices"][0]["message"]["content"]
 
-    # Strip code fences if present
+    # Strip markdown fences if present
     if content.startswith("```"):
         content = content.strip().strip("`")
         if content.lower().startswith("yaml"):
@@ -275,10 +279,13 @@ def generate_article(mode="blog"):
     body = parsed.get("body", content)
     slug = slugify(title) or f"touringmag-{mode}-{datetime.now().strftime('%Y%m%d%H%M%S')}"
 
+    # Persona metadata
+    persona = get_persona(mode)
+
     # 🛡 Guide fallback: inject steps if missing
     if mode == "guides" and "<ol>" not in body:
         print("[WARN] Guide missing step list — injecting fallback outline.")
-        fallback_steps = """
+        body += """
         <h2>Step-by-Step Instructions</h2>
         <ol>
           <li>Prepare your motorcycle and gather tools.</li>
@@ -288,10 +295,10 @@ def generate_article(mode="blog"):
         <h2>Difficulty</h2>
         <p>Beginner</p>
         """
-        body += fallback_steps
 
     hero, thumb = generate_images(title, slug)
 
+    # Save to DB
     conn = sqlite3.connect(DB_FILE)
     cur = conn.cursor()
     cur.execute("""
@@ -302,68 +309,25 @@ def generate_article(mode="blog"):
     conn.close()
 
     print(f"[OK] Article stored: {title} ({slug})")
-    return slug, title, summary, body, hero, thumb
+    return slug, title, summary, body, hero, thumb, persona
 
-
-def run_for_mode(mode):
-    slug, title, summary, body, hero, thumb = generate_article(mode)
-    extra_fields = {}
-
-    if mode == "gear":
-        extra_fields["rating"] = random.randint(3, 5)
-    elif mode == "guides":
-        extra_fields["difficulty"] = random.choice(["Beginner", "Intermediate", "Advanced"])
-    elif mode == "upgrades":
-        tags_pool = ["comfort", "performance", "storage", "safety", "electronics"]
-        extra_fields["tags"] = random.sample(tags_pool, k=random.randint(1, 3))
-
-    export_markdown(slug, title, summary, body, hero, thumb, collection=mode, extra_fields=extra_fields)
-
-
-def log_affiliate_injection(slug, injected_details):
-    with open(LOG_FILE, "a", encoding="utf-8") as f:
-        f.write(f"\n[{datetime.now(timezone.utc).isoformat()}] {slug}\n")
-        if injected_details:
-            for keyword, url, count in injected_details:
-                f.write(f"  - {keyword} → {url} (injected {count} times)\n")
-        else:
-            f.write("  - No affiliate links injected.\n")
-
-
-from datetime import datetime, timezone
-from pathlib import Path
-from bs4 import BeautifulSoup
-from fpdf import FPDF
+# -------------------
+# Export
+# -------------------
 
 def export_markdown(
-    slug,
-    title,
-    summary,
-    body,
-    hero,
-    thumb,
-    collection="blog",
-    extra_fields=None,
-    export_base=None
+    slug, title, summary, body, hero, thumb, collection="blog", extra_fields=None, export_base=None
 ):
-    """
-    Exports an article to markdown and, for guides, generates a checklist PDF.
-
-    Args:
-        slug (str): Article slug.
-        title (str): Article title.
-        summary (str): Article summary.
-        body (str): Article body (HTML or Markdown).
-        hero (str): Hero image path.
-        thumb (str): Thumbnail image path.
-        collection (str): Section/collection to export to.
-        extra_fields (dict): Any extra frontmatter fields.
-        export_base (Path): Base export directory (defaults to EXPORT_BASE global).
-    """
+    """Export an article to Markdown (with persona metadata)."""
     if export_base is None:
-        export_base = EXPORT_BASE  # Assume global variable if not provided
+        export_base = EXPORT_BASE
 
-    pub_date = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+
+# Always use current publish date
+pub_date = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+
+    # Persona metadata
+    persona = get_persona(collection)
 
     # --- Compose frontmatter ---
     frontmatter = f"""---
@@ -372,6 +336,8 @@ summary: "{summary}"
 pubDate: "{pub_date}"
 heroImage: "{hero}"
 thumbnail: "{thumb}"
+author: "{persona['name']}"
+role: "{persona['role']}"
 """
     if extra_fields:
         for key, val in extra_fields.items():
@@ -389,83 +355,20 @@ thumbnail: "{thumb}"
     out_file.parent.mkdir(parents=True, exist_ok=True)
     out_file.write_text(frontmatter, encoding="utf-8")
 
-    # --- Checklist PDF for guides ---
-    if collection == "guides":
-        try:
-            soup = BeautifulSoup(body, "html.parser")
-            steps = [li.get_text(strip=True) for li in soup.find_all("li")]
-            if steps:
-                pdf = FPDF()
-                pdf.add_page()
-                pdf.set_font("helvetica", "B", 16)
-                pdf.cell(
-                    0, 10, "TouringMag Checklist",
-                    new_x=FPDF.XPos.LMARGIN, new_y=FPDF.YPos.NEXT, align="C"
-                )
-                pdf.ln(10)
-
-                pdf.set_font("helvetica", size=12)
-                for i, step in enumerate(steps, start=1):
-                    pdf.cell(
-                        0, 10, f"[ ] {i}. {step}",
-                        new_x=FPDF.XPos.LMARGIN, new_y=FPDF.YPos.NEXT
-                    )
-
-                checklist_path = out_file.parent / f"{slug}-checklist.pdf"
-                pdf.output(str(checklist_path))
-                print(f"[OK] Checklist PDF generated: {checklist_path}")
-            else:
-                print("[WARN] No <li> steps found — checklist not generated.")
-        except Exception as e:
-            print(f"[ERROR] Failed to generate checklist PDF: {e}")
-
     print(f"[OK] Exported to {out_file}")
 
-
-def git_push():
-    repo_path = ROOT_DIR / "touringmag-site"
-    if not (repo_path / ".git").exists():
-        print(f"[INFO] Skipping git push: {repo_path} is not a git repo.")
-        return
-    try:
-        subprocess.run(["git", "add", "src/content"], cwd=repo_path, check=True)
-        subprocess.run(["git", "add", "public/assets"], cwd=repo_path, check=True)
-        subprocess.run(["git", "commit", "-m", "New AI article"], cwd=repo_path, check=True)
-        subprocess.run(["git", "push", "origin", "main"], cwd=repo_path, check=True)
-        print("[OK] Blog content pushed directly to main.")
-    except subprocess.CalledProcessError as e:
-        print("[INFO] Git push skipped (maybe no new content):", e)
-
-
 # -------------------
-# Entry point
+# Runner
 # -------------------
+
 def run_for_mode(mode):
-    slug, title, summary, body, hero, thumb = generate_article(mode)
+    slug, title, summary, body, hero, thumb, persona = generate_article(mode)
     extra_fields = {}
 
-    # Gear: product rating
     if mode == "gear":
         extra_fields["rating"] = random.randint(3, 5)
-
-    # Guides: difficulty + step fallback
     elif mode == "guides":
         extra_fields["difficulty"] = random.choice(["Beginner", "Intermediate", "Advanced"])
-
-        # Ensure step-by-step instructions exist
-        if "<ol>" not in body:
-            print("[WARN] Guide missing step list — injecting fallback outline.")
-            fallback_steps = """
-            <h2>Step-by-Step Instructions</h2>
-            <ol>
-              <li>Prepare your motorcycle and gather tools.</li>
-              <li>Follow the procedure carefully (adjust based on skill).</li>
-              <li>Test and verify everything before riding.</li>
-            </ol>
-            """
-            body += fallback_steps
-
-    # Upgrades: tags
     elif mode == "upgrades":
         tags_pool = ["comfort", "performance", "storage", "safety", "electronics"]
         extra_fields["tags"] = random.sample(tags_pool, k=random.randint(1, 3))
@@ -483,5 +386,3 @@ if __name__ == "__main__":
             run_for_mode(section)
     else:
         run_for_mode(args.mode)
-
-    # git_push()  <-- REMOVE THIS LINE

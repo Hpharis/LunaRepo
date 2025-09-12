@@ -1,7 +1,7 @@
 ---
 title: "Versatile Touring Helmet for Long Rides"
 summary: "Discover the features and benefits of this versatile touring helmet designed for long rides."
-pubDate: "2025-09-07T13:23:46+00:00"
+pubDate: "2025-07-24T22:18:38"
 heroImage: "/assets/versatile-touring-helmet-for-long-rides-hero.jpg"
 thumbnail: "/assets/versatile-touring-helmet-for-long-rides-thumb.jpg"
 rating: 5

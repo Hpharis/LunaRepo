@@ -1,7 +1,7 @@
 ---
 title: "Waterproof Motorcycle Touring Jacket Review"
 summary: "Discover the top features and performance of this versatile touring jacket."
-pubDate: "2025-09-07T00:22:01+00:00"
+pubDate: "2025-06-11T22:18:38"
 heroImage: "/assets/waterproof-motorcycle-touring-jacket-review-hero.jpg"
 thumbnail: "/assets/waterproof-motorcycle-touring-jacket-review-thumb.jpg"
 rating: 4

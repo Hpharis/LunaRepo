@@ -1,7 +1,7 @@
 ---
 title: "Top Handlebars for Motorcycle Touring"
 summary: "Enhance comfort and control with upgraded motorcycle touring handlebars."
-pubDate: "2025-09-06T15:31:20+00:00"
+pubDate: "2025-07-27T22:18:39"
 heroImage: "/assets/top-handlebars-for-motorcycle-touring-hero.jpg"
 thumbnail: "/assets/top-handlebars-for-motorcycle-touring-thumb.jpg"
 tags:

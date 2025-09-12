@@ -1,7 +1,7 @@
 ---
 title: "Essential GPS Navigation for Motorcycle Touring"
 summary: "Enhance your motorcycle touring experience with reliable GPS navigation."
-pubDate: "2025-09-06T20:04:45+00:00"
+pubDate: "2025-07-12T22:18:39"
 heroImage: "/assets/essential-gps-navigation-for-motorcycle-touring-hero.jpg"
 thumbnail: "/assets/essential-gps-navigation-for-motorcycle-touring-thumb.jpg"
 tags:

@@ -1,7 +1,7 @@
 ---
 title: "Rev'It Sand 4 H2O Jacket Review"
 summary: "Discover the versatile Rev'It Sand 4 H2O Jacket for all-season touring enthusiasts."
-pubDate: "2025-09-06T15:11:11+00:00"
+pubDate: "2025-06-21T22:18:37"
 heroImage: "/assets/rev-it-sand-4-h2o-jacket-review-hero.jpg"
 thumbnail: "/assets/rev-it-sand-4-h2o-jacket-review-thumb.jpg"
 rating: 5

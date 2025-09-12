@@ -1,7 +1,7 @@
 ---
 title: "Enhance Your Ride with Motorcycle Touring GPS"
 summary: "Discover how a GPS upgrade can transform your motorcycle touring adventures."
-pubDate: "2025-09-07T13:23:56+00:00"
+pubDate: "2025-07-28T22:18:39"
 heroImage: "/assets/enhance-your-ride-with-motorcycle-touring-gps-hero.jpg"
 thumbnail: "/assets/enhance-your-ride-with-motorcycle-touring-gps-thumb.jpg"
 tags:

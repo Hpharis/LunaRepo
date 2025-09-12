@@ -1,7 +1,7 @@
 ---
 title: "Planning Long-Distance Motorcycle Tours"
 summary: "Essential steps and tips for planning successful motorcycle tours"
-pubDate: "2025-09-07T12:53:29+00:00"
+pubDate: "2025-09-05T22:18:38"
 heroImage: "/assets/planning-long-distance-motorcycle-tours-hero.jpg"
 thumbnail: "/assets/planning-long-distance-motorcycle-tours-thumb.jpg"
 difficulty: Advanced

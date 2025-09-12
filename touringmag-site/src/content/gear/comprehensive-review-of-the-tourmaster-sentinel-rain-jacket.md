@@ -1,7 +1,7 @@
 ---
 title: "Comprehensive Review of the TourMaster Sentinel Rain Jacket"
 summary: "An in-depth look at the TourMaster Sentinel jacket for avid motorcycle tourers."
-pubDate: "2025-09-07T00:18:50+00:00"
+pubDate: "2025-07-02T22:18:37"
 heroImage: "/assets/comprehensive-review-of-the-tourmaster-sentinel-rain-jacket-hero.jpg"
 thumbnail: "/assets/comprehensive-review-of-the-tourmaster-sentinel-rain-jacket-thumb.jpg"
 rating: 4

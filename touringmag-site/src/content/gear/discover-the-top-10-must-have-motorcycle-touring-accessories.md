@@ -1,7 +1,7 @@
 ---
 title: "Discover the Top 10 Must-Have Motorcycle Touring Accessories"
 summary: "Explore essential upgrades and gear to enhance your motorcycle touring experience."
-pubDate: "2025-09-06T14:21:42+00:00"
+pubDate: "2025-08-25T22:18:37"
 heroImage: "/assets/discover-the-top-10-must-have-motorcycle-touring-accessories-hero.jpg"
 thumbnail: "/assets/discover-the-top-10-must-have-motorcycle-touring-accessories-thumb.jpg"
 rating: 5

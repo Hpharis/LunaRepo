@@ -1,7 +1,7 @@
 ---
 title: "Versatile Touring Motorcycle Jacket Review"
 summary: "Discover the perfect balance of comfort and protection for motorcyclists."
-pubDate: "2025-09-07T12:18:47+00:00"
+pubDate: "2025-08-14T22:18:38"
 heroImage: "/assets/versatile-touring-motorcycle-jacket-review-hero.jpg"
 thumbnail: "/assets/versatile-touring-motorcycle-jacket-review-thumb.jpg"
 rating: 4

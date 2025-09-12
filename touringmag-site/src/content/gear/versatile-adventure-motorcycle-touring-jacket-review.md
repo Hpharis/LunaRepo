@@ -1,7 +1,7 @@
 ---
 title: "Versatile Adventure Motorcycle Touring Jacket Review"
 summary: "Discover the top features of this rugged touring jacket for adventurers."
-pubDate: "2025-09-07T12:20:44+00:00"
+pubDate: "2025-08-31T22:18:37"
 heroImage: "/assets/versatile-adventure-motorcycle-touring-jacket-review-hero.jpg"
 thumbnail: "/assets/versatile-adventure-motorcycle-touring-jacket-review-thumb.jpg"
 rating: 5

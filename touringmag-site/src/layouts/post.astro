@@ -9,8 +9,24 @@ const { title, summary, date } = Astro.props;
   <body>
     <main>
       <article>
-        <h1>{title}</h1>
-        <p><em>{date}</em></p>
+		<div class="title">
+		  <div class="date">
+			<FormattedDate date={pubDate} />
+			{updatedDate && (
+			  <div class="last-updated-on">
+				Last updated on <FormattedDate date={updatedDate} />
+			  </div>
+			)}
+		  </div>
+		  <h1>{title}</h1>
+		  {frontmatter.author && (
+			<p class="author text-sm text-gray-400 mb-4 italic">
+			  {frontmatter.author} — {frontmatter.role}
+			</p>
+		  )}
+		  <hr />
+		</div>
+
         <slot />
       </article>
     </main>

@@ -1,7 +1,7 @@
 ---
 title: "Maximize Comfort on Long Motorcycle Rides"
 summary: "Discover essential tips to enhance comfort during lengthy motorcycle tours."
-pubDate: "2025-09-07T23:40:24+00:00"
+pubDate: "2025-08-25T22:18:38"
 heroImage: "/assets/maximize-comfort-on-long-motorcycle-rides-hero.jpg"
 thumbnail: "/assets/maximize-comfort-on-long-motorcycle-rides-thumb.jpg"
 difficulty: Intermediate

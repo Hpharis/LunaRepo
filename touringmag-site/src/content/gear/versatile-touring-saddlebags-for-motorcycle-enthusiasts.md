@@ -1,7 +1,7 @@
 ---
 title: "Versatile Touring Saddlebags for Motorcycle Enthusiasts"
 summary: "Discover the ultimate durable and spacious saddlebags for long motorcycle journeys."
-pubDate: "2025-09-07T12:51:37+00:00"
+pubDate: "2025-06-20T22:18:38"
 heroImage: "/assets/versatile-touring-saddlebags-for-motorcycle-enthusiasts-hero.jpg"
 thumbnail: "/assets/versatile-touring-saddlebags-for-motorcycle-enthusiasts-thumb.jpg"
 rating: 4

@@ -1,7 +1,7 @@
 ---
 title: "Motorcycle Touring with GPS Navigation Guide"
 summary: "Learn how to effectively use GPS for motorcycle touring adventures."
-pubDate: "2025-09-06T15:31:29+00:00"
+pubDate: "2025-06-15T22:18:38"
 heroImage: "/assets/motorcycle-touring-with-gps-navigation-guide-hero.jpg"
 thumbnail: "/assets/motorcycle-touring-with-gps-navigation-guide-thumb.jpg"
 difficulty: Intermediate

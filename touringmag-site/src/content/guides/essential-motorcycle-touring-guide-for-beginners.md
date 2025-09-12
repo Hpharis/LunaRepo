@@ -1,7 +1,7 @@
 ---
 title: "Essential Motorcycle Touring Guide for Beginners"
 summary: "A comprehensive guide to help new riders successfully embark on motorcycle tours."
-pubDate: "2025-09-07T12:20:19+00:00"
+pubDate: "2025-06-22T22:18:38"
 heroImage: "/assets/essential-motorcycle-touring-guide-for-beginners-hero.jpg"
 thumbnail: "/assets/essential-motorcycle-touring-guide-for-beginners-thumb.jpg"
 difficulty: Beginner

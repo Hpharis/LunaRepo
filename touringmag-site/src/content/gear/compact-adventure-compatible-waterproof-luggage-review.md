@@ -1,7 +1,7 @@
 ---
 title: "Compact Adventure-Compatible Waterproof Luggage Review"
 summary: "Discover the ultimate waterproof luggage solution for adventure motorcyclists."
-pubDate: "2025-09-07T12:05:14+00:00"
+pubDate: "2025-07-02T22:18:37"
 heroImage: "/assets/compact-adventure-compatible-waterproof-luggage-review-hero.jpg"
 thumbnail: "/assets/compact-adventure-compatible-waterproof-luggage-review-thumb.jpg"
 rating: 3

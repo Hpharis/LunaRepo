@@ -3,16 +3,33 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
-const { title = "TouringMag", description = "" } = Astro.props;
+const { title = "TouringMag", description = "", author, role } = Astro.props;
 ---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
+    <title>{title} {author}</title>
     <meta name="description" content={description} />
+	{author && (
+  <p class="text-sm text-gray-400 italic mt-2">
+    {author} — {role}
+  </p>
+)}
+
+    <!-- AdSense Loader -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6639891364095839"
       crossorigin="anonymous"></script>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-073R6GJZEQ"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-073R6GJZEQ');
+	</script>
   </head>
   <body class="bg-gray-900 text-gray-200">
     <Header />

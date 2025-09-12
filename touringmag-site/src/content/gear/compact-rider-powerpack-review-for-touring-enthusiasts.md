@@ -1,7 +1,7 @@
 ---
 title: "Compact Rider PowerPack Review for Touring Enthusiasts"
 summary: "Compact Rider PowerPack offers reliable power solutions for long touring rides"
-pubDate: "2025-09-06T23:57:31+00:00"
+pubDate: "2025-07-09T22:18:37"
 heroImage: "/assets/compact-rider-powerpack-review-for-touring-enthusiasts-hero.jpg"
 thumbnail: "/assets/compact-rider-powerpack-review-for-touring-enthusiasts-thumb.jpg"
 rating: 5

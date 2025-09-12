@@ -1,7 +1,7 @@
 ---
 title: "Compact and Versatile Motorcycle Touring Backpack"
 summary: "Discover the perfect motorcycle touring backpack for avid travelers."
-pubDate: "2025-09-07T00:26:29+00:00"
+pubDate: "2025-06-15T22:18:37"
 heroImage: "/assets/compact-and-versatile-motorcycle-touring-backpack-hero.jpg"
 thumbnail: "/assets/compact-and-versatile-motorcycle-touring-backpack-thumb.jpg"
 rating: 5

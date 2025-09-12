@@ -1,7 +1,7 @@
 ---
 title: "Essential Motorcycle Touring Gear for the Ultimate Road Adventure"
 summary: "Discover must-have motorcycle touring upgrades and gear to enhance your ultimate road adventure."
-pubDate: "2025-09-06T14:21:49+00:00"
+pubDate: "2025-08-23T22:18:39"
 heroImage: "/assets/essential-motorcycle-touring-gear-for-the-ultimate-road-adventure-hero.jpg"
 thumbnail: "/assets/essential-motorcycle-touring-gear-for-the-ultimate-road-adventure-thumb.jpg"
 tags:

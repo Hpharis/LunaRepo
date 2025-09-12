@@ -1,7 +1,7 @@
 ---
 title: "Exploring the Rugged Durability of the AdventurePro Saddlebags"
 summary: "Discover the perfect adventure-ready saddlebags for motorcycle touring enthusiasts."
-pubDate: "2025-09-07T12:52:51+00:00"
+pubDate: "2025-06-21T22:18:37"
 heroImage: "/assets/exploring-the-rugged-durability-of-the-adventurepro-saddlebags-hero.jpg"
 thumbnail: "/assets/exploring-the-rugged-durability-of-the-adventurepro-saddlebags-thumb.jpg"
 rating: 4

@@ -1,7 +1,7 @@
 ---
 title: "Durable Adventure Motorcycle Saddlebags"
 summary: "Discover the top features of these rugged saddlebags for adventure riders."
-pubDate: "2025-09-06T14:50:33+00:00"
+pubDate: "2025-08-21T22:18:37"
 heroImage: "/assets/durable-adventure-motorcycle-saddlebags-hero.jpg"
 thumbnail: "/assets/durable-adventure-motorcycle-saddlebags-thumb.jpg"
 rating: 3

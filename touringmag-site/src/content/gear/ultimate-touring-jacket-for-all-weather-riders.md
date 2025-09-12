@@ -1,7 +1,7 @@
 ---
 title: "Ultimate Touring Jacket for All-Weather Riders"
 summary: "Discover the best all-weather motorcycle touring jacket for avid long-distance riders."
-pubDate: "2025-09-06T14:29:24+00:00"
+pubDate: "2025-07-02T22:18:37"
 heroImage: "/assets/ultimate-touring-jacket-for-all-weather-riders-hero.jpg"
 thumbnail: "/assets/ultimate-touring-jacket-for-all-weather-riders-thumb.jpg"
 rating: 4

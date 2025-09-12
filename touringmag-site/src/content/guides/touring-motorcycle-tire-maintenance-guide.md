@@ -1,7 +1,7 @@
 ---
 title: "Touring Motorcycle Tire Maintenance Guide"
 summary: "Learn essential tire maintenance for a safe and smooth motorcycle tour."
-pubDate: "2025-09-07T13:21:19+00:00"
+pubDate: "2025-06-23T22:18:38"
 heroImage: "/assets/touring-motorcycle-tire-maintenance-guide-hero.jpg"
 thumbnail: "/assets/touring-motorcycle-tire-maintenance-guide-thumb.jpg"
 difficulty: Beginner

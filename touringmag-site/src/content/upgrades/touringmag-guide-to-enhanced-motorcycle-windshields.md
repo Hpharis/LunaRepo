@@ -1,7 +1,7 @@
 ---
 title: "TouringMag Guide to Enhanced Motorcycle Windshields"
 summary: "Discover the benefits of upgrading to an enhanced motorcycle windshield for better touring experiences."
-pubDate: "2025-09-06T23:39:12+00:00"
+pubDate: "2025-07-16T22:18:39"
 heroImage: "/assets/touringmag-guide-to-enhanced-motorcycle-windshields-hero.jpg"
 thumbnail: "/assets/touringmag-guide-to-enhanced-motorcycle-windshields-thumb.jpg"
 tags:

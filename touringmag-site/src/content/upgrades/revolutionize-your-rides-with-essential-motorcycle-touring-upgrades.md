@@ -1,7 +1,7 @@
 ---
 title: "Revolutionize Your Rides with Essential Motorcycle Touring Upgrades"
 summary: "Discover essential upgrades for long-distance motorcycle touring that elevate riding comfort, safety, and enjoyment."
-pubDate: "2025-09-01T12:29:44+00:00"
+pubDate: "2025-07-14T22:18:39"
 heroImage: "/assets/images/motorcycle-touring-upgrades.jpg"
 ---
 

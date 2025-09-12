@@ -21,6 +21,8 @@ const blog = defineCollection({
 	thumbnail: z.string().optional(),        // add this
     affiliateLink: z.string().optional(),    // allow injected links
     tags: z.array(z.string()).optional(),
+    author: z.string().optional(),
+    role: z.string().optional(),
   }),
 });
 

@@ -1,7 +1,7 @@
 ---
 title: "Boost Your Journey: Top Motorcycle Touring Upgrades"
 summary: "Explore top-tier motorcycle touring upgrades and gear to enhance your adventurous ride."
-pubDate: "2025-09-01T12:25:18+00:00"
+pubDate: "2025-08-27T22:18:38"
 heroImage: "/assets/motorcycle-touring-upgrades.jpg"
 difficulty: Intermediate
 ---

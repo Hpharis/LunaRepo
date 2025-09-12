@@ -1,7 +1,7 @@
 ---
 title: "Ultralight Touring Jacket for All-Weather Adventures"
 summary: "Discover the ultimate all-weather motorcycle touring jacket for enthusiasts."
-pubDate: "2025-09-07T12:18:11+00:00"
+pubDate: "2025-08-10T22:18:37"
 heroImage: "/assets/ultralight-touring-jacket-for-all-weather-adventures-hero.jpg"
 thumbnail: "/assets/ultralight-touring-jacket-for-all-weather-adventures-thumb.jpg"
 rating: 5

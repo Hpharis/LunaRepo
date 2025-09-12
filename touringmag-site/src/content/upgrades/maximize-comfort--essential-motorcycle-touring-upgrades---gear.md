@@ -1,7 +1,7 @@
 ---
 title: "Maximize Comfort: Essential Motorcycle Touring Upgrades & Gear"
 summary: "Enhance your motorcycle touring experience with essential upgrades and gear recommendations."
-pubDate: "2025-09-06T13:28:26+00:00"
+pubDate: "2025-08-26T22:18:39"
 heroImage: "/assets/maximize-comfort--essential-motorcycle-touring-upgrades---gear-hero.jpg"
 thumbnail: "/assets/maximize-comfort--essential-motorcycle-touring-upgrades---gear-thumb.jpg"
 tags:

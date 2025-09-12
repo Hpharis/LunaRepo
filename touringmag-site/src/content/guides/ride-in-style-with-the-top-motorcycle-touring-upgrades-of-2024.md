@@ -1,7 +1,7 @@
 ---
 title: "Ride in Style with the Top Motorcycle Touring Upgrades of 2024"
 summary: "Discover 2024's essential motorcycle touring upgrades and gear to enhance your ride."
-pubDate: "2025-09-06T12:37:16+00:00"
+pubDate: "2025-07-27T22:18:38"
 heroImage: "/assets/ride-in-style-with-the-top-motorcycle-touring-upgrades-of-2024-hero.jpg"
 thumbnail: "/assets/ride-in-style-with-the-top-motorcycle-touring-upgrades-of-2024-thumb.jpg"
 difficulty: Intermediate

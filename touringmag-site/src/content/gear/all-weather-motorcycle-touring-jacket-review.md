@@ -1,7 +1,7 @@
 ---
 title: "All-Weather Motorcycle Touring Jacket Review"
 summary: "Discover the essential all-weather jacket designed for adventurous motorcycle tourers"
-pubDate: "2025-09-06T14:43:13+00:00"
+pubDate: "2025-08-14T22:18:37"
 heroImage: "/assets/all-weather-motorcycle-touring-jacket-review-hero.jpg"
 thumbnail: "/assets/all-weather-motorcycle-touring-jacket-review-thumb.jpg"
 rating: 5

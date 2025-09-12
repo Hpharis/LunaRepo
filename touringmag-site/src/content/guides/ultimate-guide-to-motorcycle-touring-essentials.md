@@ -1,7 +1,7 @@
 ---
 title: "Ultimate Guide to Motorcycle Touring Essentials"
 summary: "Discover essential tools and tips for an unforgettable motorcycle tour."
-pubDate: "2025-09-06T15:11:23+00:00"
+pubDate: "2025-08-15T22:18:38"
 heroImage: "/assets/ultimate-guide-to-motorcycle-touring-essentials-hero.jpg"
 thumbnail: "/assets/ultimate-guide-to-motorcycle-touring-essentials-thumb.jpg"
 difficulty: Advanced

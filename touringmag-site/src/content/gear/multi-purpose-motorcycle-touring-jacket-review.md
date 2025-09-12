@@ -1,7 +1,7 @@
 ---
 title: "Multi-Purpose Motorcycle Touring Jacket Review"
 summary: "A versatile jacket ideal for motorcyclists seeking comfort and protection."
-pubDate: "2025-09-07T03:28:07+00:00"
+pubDate: "2025-08-11T22:18:37"
 heroImage: "/assets/multi-purpose-motorcycle-touring-jacket-review-hero.jpg"
 thumbnail: "/assets/multi-purpose-motorcycle-touring-jacket-review-thumb.jpg"
 rating: 4

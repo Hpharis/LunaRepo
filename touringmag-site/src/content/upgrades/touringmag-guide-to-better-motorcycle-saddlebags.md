@@ -1,7 +1,7 @@
 ---
 title: "TouringMag Guide to Better Motorcycle Saddlebags"
 summary: "Upgrade your motorcycle saddlebags for more storage and convenience."
-pubDate: "2025-09-07T12:17:35+00:00"
+pubDate: "2025-06-27T22:18:39"
 heroImage: "/assets/touringmag-guide-to-better-motorcycle-saddlebags-hero.jpg"
 thumbnail: "/assets/touringmag-guide-to-better-motorcycle-saddlebags-thumb.jpg"
 tags:

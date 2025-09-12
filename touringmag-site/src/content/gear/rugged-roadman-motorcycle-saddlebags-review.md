@@ -1,7 +1,7 @@
 ---
 title: "Rugged Roadman Motorcycle Saddlebags Review"
 summary: "Discover the durable saddlebags perfect for long-haul motorcycle tours."
-pubDate: "2025-09-06T23:25:00+00:00"
+pubDate: "2025-07-09T22:18:37"
 heroImage: "/assets/rugged-roadman-motorcycle-saddlebags-review-hero.jpg"
 thumbnail: "/assets/rugged-roadman-motorcycle-saddlebags-review-thumb.jpg"
 rating: 5

@@ -1,7 +1,7 @@
 ---
 title: "Packing for Motorcycle Touring Simplified"
 summary: "Learn efficient packing strategies to enhance your motorcycle touring experience"
-pubDate: "2025-09-07T12:07:17+00:00"
+pubDate: "2025-08-30T22:18:38"
 heroImage: "/assets/packing-for-motorcycle-touring-simplified-hero.jpg"
 thumbnail: "/assets/packing-for-motorcycle-touring-simplified-thumb.jpg"
 difficulty: Advanced

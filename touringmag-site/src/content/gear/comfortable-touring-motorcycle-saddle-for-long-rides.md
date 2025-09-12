@@ -1,7 +1,7 @@
 ---
 title: "Comfortable Touring Motorcycle Saddle for Long Rides"
 summary: "Discover the ultimate seat for enhanced comfort on long motorcycle tours."
-pubDate: "2025-09-07T12:20:09+00:00"
+pubDate: "2025-07-01T22:18:37"
 heroImage: "/assets/comfortable-touring-motorcycle-saddle-for-long-rides-hero.jpg"
 thumbnail: "/assets/comfortable-touring-motorcycle-saddle-for-long-rides-thumb.jpg"
 rating: 3
