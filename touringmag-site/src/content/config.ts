@@ -36,6 +36,8 @@ const gear = defineCollection({
     rating: z.number().min(1).max(5).optional(), // ⭐ for reviews
 	thumbnail: z.string().optional(),        // add this
     affiliateLink: z.string().optional(),
+	author: z.string().optional(),
+    role: z.string().optional(),
   }),
 });
 
@@ -49,6 +51,8 @@ const upgrades = defineCollection({
 	thumbnail: z.string().optional(),        // add this
     tags: z.array(z.string()).optional(),
 	affiliateLink: z.string().optional(),    // allow injected links
+	author: z.string().optional(),
+    role: z.string().optional(),
   }),
 });
 
@@ -61,6 +65,8 @@ const guides = defineCollection({
     heroImage: z.string().optional(),
 	thumbnail: z.string().optional(),        // add this
     difficulty: z.enum(["Beginner", "Intermediate", "Advanced"]).optional(),
+	author: z.string().optional(),
+    role: z.string().optional(),
   }),
 });
 

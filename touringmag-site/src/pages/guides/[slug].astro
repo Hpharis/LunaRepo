@@ -1,8 +1,8 @@
-
 ---
 import { getCollection, getEntryBySlug } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
+import EditorComment from "../../components/EditorComment.astro";
 
 export const prerender = true;
 
@@ -57,6 +57,9 @@ const jsonLd = {
         <p class="mt-2 text-orange-400 font-semibold text-lg">
           Difficulty: {data.difficulty}
         </p>
+			  <p class="text-sm text-gray-300 italic mt-1">
+		{data.author} — {data.role}
+	  </p>
       )}
     </div>
   </div>
@@ -107,12 +110,12 @@ const jsonLd = {
         <button onclick="window.print()" 
           class="text-sm text-gray-400 hover:text-white border border-neutral-700 px-3 py-1 rounded">
           🖨 Print this guide
-        </button>
+        </button><br><br>
       </div>
     </div>
   </article>
+<EditorComment editorComment={data.editorComment} />
 
-  <!-- JSON-LD -->
   <script type="application/ld+json">
     {JSON.stringify(jsonLd)}
   </script>

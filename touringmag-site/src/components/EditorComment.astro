@@ -1,0 +1,22 @@
+---
+const { author, editorComment } = Astro.props;
+
+const avatarMap = {
+  "Sam Torres": "/sam.png",
+  "Jordan Cross": "/jordan.png",
+  "Riley Grant": "/riley.png",
+  "Luna Collective": "/luna.png",
+};
+
+const avatarFile = avatarMap[author] || "/editorial-team.png";
+---
+
+{editorComment && (
+  <div class="mt-12 flex items-start gap-4 p-4 bg-neutral-900 rounded-lg shadow">
+<img src={avatarFile} alt={author || "Editorial Team"} class="avatar border border-orange-500" />
+    <div>
+      <p class="text-gray-200 italic">{editorComment}</p>
+    </div>
+  </div>
+)}
+

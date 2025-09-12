@@ -5,6 +5,8 @@ import subprocess
 import random
 import requests
 from pathlib import Path
+ROOT_DIR = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT_DIR))
 from dotenv import load_dotenv
 import openai
 import argparse
@@ -15,6 +17,8 @@ import shutil
 import yaml
 from fpdf import FPDF
 from bs4 import BeautifulSoup
+from modules.affiliate_injector import load_affiliate_links, inject_links
+from modules.persona_engine import get_persona, apply_persona_prompt
 
 # -------------------------------------------------------------------
 # Path setup
@@ -42,9 +46,7 @@ load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 UNSPLASH_ACCESS_KEY = os.getenv("UNSPLASH_ACCESS_KEY")
 
-# Import Goldloop modules
-from goldloop.modules.affiliate_injector import load_affiliate_links, inject_links
-from goldloop.modules.persona_engine import get_persona, apply_persona_prompt
+
 
 # -------------------
 # Helpers
@@ -310,6 +312,52 @@ def generate_article(mode="blog"):
 
     print(f"[OK] Article stored: {title} ({slug})")
     return slug, title, summary, body, hero, thumb, persona
+ 
+def sanitize_comment(text: str) -> str:
+    """
+    YAML-safe editorComment:
+    - collapse newlines
+    - strip double/single quotes
+    - plain string, no Markdown formatting
+    """
+    if not text:
+        return "''"
+    safe = text.replace("\n", " ").strip()
+    safe = safe.replace('"', "").replace("'", "").replace("''", "")
+    return f"'{safe}'"
+
+ 
+def generate_editor_comment(mode, title, summary, persona):
+    """
+    Generate a short editor's note in the persona's voice.
+    Always returns a non-empty string.
+    """
+    prompt = (
+        f"You are {persona['name']}, the {persona['role']} at TouringMag. "
+        f"Write a short 1–2 sentence editor’s note in your voice, "
+        f"reacting to this article:\n\n"
+        f"Title: {title}\nSummary: {summary}\n\n"
+        "Keep it concise and authentic."
+        "Never use asterixis or quotaion marks."
+    )
+
+    try:
+        response = openai.ChatCompletion.create(
+            model="gpt-4o",
+            messages=[{"role": "user", "content": prompt}],
+        )
+        text = response["choices"][0]["message"]["content"].strip()
+    except Exception as e:
+        print(f"[WARN] Failed to generate editor comment: {e}")
+        text = ""
+
+    # ✅ Guarantee a fallback if GPT returns empty
+    if not text:
+        text = f"This piece was selected by {persona['name']} for its unique perspective on touring."
+
+    return text
+
+
 
 # -------------------
 # Export
@@ -322,9 +370,8 @@ def export_markdown(
     if export_base is None:
         export_base = EXPORT_BASE
 
-
-# Always use current publish date
-pub_date = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+    # Always use current publish date
+    pub_date = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
     # Persona metadata
     persona = get_persona(collection)
@@ -361,8 +408,22 @@ role: "{persona['role']}"
 # Runner
 # -------------------
 
+def sanitize_comment(text: str) -> str:
+    """
+    Make editorComment YAML-safe:
+    - collapse newlines
+    - replace internal single quotes with doubled '' (YAML safe)
+    - wrap whole string in single quotes, italics only
+    """
+    if not text:
+        return "''"
+    safe = text.replace("\n", " ").strip()
+    safe = safe.replace("'", "''")  # escape single quotes
+    return f"'*{safe}*'"
+
 def run_for_mode(mode):
     slug, title, summary, body, hero, thumb, persona = generate_article(mode)
+
     extra_fields = {}
 
     if mode == "gear":
@@ -372,6 +433,14 @@ def run_for_mode(mode):
     elif mode == "upgrades":
         tags_pool = ["comfort", "performance", "storage", "safety", "electronics"]
         extra_fields["tags"] = random.sample(tags_pool, k=random.randint(1, 3))
+
+    # ✅ Generate editor comment (sanitized)
+    raw_comment = generate_editor_comment(mode, title, summary, persona)
+    extra_fields["editorComment"] = sanitize_comment(raw_comment)
+
+    export_markdown(slug, title, summary, body, hero, thumb,
+                    collection=mode, extra_fields=extra_fields)
+
 
     export_markdown(slug, title, summary, body, hero, thumb, collection=mode, extra_fields=extra_fields)
 

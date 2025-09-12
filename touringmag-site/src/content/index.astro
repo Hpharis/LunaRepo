@@ -1,0 +1,46 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const collections = ["blog", "gear", "guides", "upgrades"];
+  return collections.map((c) => ({ params: { collection: c } }));
+}
+
+const { collection } = Astro.params;
+const posts = await getCollection(collection);
+
+// Sort newest first
+posts.sort(
+  (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+);
+---
+
+<BaseLayout
+  title={`${collection.charAt(0).toUpperCase() + collection.slice(1)} – TouringMag`}
+  description={`Latest ${collection} articles from TouringMag`}
+>
+  <h1 class="text-3xl font-bold mb-6 capitalize">Latest {collection}</h1>
+  <div class="grid md:grid-cols-3 gap-8">
+    {posts.map((post) => (
+      <a
+        href={`/${post.collection}/${post.slug}/`}
+        class="block bg-neutral-900 p-4 rounded-lg shadow hover:bg-neutral-800 transition"
+      >
+        <img
+          src={post.data.thumbnail || "/assets/blog-placeholder-1.jpg"}
+          alt={post.data.title}
+          class="w-full h-40 object-cover rounded mb-3"
+        />
+        <h2 class="text-lg font-semibold text-orange-500">{post.data.title}</h2>
+        {post.data.summary && (
+          <p class="text-sm text-gray-400 mt-2">{post.data.summary}</p>
+        )}
+        <p class="text-xs text-gray-500 mt-2">
+          {post.data.author} — {post.data.role}
+        </p>
+      </a>
+    ))}
+  </div>
+</BaseLayout>
+

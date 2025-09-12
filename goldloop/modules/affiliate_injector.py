@@ -2,7 +2,6 @@ import csv
 import re
 from pathlib import Path
 from dotenv import load_dotenv
-from goldloop.shared.db import query, commit
 
 load_dotenv()
 
@@ -10,6 +9,7 @@ MAX_LINKS_PER_KEYWORD = 2
 AFFILIATE_FILE = Path(__file__).resolve().parents[1] / "data" / "affiliate_links.csv"
 
 def load_affiliate_links(csv_path=AFFILIATE_FILE):
+    """Load affiliate keyword→URL mappings from CSV."""
     link_map = []
     with open(csv_path, newline="", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
@@ -40,19 +40,8 @@ def inject_links(html: str, link_map):
     return html, total_injected
 
 def run_affiliate_injection():
-    """Process DB articles not affiliate-ready yet."""
-    link_map = load_affiliate_links()
-    rows = query("SELECT ArticleID, ContentHtml FROM Articles WHERE AffiliateReady = 0").fetchall()
-    print(f"🔎 Found {len(rows)} articles needing injection.")
-
-    for row in rows:
-        article_id, html = row["ArticleID"], row["ContentHtml"]
-        updated_html, injected_count = inject_links(html, link_map)
-        if injected_count > 0:
-            query("UPDATE Articles SET ContentHtml = ?, AffiliateReady = 1 WHERE ArticleID = ?",
-                  updated_html, article_id)
-            print(f"✅ ArticleID {article_id}: injected {injected_count} links")
-        else:
-            print(f"⚠️ ArticleID {article_id}: no matches")
-    commit()
-    print("🎉 Affiliate injection completed.")
+    """Placeholder: originally injected into DB.
+    For now, just print a message and return.
+    """
+    print("[INFO] run_affiliate_injection() is not wired to a DB in this version.")
+    print("       Use inject_links(html, link_map) directly in your pipeline.")

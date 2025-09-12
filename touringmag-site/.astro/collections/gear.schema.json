@@ -63,6 +63,9 @@
         "role": {
           "type": "string"
         },
+        "editorComment": {
+          "type": "string"
+        },
         "rating": {
           "type": "number",
           "minimum": 1,

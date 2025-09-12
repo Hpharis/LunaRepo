@@ -2,6 +2,7 @@
 import { getCollection, getEntryBySlug } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
+import EditorComment from "../../components/EditorComment.astro";
 
 export const prerender = true;
 
@@ -51,6 +52,9 @@ const jsonLd = {
           <span class="ml-2 italic">(updated <FormattedDate date={data.updatedDate} />)</span>
         )}
       </p>
+	  	  <p class="text-sm text-gray-300 italic mt-1">
+		{data.author} — {data.role}
+	  </p>
     </div>
   </div>
 
@@ -66,9 +70,10 @@ const jsonLd = {
     </>
   )}
 
-  <article class="prose prose-invert max-w-3xl mx-auto px-4">
-    <Content />
-  </article>
+<article class="prose prose-invert max-w-3xl mx-auto px-4">
+  <Content />
+</article>
+<EditorComment editorComment={data.editorComment} />
 
   <script type="application/ld+json">
     {JSON.stringify(jsonLd)}

@@ -1,4 +1,3 @@
-# goldloop/modules/__init__.py
 """
 Package initializer for Goldloop modules.
 Currently only affiliate_injector is active.

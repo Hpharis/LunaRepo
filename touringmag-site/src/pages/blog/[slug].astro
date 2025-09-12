@@ -2,6 +2,7 @@
 import { getCollection, getEntryBySlug } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
+import EditorComment from "../../components/EditorComment.astro";
 
 export const prerender = true;
 
@@ -14,9 +15,35 @@ const { slug } = Astro.params;
 const post = await getEntryBySlug("blog", slug);
 if (!post) throw new Error(`Blog post not found: ${slug}`);
 
-const placeholder = "/assets/blog-placeholder-1.jpg";
 const data = post.data;
+const placeholder = "/assets/blog-placeholder-1.jpg";
+
+// ✅ compile MD/MDX to a component
 const { Content } = await post.render();
+
+// JSON-LD (ensure ISO strings)
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: data.title,
+  image: data.heroImage || placeholder,
+  description: data.summary || "",
+  datePublished: data.pubDate?.toISOString?.() ?? data.pubDate,
+  dateModified:
+    data.updatedDate?.toISOString?.() ??
+    data.pubDate?.toISOString?.() ??
+    data.updatedDate ??
+    data.pubDate,
+  author: { "@type": "Organization", name: "TouringMag" },
+  publisher: {
+    "@type": "Organization",
+    name: "TouringMag",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://touringmag.com/assets/touringmaglogo.png",
+    },
+  },
+};
 ---
 
 <BaseLayout
@@ -31,7 +58,9 @@ const { Content } = await post.render();
       alt={data.title}
       class="w-full h-72 md:h-96 object-cover rounded-lg shadow-lg"
     />
-    <div class="absolute inset-0 bg-black/50 rounded-lg flex flex-col items-center justify-center text-center px-6">
+    <div
+      class="absolute inset-0 bg-black/50 rounded-lg flex flex-col items-center justify-center text-center px-6"
+    >
       <h1 class="text-3xl md:text-5xl font-extrabold text-white drop-shadow mb-2">
         {data.title}
       </h1>
@@ -39,16 +68,14 @@ const { Content } = await post.render();
       <p class="text-sm text-gray-400 mt-4">
         {data.pubDate && <FormattedDate date={data.pubDate} />}
         {data.updatedDate && (
-          <span class="ml-2 italic">
-            (updated <FormattedDate date={data.updatedDate} />)
-          </span>
+          <span class="ml-2 italic"
+            >(updated <FormattedDate date={data.updatedDate} />)</span
+          >
         )}
       </p>
-      {data.author && (
-        <p class="text-sm text-gray-300 italic mt-1">
-          {data.author} — {data.role}
-        </p>
-      )}
+	  <p class="text-sm text-gray-300 italic mt-1">
+		{data.author} — {data.role}
+	  </p>
     </div>
   </div>
 
@@ -105,9 +132,9 @@ const { Content } = await post.render();
     </aside>
   </div>
 
-  <!-- ✅ JSON-LD Structured Data -->
+<EditorComment editorComment={data.editorComment} />
+
   <script type="application/ld+json">
     {JSON.stringify(jsonLd)}
   </script>
 </BaseLayout>
-

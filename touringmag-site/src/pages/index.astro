@@ -47,22 +47,19 @@ const coverStory = blogPosts[0];
   <section style="max-width:1200px; margin:0 auto; padding:2rem 1rem; display:grid; gap:3rem;">
 
     <!-- Blog -->
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
-  <h2 style="font-size:1.75rem; font-weight:700; color:#f97316;">Latest Blog Articles</h2>
-  <a href="/blog" 
-     style="background:#ea580c; color:white; padding:0.4rem 0.9rem; border-radius:6px; font-size:0.85rem; font-weight:600; text-decoration:none; transition:background 0.2s;">
-    View All →
-  </a>
-</div>
-
+    <div>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+        <h2 style="font-size:1.75rem; font-weight:700; color:#f97316;">Latest Blog Articles</h2>
+        <a href="/blog" class="bg-orange-600 text-white px-3 py-1 rounded hover:bg-orange-700">View All →</a>
+      </div>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:2rem;">
         {blogPosts.slice(1,4).map((post) => (
-          <a href={`/blog/${post.slug}`} style="background:#111; border-radius:12px; overflow:hidden; text-decoration:none; color:inherit; display:flex; flex-direction:column;">
-            <img src={post.data.heroImage || placeholder} alt={post.data.title} style="width:100%; height:160px; object-fit:cover;" />
-            <div style="padding:1rem; flex:1; display:flex; flex-direction:column;">
-              <h3 style="font-size:1.1rem; font-weight:600; color:white; margin-bottom:0.5rem;">{post.data.title}</h3>
-              <p style="font-size:0.9rem; color:#bbb; flex:1;">{post.data.summary}</p>
-              <p style="font-size:0.8rem; color:#888; margin-top:0.5rem;"><FormattedDate date={post.data.pubDate} /></p>
+          <a href={`/blog/${post.slug}`} class="bg-neutral-900 rounded-lg overflow-hidden no-underline text-inherit flex flex-col">
+            <img src={post.data.heroImage || placeholder} alt={post.data.title} class="w-full h-40 object-cover" />
+            <div class="p-4 flex-1 flex flex-col">
+              <h3 class="text-lg font-semibold text-white mb-2">{post.data.title}</h3>
+              <p class="text-sm text-gray-400 flex-1">{post.data.summary}</p>
+              <p class="text-xs text-gray-500 mt-2"><FormattedDate date={post.data.pubDate} /></p>
             </div>
           </a>
         ))}
@@ -71,21 +68,17 @@ const coverStory = blogPosts[0];
 
     <!-- Gear -->
     <div>
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
-  <h2 style="font-size:1.75rem; font-weight:700; color:#f97316;">Latest Blog Articles</h2>
-  <a href="/blog" 
-     style="background:#ea580c; color:white; padding:0.4rem 0.9rem; border-radius:6px; font-size:0.85rem; font-weight:600; text-decoration:none; transition:background 0.2s;">
-    View All →
-  </a>
-</div>
-
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:2rem;">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-bold text-orange-500">Latest Gear Reviews</h2>
+        <a href="/gear" class="bg-orange-600 text-white px-3 py-1 rounded hover:bg-orange-700">View All →</a>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
         {gearPosts.slice(0,3).map((post) => (
-          <a href={`/gear/${post.slug}`} style="background:#111; border-radius:12px; overflow:hidden; text-decoration:none; color:inherit; display:flex; flex-direction:column;">
-            <img src={post.data.heroImage || placeholder} alt={post.data.title} style="width:100%; height:160px; object-fit:cover;" />
-            <div style="padding:1rem; flex:1; display:flex; flex-direction:column;">
-              <h3 style="font-size:1.1rem; font-weight:600; color:white; margin-bottom:0.5rem;">{post.data.title}</h3>
-              {post.data.rating && <p style="color:#facc15; font-weight:600;">⭐ {post.data.rating}/5</p>}
+          <a href={`/gear/${post.slug}`} class="bg-neutral-900 rounded-lg overflow-hidden no-underline text-inherit flex flex-col">
+            <img src={post.data.heroImage || placeholder} alt={post.data.title} class="w-full h-40 object-cover" />
+            <div class="p-4 flex-1 flex flex-col">
+              <h3 class="text-lg font-semibold text-white mb-2">{post.data.title}</h3>
+              {post.data.rating && <p class="text-yellow-400 font-semibold">⭐ {post.data.rating}/5</p>}
             </div>
           </a>
         ))}
@@ -94,21 +87,17 @@ const coverStory = blogPosts[0];
 
     <!-- Upgrades -->
     <div>
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
-  <h2 style="font-size:1.75rem; font-weight:700; color:#f97316;">Latest Blog Articles</h2>
-  <a href="/blog" 
-     style="background:#ea580c; color:white; padding:0.4rem 0.9rem; border-radius:6px; font-size:0.85rem; font-weight:600; text-decoration:none; transition:background 0.2s;">
-    View All →
-  </a>
-</div>
-
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:2rem;">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-bold text-orange-500">Latest Upgrades</h2>
+        <a href="/upgrades" class="bg-orange-600 text-white px-3 py-1 rounded hover:bg-orange-700">View All →</a>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
         {upgradePosts.slice(0,3).map((post) => (
-          <a href={`/upgrades/${post.slug}`} style="background:#111; border-radius:12px; overflow:hidden; text-decoration:none; color:inherit; display:flex; flex-direction:column;">
-            <img src={post.data.heroImage || placeholder} alt={post.data.title} style="width:100%; height:160px; object-fit:cover;" />
-            <div style="padding:1rem; flex:1; display:flex; flex-direction:column;">
-              <h3 style="font-size:1.1rem; font-weight:600; color:white; margin-bottom:0.5rem;">{post.data.title}</h3>
-              <p style="font-size:0.9rem; color:#bbb; flex:1;">{post.data.summary}</p>
+          <a href={`/upgrades/${post.slug}`} class="bg-neutral-900 rounded-lg overflow-hidden no-underline text-inherit flex flex-col">
+            <img src={post.data.heroImage || placeholder} alt={post.data.title} class="w-full h-40 object-cover" />
+            <div class="p-4 flex-1 flex flex-col">
+              <h3 class="text-lg font-semibold text-white mb-2">{post.data.title}</h3>
+              <p class="text-sm text-gray-400 flex-1">{post.data.summary}</p>
             </div>
           </a>
         ))}
@@ -116,21 +105,20 @@ const coverStory = blogPosts[0];
     </div>
 
     <!-- Guides -->
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
-  <h2 style="font-size:1.75rem; font-weight:700; color:#f97316;">Latest Blog Articles</h2>
-  <a href="/blog" 
-     style="background:#ea580c; color:white; padding:0.4rem 0.9rem; border-radius:6px; font-size:0.85rem; font-weight:600; text-decoration:none; transition:background 0.2s;">
-    View All →
-  </a>
-</div>
-
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:2rem;">
+    <div>
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-bold text-orange-500">Latest Guides</h2>
+        <a href="/guides" class="bg-orange-600 text-white px-3 py-1 rounded hover:bg-orange-700">View All →</a>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
         {guidePosts.slice(0,3).map((post) => (
-          <a href={`/guides/${post.slug}`} style="background:#111; border-radius:12px; overflow:hidden; text-decoration:none; color:inherit; display:flex; flex-direction:column;">
-            <img src={post.data.heroImage || placeholder} alt={post.data.title} style="width:100%; height:160px; object-fit:cover;" />
-            <div style="padding:1rem; flex:1; display:flex; flex-direction:column;">
-              <h3 style="font-size:1.1rem; font-weight:600; color:white; margin-bottom:0.5rem;">{post.data.title}</h3>
-              {post.data.difficulty && <p style="color:#60a5fa; font-weight:600;">Difficulty: {post.data.difficulty}</p>}
+          <a href={`/guides/${post.slug}`} class="bg-neutral-900 rounded-lg overflow-hidden no-underline text-inherit flex flex-col">
+            <img src={post.data.heroImage || placeholder} alt={post.data.title} class="w-full h-40 object-cover" />
+            <div class="p-4 flex-1 flex flex-col">
+              <h3 class="text-lg font-semibold text-white mb-2">{post.data.title}</h3>
+              {post.data.difficulty && (
+                <p class="text-blue-400 font-semibold">Difficulty: {post.data.difficulty}</p>
+              )}
             </div>
           </a>
         ))}

@@ -11,11 +11,12 @@ const baseFields = {
   tags: z.array(z.string()).optional(),   // shared
   author: z.string().optional(),
   role: z.string().optional(),
+  editorComment: z.string().optional(),   // persona comments
 };
 
 const blog = defineCollection({
   type: "content",
-  dir: "blog", // 👈 explicitly points to src/content/blog
+  dir: "blog", // 
   schema: z.object(baseFields),
 });
 
