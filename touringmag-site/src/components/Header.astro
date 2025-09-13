@@ -7,7 +7,11 @@ const links = [
   { href: "/upgrades", label: "Upgrades" },
   { href: "/gear", label: "Gear" },
   { href: "/guides", label: "Guides" },
+  { href: "/routes", label: "Routes" },
+  { href: "/map", label: "Map" },
+  { href: "/advisor", label: "Advisor" }
 ];
+
 ---
 
 <!-- src/components/Header.astro -->
@@ -24,6 +28,9 @@ const links = [
       <a href="/guides">Guides</a>
       <a href="/about">About</a>
       <a href="/contact">Contact</a>
+	  <a href="/routes">Routes</a>
+	  <a href="/map">Map</a>
+	  <a href="/advisor">Advisor</a>
     </nav>
 
 <style>
@@ -55,6 +62,6 @@ const links = [
     font-weight: 500;
   }
   nav a:hover {
-    color: #FF6600;
+    color: #0E7490;
   }
 </style>

@@ -1,0 +1,164 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "TouringMag Logo" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "TouringMag Logo" [ref=e5] [cursor=pointer]
+      - navigation [ref=e6]:
+        - link "Home" [ref=e7] [cursor=pointer]:
+          - /url: /
+        - link "Blog" [ref=e8] [cursor=pointer]:
+          - /url: /blog
+        - link "Gear" [ref=e9] [cursor=pointer]:
+          - /url: /gear
+        - link "Upgrades" [ref=e10] [cursor=pointer]:
+          - /url: /upgrades
+        - link "Guides" [ref=e11] [cursor=pointer]:
+          - /url: /guides
+        - link "About" [ref=e12] [cursor=pointer]:
+          - /url: /about
+        - link "Contact" [ref=e13] [cursor=pointer]:
+          - /url: /contact
+  - main [ref=e14]:
+    - generic [ref=e15]:
+      - 'img "Embracing Freedom: A Journey Through Motorcycle Touring" [ref=e16]'
+      - generic [ref=e17]:
+        - 'heading "Embracing Freedom: A Journey Through Motorcycle Touring" [level=1] [ref=e18]'
+        - paragraph [ref=e19]: Discover the soul-stirring essence of motorcycle touring adventures.
+        - paragraph [ref=e20]:
+          - time [ref=e21]: Sep 12, 2025
+        - link "Read More" [ref=e22] [cursor=pointer]:
+          - /url: /blog/embracing-freedom--a-journey-through-motorcycle-touring
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - heading "Latest Blog Articles" [level=2] [ref=e26]
+          - link "View All →" [ref=e27] [cursor=pointer]:
+            - /url: /blog
+        - generic [ref=e28]:
+          - 'link "Embrace the Open Road: Motorcycle Touring''s Heartbeat Embrace the Open Road: Motorcycle Touring''s Heartbeat Discover the passion and freedom of motorcycle touring adventures. Sep 12, 2025" [ref=e29] [cursor=pointer]':
+            - /url: /blog/embrace-the-open-road--motorcycle-touring-s-heartbeat
+            - 'img "Embrace the Open Road: Motorcycle Touring''s Heartbeat" [ref=e30] [cursor=pointer]'
+            - generic [ref=e31] [cursor=pointer]:
+              - 'heading "Embrace the Open Road: Motorcycle Touring''s Heartbeat" [level=3] [ref=e32] [cursor=pointer]'
+              - paragraph [ref=e33] [cursor=pointer]: Discover the passion and freedom of motorcycle touring adventures.
+              - paragraph [ref=e34] [cursor=pointer]:
+                - time [ref=e35] [cursor=pointer]: Sep 12, 2025
+          - 'link "Whispers of the Wind: Embracing the Open Road Whispers of the Wind: Embracing the Open Road Experience the liberating spirit of motorcycle touring on the open road. Sep 12, 2025" [ref=e36] [cursor=pointer]':
+            - /url: /blog/whispers-of-the-wind--embracing-the-open-road
+            - 'img "Whispers of the Wind: Embracing the Open Road" [ref=e37] [cursor=pointer]'
+            - generic [ref=e38] [cursor=pointer]:
+              - 'heading "Whispers of the Wind: Embracing the Open Road" [level=3] [ref=e39] [cursor=pointer]'
+              - paragraph [ref=e40] [cursor=pointer]: Experience the liberating spirit of motorcycle touring on the open road.
+              - paragraph [ref=e41] [cursor=pointer]:
+                - time [ref=e42] [cursor=pointer]: Sep 12, 2025
+          - 'link "Chasing Sunsets: The Ultimate Motorcycle Touring Experience Chasing Sunsets: The Ultimate Motorcycle Touring Experience Discover the poetic allure and freedom of motorcycle touring at sunset. Sep 12, 2025" [ref=e43] [cursor=pointer]':
+            - /url: /blog/chasing-sunsets--the-ultimate-motorcycle-touring-experience
+            - 'img "Chasing Sunsets: The Ultimate Motorcycle Touring Experience" [ref=e44] [cursor=pointer]'
+            - generic [ref=e45] [cursor=pointer]:
+              - 'heading "Chasing Sunsets: The Ultimate Motorcycle Touring Experience" [level=3] [ref=e46] [cursor=pointer]'
+              - paragraph [ref=e47] [cursor=pointer]: Discover the poetic allure and freedom of motorcycle touring at sunset.
+              - paragraph [ref=e48] [cursor=pointer]:
+                - time [ref=e49] [cursor=pointer]: Sep 12, 2025
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - heading "Latest Gear Reviews" [level=2] [ref=e52]
+          - link "View All →" [ref=e53] [cursor=pointer]:
+            - /url: /gear
+        - generic [ref=e54]:
+          - link "The Ultimate Motorcycle Touring Jacket Review The Ultimate Motorcycle Touring Jacket Review ⭐ 5/5" [ref=e55] [cursor=pointer]:
+            - /url: /gear/the-ultimate-motorcycle-touring-jacket-review
+            - img "The Ultimate Motorcycle Touring Jacket Review" [ref=e56] [cursor=pointer]
+            - generic [ref=e57] [cursor=pointer]:
+              - heading "The Ultimate Motorcycle Touring Jacket Review" [level=3] [ref=e58] [cursor=pointer]
+              - paragraph [ref=e59] [cursor=pointer]: ⭐ 5/5
+          - 'link "The RideMax Touring Jacket: Comfort Meets Durability The RideMax Touring Jacket: Comfort Meets Durability ⭐ 5/5" [ref=e60] [cursor=pointer]':
+            - /url: /gear/the-ridemax-touring-jacket--comfort-meets-durability
+            - 'img "The RideMax Touring Jacket: Comfort Meets Durability" [ref=e61] [cursor=pointer]'
+            - generic [ref=e62] [cursor=pointer]:
+              - 'heading "The RideMax Touring Jacket: Comfort Meets Durability" [level=3] [ref=e63] [cursor=pointer]'
+              - paragraph [ref=e64] [cursor=pointer]: ⭐ 5/5
+          - link "Revenger Series X Motorcycle Helmet Review Revenger Series X Motorcycle Helmet Review ⭐ 3/5" [ref=e65] [cursor=pointer]:
+            - /url: /gear/revenger-series-x-motorcycle-helmet-review
+            - img "Revenger Series X Motorcycle Helmet Review" [ref=e66] [cursor=pointer]
+            - generic [ref=e67] [cursor=pointer]:
+              - heading "Revenger Series X Motorcycle Helmet Review" [level=3] [ref=e68] [cursor=pointer]
+              - paragraph [ref=e69] [cursor=pointer]: ⭐ 3/5
+      - generic [ref=e70]:
+        - generic [ref=e71]:
+          - heading "Latest Upgrades" [level=2] [ref=e72]
+          - link "View All →" [ref=e73] [cursor=pointer]:
+            - /url: /upgrades
+        - generic [ref=e74]:
+          - link "Boost Motorcycle Touring Comfort with Seat Upgrade Boost Motorcycle Touring Comfort with Seat Upgrade Upgrade your motorcycle seat for maximum touring comfort and support." [ref=e75] [cursor=pointer]:
+            - /url: /upgrades/boost-motorcycle-touring-comfort-with-seat-upgrade
+            - img "Boost Motorcycle Touring Comfort with Seat Upgrade" [ref=e76] [cursor=pointer]
+            - generic [ref=e77] [cursor=pointer]:
+              - heading "Boost Motorcycle Touring Comfort with Seat Upgrade" [level=3] [ref=e78] [cursor=pointer]
+              - paragraph [ref=e79] [cursor=pointer]: Upgrade your motorcycle seat for maximum touring comfort and support.
+          - link "Upgrade Your Seat for Long-Distance Comfort Upgrade Your Seat for Long-Distance Comfort Discover how a seat upgrade can transform your touring experience." [ref=e80] [cursor=pointer]:
+            - /url: /upgrades/upgrade-your-seat-for-long-distance-comfort
+            - img "Upgrade Your Seat for Long-Distance Comfort" [ref=e81] [cursor=pointer]
+            - generic [ref=e82] [cursor=pointer]:
+              - heading "Upgrade Your Seat for Long-Distance Comfort" [level=3] [ref=e83] [cursor=pointer]
+              - paragraph [ref=e84] [cursor=pointer]: Discover how a seat upgrade can transform your touring experience.
+          - link "Improve Touring Comfort with Gel Seat Pad Upgrade Improve Touring Comfort with Gel Seat Pad Upgrade Enhance your motorcycle touring experience with a DIY gel seat pad upgrade." [ref=e85] [cursor=pointer]:
+            - /url: /upgrades/improve-touring-comfort-with-gel-seat-pad-upgrade
+            - img "Improve Touring Comfort with Gel Seat Pad Upgrade" [ref=e86] [cursor=pointer]
+            - generic [ref=e87] [cursor=pointer]:
+              - heading "Improve Touring Comfort with Gel Seat Pad Upgrade" [level=3] [ref=e88] [cursor=pointer]
+              - paragraph [ref=e89] [cursor=pointer]: Enhance your motorcycle touring experience with a DIY gel seat pad upgrade.
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - heading "Latest Guides" [level=2] [ref=e92]
+          - link "View All →" [ref=e93] [cursor=pointer]:
+            - /url: /guides
+        - generic [ref=e94]:
+          - 'link "Packing Essentials for Motorcycle Touring Packing Essentials for Motorcycle Touring Difficulty: Intermediate" [ref=e95] [cursor=pointer]':
+            - /url: /guides/packing-essentials-for-motorcycle-touring
+            - img "Packing Essentials for Motorcycle Touring" [ref=e96] [cursor=pointer]
+            - generic [ref=e97] [cursor=pointer]:
+              - heading "Packing Essentials for Motorcycle Touring" [level=3] [ref=e98] [cursor=pointer]
+              - paragraph [ref=e99] [cursor=pointer]: "Difficulty: Intermediate"
+          - 'link "Motorcycle Touring: Packing Essentials for Your Journey Motorcycle Touring: Packing Essentials for Your Journey Difficulty: Advanced" [ref=e100] [cursor=pointer]':
+            - /url: /guides/motorcycle-touring--packing-essentials-for-your-journey
+            - 'img "Motorcycle Touring: Packing Essentials for Your Journey" [ref=e101] [cursor=pointer]'
+            - generic [ref=e102] [cursor=pointer]:
+              - 'heading "Motorcycle Touring: Packing Essentials for Your Journey" [level=3] [ref=e103] [cursor=pointer]'
+              - paragraph [ref=e104] [cursor=pointer]: "Difficulty: Advanced"
+          - 'link "Essential Motorcycle Touring Packing List for Beginners Essential Motorcycle Touring Packing List for Beginners Difficulty: Advanced" [ref=e105] [cursor=pointer]':
+            - /url: /guides/essential-motorcycle-touring-packing-list-for-beginners
+            - img "Essential Motorcycle Touring Packing List for Beginners" [ref=e106] [cursor=pointer]
+            - generic [ref=e107] [cursor=pointer]:
+              - heading "Essential Motorcycle Touring Packing List for Beginners" [level=3] [ref=e108] [cursor=pointer]
+              - paragraph [ref=e109] [cursor=pointer]: "Difficulty: Advanced"
+  - contentinfo [ref=e110]:
+    - paragraph [ref=e111]: © 2025 TouringMag. All rights reserved. Unauthorized duplication is prohibited.
+    - paragraph [ref=e112]:
+      - link "Privacy Policy" [ref=e113] [cursor=pointer]:
+        - /url: /privacy-policy
+      - text: "|"
+      - link "Terms of Service" [ref=e114] [cursor=pointer]:
+        - /url: /terms-of-service
+      - text: "|"
+      - link "Disclaimer" [ref=e115] [cursor=pointer]:
+        - /url: /disclaimer
+  - generic [ref=e118]:
+    - button "Menu" [ref=e119]:
+      - img [ref=e121]
+      - generic: Menu
+    - button "Inspect" [ref=e125]:
+      - img [ref=e127]
+      - generic: Inspect
+    - button "Audit" [ref=e129]:
+      - generic [ref=e130]:
+        - img [ref=e131]
+        - img [ref=e134]
+      - generic: Audit
+    - button "Settings" [ref=e137]:
+      - img [ref=e139]
+      - generic: Settings
+```

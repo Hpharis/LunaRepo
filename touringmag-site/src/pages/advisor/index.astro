@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const query = Astro.url.searchParams.get("query");
+let response = "";
+
+if (query) {
+  if (query.toLowerCase().includes("seat")) {
+    response = "Best Touring Seat 2025 — see our review";
+  } else if (query.toLowerCase().includes("luggage")) {
+    response = "Top Luggage Systems — see comparison";
+  } else {
+    response = "No match found";
+  }
+}
+---
+
+<BaseLayout>
+  <h1>Gear Advisor</h1>
+  <div class="advisor">
+    <form method="get">
+      <input type="text" name="query" placeholder="Ask about gear…" />
+      <button type="submit">Ask</button>
+    </form>
+
+    {response && <p>{response}</p>}
+  </div>
+</BaseLayout>

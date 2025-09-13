@@ -323,7 +323,7 @@ def sanitize_comment(text: str) -> str:
     if not text:
         return "''"
     safe = text.replace("\n", " ").strip()
-    safe = safe.replace('"', "").replace("'", "").replace("''", "")
+    safe = safe.replace('"', "").replace("'", "").replace("''", "").replace("*", "")
     return f"'{safe}'"
 
  

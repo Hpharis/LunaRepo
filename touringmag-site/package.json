@@ -6,7 +6,11 @@
     "dev": "set CHOKIDAR_USEPOLLING=false && set NODE_OPTIONS=--max-old-space-size=8192 && astro dev --port 4322",
     "build": "astro build",
     "preview": "astro preview",
-    "start": "astro preview"
+    "start": "astro preview",
+    "test": "vitest run",
+    "test:ui": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test --reporter=dot"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.4",
@@ -18,8 +22,18 @@
     "tailwindcss": "^3.4.3"
   },
   "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "@vitest/coverage-v8": "^3.2.4",
     "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.38"
+    "jsdom": "^26.1.0",
+    "playwright": "^1.47.0",
+    "postcss": "^8.4.38",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "vitest": "^3.2.4"
   },
   "overrides": {
     "path-to-regexp": "^6.3.0"

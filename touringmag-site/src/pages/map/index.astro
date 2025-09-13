@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <h1>Interactive Touring Map</h1>
+  <div id="map" style="height:500px;"></div>
+
+  <!-- Load Leaflet assets -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Init script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const map = L.map('map').setView([45, -63], 4);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+      }).addTo(map);
+
+      L.marker([46.1, -64.7]).addTo(map)
+        .bindPopup('<a href="/gear/roadguard-elite-touring-jacket-review">RoadGuard Elite Jacket</a>');
+    });
+  </script>
+</BaseLayout>
+

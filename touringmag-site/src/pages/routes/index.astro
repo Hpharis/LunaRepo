@@ -1,0 +1,181 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Plan Your Ride | TouringMag" description="Interactive motorcycle touring route planner with maps and rider tips.">
+  <h1 class="text-3xl font-bold text-[var(--accent)] mb-6">Plan Your Touring Route</h1><br>
+<form id="routeForm" style="margin-bottom:2rem;">
+<div style="display: flex; gap: 5rem; margin-bottom: 1rem;">
+  <div style="flex: 1;">
+    <label for="start" style="display:block; margin-bottom:0.25rem;">Start Location</label>
+    <input id="start" name="start" type="text" required
+      style="
+        width: 75%;
+        padding: .75rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 0.5rem;
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #444;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      "
+    />
+  </div>
+<br><br>
+  <div style="flex: 1;">
+    <label for="end" style="display:block; margin-bottom:0.25rem;">Destination</label>
+    <input id="end" name="end" type="text" required
+      style="
+        width: 75%;
+        padding: .75rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 0.5rem;
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #444;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      "
+    />
+  </div>
+</div>
+
+<br><br>
+
+<button type="submit"
+  style="
+    background-color: var(--accent);
+    color: #fff;
+    padding: .75rem 1.5rem;   /* Bigger button: py-4 px-10 */
+    font-size: 1.00rem;     /* 20px ~ text-xl */
+    font-weight: 700;       /* Bold */
+    border-radius: 0.5rem;  /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: background-color 0.2s ease;
+  "
+  onmouseover="this.style.backgroundColor='var(--accent-dark)'"
+  onmouseout="this.style.backgroundColor='var(--accent)'">
+  Show Route
+</button>
+
+<br><br>
+
+  </form>
+
+  <!-- Map -->
+  <div id="map" style="height:500px;" class="rounded mb-8"></div>
+
+  <!-- Directions -->
+  <section id="results" class="mb-8">
+    <h2 id="toggle-directions" class="text-xl font-bold text-[var(--accent)] cursor-pointer">
+      Step-by-Step Directions
+    </h2>
+    <ul id="directions" class="mt-2"></ul>
+  </section>
+
+  <!-- Gear recommendations -->
+  <section class="mb-8">
+    <h2 class="text-xl font-bold text-[var(--accent)] mb-3">Recommended Gear for This Ride</h2>
+    <div id="gear-recommendations" class="text-gray-300"></div>
+    <p class="text-xs text-gray-500 mt-2">
+      Links may include affiliates that support TouringMag at no extra cost to you.
+    </p>
+  </section>
+
+  <!-- Persona insight -->
+  <div class="persona-comment mt-8">
+    <strong>Riley Grant (Guides Editor):</strong> Remember to fuel up before heading into remote stretches, and pack rain gear just in case — nothing spoils a touring day like soggy boots.
+  </div>
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const map = L.map('map').setView([51, -114], 5);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    let routeLayer;
+
+    document.getElementById('routeForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const start = document.getElementById('start').value;
+      const end = document.getElementById('end').value;
+
+      const geocode = async (query) => {
+        const res = await fetch("https://nominatim.openstreetmap.org/search?format=json&q=" + encodeURIComponent(query));
+        const data = await res.json();
+        if (!data.length) throw new Error("No results for: " + query);
+        return [parseFloat(data[0].lon), parseFloat(data[0].lat)];
+      };
+
+      try {
+        const startCoords = await geocode(start);
+        const endCoords = await geocode(end);
+
+        const url = "https://router.project-osrm.org/route/v1/driving/"
+          + startCoords.join(",") + ";" + endCoords.join(",")
+          + "?overview=full&geometries=geojson&steps=true";
+
+        const res = await fetch(url);
+        const json = await res.json();
+
+        if (!json.routes || !json.routes.length) throw new Error("No route found.");
+        const route = json.routes[0];
+
+        if (routeLayer) map.removeLayer(routeLayer);
+        routeLayer = L.geoJSON({ type: "Feature", geometry: route.geometry }).addTo(map);
+        map.fitBounds(routeLayer.getBounds());
+
+        const steps = route.legs[0].steps;
+        const list = document.getElementById('directions');
+        list.innerHTML = "";
+        steps.forEach((s) => {
+          const li = document.createElement('li');
+          li.textContent = s.maneuver.instruction;
+          list.appendChild(li);
+        });
+
+        // Gear recommendations (plain text sent to API for affiliate injection)
+        const gearHTML = `
+          <ul class="list-disc list-inside space-y-2">
+            <li>Touring Jacket – Weatherproof comfort</li>
+            <li>Saddlebags – Extra storage for long trips</li>
+            <li>GPS Mount – Keep your route visible</li>
+            <li>Rain Gear – Stay dry when weather turns</li>
+          </ul>
+        `;
+
+        fetch("/api/affiliate", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ html: gearHTML })
+        })
+          .then(res => res.text())
+          .then(enhanced => {
+            document.getElementById("gear-recommendations").innerHTML = enhanced;
+          })
+          .catch(err => {
+            console.error("Affiliate injection failed", err);
+            document.getElementById("gear-recommendations").innerHTML = gearHTML;
+          });
+
+      } catch (err) {
+        console.error(err);
+        document.getElementById('directions').innerHTML =
+          "<li style='color:red;'>Error: " + err.message + "</li>";
+      }
+    });
+
+    // Toggle directions list
+    document.getElementById("toggle-directions").addEventListener("click", () => {
+      const list = document.getElementById("directions");
+      list.classList.toggle("hidden");
+    });
+  });
+  </script>
+</BaseLayout>
